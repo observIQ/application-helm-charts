@@ -2,7 +2,7 @@
 
 # Charts
 
-This repository contains Helm Charts suitable for developing integrations. This repository
+This repository contains Helm charts suitable for developing integrations. This repository
 is not intended for production use.
 
 ## Usage
@@ -13,7 +13,7 @@ Helm's [documentation](https://helm.sh/docs) to get started.
 
 ### Add Repo
 
-Add the observIQ help repository.
+Add the observIQ Helm repository.
 
 ```bash
 helm repo add observiq https://observiq.github.io/charts
