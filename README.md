@@ -1,4 +1,9 @@
-# charts
+[![CI](https://github.com/observIQ/charts/actions/workflows/ci.yaml/badge.svg)](https://github.com/observIQ/charts/actions/workflows/ci.yaml)
+
+# Charts
+
+This repository contains Helm Charts suitable for developing integrations. This repository
+is not intended for production use.
 
 ## Usage
 

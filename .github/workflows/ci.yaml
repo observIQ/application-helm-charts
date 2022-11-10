@@ -8,7 +8,7 @@ on:
       - main
 
 jobs:
-  setup-environment:
+  helm:
     strategy:
       matrix:
         chart:
