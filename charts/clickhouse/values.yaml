@@ -282,7 +282,7 @@ clickhouse:
     # root — The znode that is used as the root for znodes used by the ClickHouse server. Optional.
     # identity — User and password, that can be required by ZooKeeper to give access to requested znodes. Optional.
     zookeeper_servers:
-      enabled: false
+      enabled: true
       session_timeout_ms: "30000"
       operation_timeout_ms: "10000"
       # root: "/path/to/zookeeper/node"
