@@ -1,5 +1,7 @@
 # ClickHouse
 
+This Chart is a hardfork of https://github.com/sentry-kubernetes/charts/tree/17.0.0/clickhouse. 
+
 [ClickHouse](https://clickhouse.yandex/) is an open source column-oriented database management system capable of real time generation of analytical data reports using SQL queries.
 
 ## Introduction
