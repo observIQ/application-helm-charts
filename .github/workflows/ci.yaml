@@ -1,0 +1,25 @@
+name: CI
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+jobs:
+  setup-environment:
+    strategy:
+      matrix:
+        chart:
+          - "clickhouse"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: Helm Check
+        uses: igabaydulin/helm-check-action@0.1.4
+        env:
+          CHART_LOCATION: ./charts/${{ matrix.chart }}
+          CHART_VALUES: ./charts/${{ matrix.chart }}/values.yaml
