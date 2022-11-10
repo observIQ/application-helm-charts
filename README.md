@@ -1,3 +1,5 @@
+[![Release Charts](https://github.com/observIQ/charts/actions/workflows/release.yaml/badge.svg?branch=main)](https://github.com/observIQ/charts/actions/workflows/release.yaml)
+
 # charts
 
 ## Usage
