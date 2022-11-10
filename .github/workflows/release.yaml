@@ -2,8 +2,8 @@ name: Release Charts
 
 on:
   push:
-    tags:
-      - 'v*'
+    branches:
+      - main
 
 jobs:
   release:
@@ -21,7 +21,5 @@ jobs:
 
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.4.1
-        with:
-          charts_dir: charts/
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
