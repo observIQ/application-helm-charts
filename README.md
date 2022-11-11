@@ -40,3 +40,17 @@ To uninstall the chart:
 ```bash
 helm delete clickhouse
 ```
+
+#### Discourse(R)
+
+To install the Discourse(R) chart:
+
+```bash
+helm install discourse observiq/discourse
+```
+
+To uninstall the chart:
+
+```bash
+helm delete discourse
+```
