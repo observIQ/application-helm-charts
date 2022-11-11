@@ -68,8 +68,8 @@ diagnosticMode:
 ##
 image:
   registry: docker.io
-  repository: bitnami/discourse
-  tag: 2.8.9-debian-11-r3
+  repository: ghcr.io/observiq/discourse
+  tag: cdf5616
   digest: ""
   ## Specify a imagePullPolicy
   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
