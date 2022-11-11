@@ -13,6 +13,7 @@ jobs:
       matrix:
         chart:
           - "clickhouse"
+          - "discourse"
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
