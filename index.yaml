@@ -68,6 +68,43 @@ entries:
       category: Forum
     apiVersion: v2
     appVersion: 2.8.9
+    created: "2022-11-11T20:03:56.476712011Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 17.X.X
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.X.X
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: Discourse is an open source discussion platform with built-in moderation
+      and governance systems that let discussion communities protect themselves from
+      bad actors even without official moderators.
+    digest: a0c863acf2a5239478d023146f364b2502e9448fff7085e23e552431d83bfce2
+    home: https://github.com/observIQ/charts/tree/main/charts/discourse
+    keywords:
+    - community
+    - forum
+    maintainers:
+    - name: observIQ
+    name: discourse
+    sources:
+    - https://github.com/bitnami/containers/tree/main/bitnami/discourse
+    - https://github.com/spinnaker
+    - https://www.discourse.org/
+    urls:
+    - https://github.com/observIQ/charts/releases/download/discourse-9.0.3/discourse-9.0.3.tgz
+    version: 9.0.3
+  - annotations:
+      category: Forum
+    apiVersion: v2
+    appVersion: 2.8.9
     created: "2022-11-11T19:49:58.120115651Z"
     dependencies:
     - condition: redis.enabled
@@ -175,4 +212,4 @@ entries:
     urls:
     - https://github.com/observIQ/charts/releases/download/discourse-9.0.0/discourse-9.0.0.tgz
     version: 9.0.0
-generated: "2022-11-11T19:49:58.120133351Z"
+generated: "2022-11-11T20:03:56.476735912Z"
