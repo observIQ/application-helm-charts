@@ -69,7 +69,7 @@ diagnosticMode:
 image:
   registry: docker.io
   repository: ghcr.io/observiq/discourse
-  tag: 8f49b7f
+  tag: ade8a41
   digest: ""
   ## Specify a imagePullPolicy
   ## Defaults to 'Always' if image tag is 'latest', else set to 'IfNotPresent'
