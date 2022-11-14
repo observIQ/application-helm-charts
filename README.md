@@ -1,4 +1,5 @@
 [![CI](https://github.com/observIQ/charts/actions/workflows/ci.yaml/badge.svg)](https://github.com/observIQ/charts/actions/workflows/ci.yaml)
+[![Release Container Images](https://github.com/observIQ/charts/actions/workflows/container.yaml/badge.svg)](https://github.com/observIQ/charts/actions/workflows/container.yaml)
 
 # Charts
 
