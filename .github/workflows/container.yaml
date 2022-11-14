@@ -14,6 +14,7 @@ jobs:
       matrix:
         app:
           - "discourse"
+          - "rubyexporter"
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -24,7 +25,7 @@ jobs:
         run: echo "GITHUB_SHA_SHORT=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
 
       - name: Build Image
-        run: "docker build -t ghcr.io/observiq/discourse:${GITHUB_SHA_SHORT} ."
+        run: "docker build -t ghcr.io/observiq/${{ matrix.app }}:${GITHUB_SHA_SHORT} ."
         working-directory: container/${{ matrix.app }}
 
       - name: Login to Github Container Registry
@@ -35,4 +36,4 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Docker Push
-        run: "docker push ghcr.io/observiq/discourse:${GITHUB_SHA_SHORT}"
+        run: "docker push ghcr.io/observiq/${{ matrix.app }}:${GITHUB_SHA_SHORT}"
