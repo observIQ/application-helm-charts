@@ -106,10 +106,6 @@ spec:
           args: {{- include "common.tplvalues.render" (dict "value" .Values.discourse.args "context" $) | nindent 12 }}
           {{- end }}
           env:
-            - name: PROMETHEUS_CLIENT_ADDRESS
-              valueFrom:
-                fieldRef:
-                  fieldPath: status.podIP
             - name: BITNAMI_DEBUG
               value: {{ ternary "true" "false" .Values.image.debug | quote }}
             - name: DISCOURSE_PASSWORD
@@ -219,7 +215,7 @@ spec:
             {{- include "common.tplvalues.render" (dict "value" .Values.discourse.extraVolumeMounts "context" $) | nindent 12 }}
             {{- end }}
         - name: exporter
-          image: ghcr.io/observiq/rubyexporter:8c5eebc
+          image: ghcr.io/observiq/rubyexporter:206de6f
           ports:
             - containerPort: 9405
               name: prometheus
