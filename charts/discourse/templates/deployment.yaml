@@ -218,6 +218,11 @@ spec:
             {{- if .Values.discourse.extraVolumeMounts }}
             {{- include "common.tplvalues.render" (dict "value" .Values.discourse.extraVolumeMounts "context" $) | nindent 12 }}
             {{- end }}
+        - name: exporter
+          image: ghcr.io/observiq/rubyexporter:74246b4
+          ports:
+            - containerPort: 9394
+              name: prometheus
         - name: sidekiq
           image: {{ include "discourse.image" . }}
           imagePullPolicy: {{ .Values.image.pullPolicy | quote }}
