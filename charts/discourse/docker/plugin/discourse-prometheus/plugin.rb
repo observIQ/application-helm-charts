@@ -37,8 +37,7 @@ Rails.configuration.middleware.unshift DiscoursePrometheus::Middleware::Metrics
 
 after_initialize do
   $prometheus_client = PrometheusExporter::Client.new(
-    # TODO(jsirianni): How does the enduser configure this?
-    host: '0.0.0.0', # was 'localhost'
+    host: ENV["PROMETHEUS_CLIENT_ADDRESS"], # was 'localhost'
     port: GlobalSetting.prometheus_collector_port
   )
 
