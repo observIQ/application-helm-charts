@@ -1,0 +1,38 @@
+name: Release Container Images
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "container/**"
+
+jobs:
+  push-images:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        app:
+          - "discourse"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Set GITHUB_SHA_SHORT
+        run: echo "GITHUB_SHA_SHORT=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
+
+      - name: Build Image
+        run: "docker build -t ghcr.io/observiq/discourse:${GITHUB_SHA_SHORT} ."
+        working-directory: container/${{ matrix.app }}
+
+      - name: Login to Github Container Registry
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Docker Push
+        run: "docker push ghcr.io/observiq/discourse:${GITHUB_SHA_SHORT}"
