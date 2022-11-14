@@ -219,9 +219,9 @@ spec:
             {{- include "common.tplvalues.render" (dict "value" .Values.discourse.extraVolumeMounts "context" $) | nindent 12 }}
             {{- end }}
         - name: exporter
-          image: ghcr.io/observiq/rubyexporter:ab56ae9
+          image: ghcr.io/observiq/rubyexporter:8c5eebc
           ports:
-            - containerPort: 9394
+            - containerPort: 9405
               name: prometheus
         - name: sidekiq
           image: {{ include "discourse.image" . }}
