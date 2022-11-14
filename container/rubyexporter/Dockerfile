@@ -1,4 +1,4 @@
-FROM ruby
+FROM ruby:3.1.2-slim-buster
 
 RUN gem install prometheus_exporter
 
