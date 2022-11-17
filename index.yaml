@@ -511,6 +511,22 @@ entries:
   tensorflow:
   - apiVersion: v2
     appVersion: 2.9.2
+    created: "2022-11-17T21:02:19.163956222Z"
+    digest: d56a1bebbef78eb7ea4bd0ad8fae509a3041714d59091157732e47f975ff5173
+    home: https://github.com/observIQ/charts/tree/main/charts/tensorflow
+    keywords:
+    - community
+    - forum
+    maintainers:
+    - name: observIQ
+    name: tensorflow
+    sources:
+    - https://github.com/tensorflow/serving
+    urls:
+    - https://github.com/observIQ/charts/releases/download/tensorflow-0.0.2/tensorflow-0.0.2.tgz
+    version: 0.0.2
+  - apiVersion: v2
+    appVersion: 2.9.2
     created: "2022-11-17T18:51:20.327703621Z"
     digest: 1704399ff77554bcc68914b400be90994abcd49f11f9cbd0f2cc46ce1451e54d
     home: https://github.com/observIQ/charts/tree/main/charts/tensorflow
@@ -525,4 +541,4 @@ entries:
     urls:
     - https://github.com/observIQ/charts/releases/download/tensorflow-0.0.1/tensorflow-0.0.1.tgz
     version: 0.0.1
-generated: "2022-11-17T18:51:20.328040526Z"
+generated: "2022-11-17T21:02:19.164003425Z"
