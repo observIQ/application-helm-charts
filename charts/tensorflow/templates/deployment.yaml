@@ -6,11 +6,11 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: httpd
+      app.kubernetes.io/app: tensorflow
   template:
     metadata:
       labels:
-        app: httpd
+        app.kubernetes.io/app: tensorflow
     spec:
       containers:
       - name: tensorflow
