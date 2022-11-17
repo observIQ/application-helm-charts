@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  tensorflow:
+    restart: always
+    build: .
+    command:
+      - --monitoring_config_file=/monitoring_config.txt
+    ports:
+      - "8500:8500"
+      - "8501:8501"
