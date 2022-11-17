@@ -14,6 +14,8 @@ jobs:
         chart:
           - "clickhouse"
           - "discourse"
+          - "tensorflow"
+
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
