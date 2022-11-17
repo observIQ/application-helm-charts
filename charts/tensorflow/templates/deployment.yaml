@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: httpd
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: httpd
+  template:
+    metadata:
+      labels:
+        app: httpd
+    spec:
+      containers:
+      - name: tensorflow
+        image: {{ .Values.image }}
+        args:
+          - --monitoring_config_file=/monitoring_config.txt
+        ports:
+        - containerPort: 8500
+          name: api
+        - containerPort: 8501
+          name: prometheus
+        livenessProbe:
+          httpGet:
+            path: /monitoring/prometheus/metrics
+            port: prometheus
+          initialDelaySeconds: 10
+          periodSeconds: 1
+          successThreshold: 1
+          timeoutSeconds: 1
+          failureThreshold: 5

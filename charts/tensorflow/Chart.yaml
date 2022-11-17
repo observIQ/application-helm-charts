@@ -1,0 +1,13 @@
+apiVersion: v2
+appVersion: 2.9.2
+engine: gotpl
+home: https://github.com/observIQ/charts/tree/main/charts/tensorflow
+keywords:
+  - community
+  - forum
+maintainers:
+  - name: observIQ
+name: tensorflow
+sources:
+  - https://github.com/tensorflow/serving
+version: 0.0.1
