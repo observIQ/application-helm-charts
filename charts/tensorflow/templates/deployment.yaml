@@ -31,3 +31,5 @@ spec:
           successThreshold: 1
           timeoutSeconds: 1
           failureThreshold: 5
+      - name: loadgen
+        image: {{ .Values.loadimage }}
