@@ -16,6 +16,7 @@ jobs:
           - "discourse"
           - "rubyexporter"
           - "tensorflow"
+          - "tensorflowload"
     steps:
       - name: Checkout
         uses: actions/checkout@v2
