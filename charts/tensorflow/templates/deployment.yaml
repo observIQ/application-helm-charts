@@ -17,6 +17,8 @@ spec:
         image: {{ .Values.image }}
         args:
           - --monitoring_config_file=/monitoring_config.txt
+          - --enable_batching
+          - --batching_parameters_file=/batching_config.txt
         ports:
         - containerPort: 8500
           name: api
