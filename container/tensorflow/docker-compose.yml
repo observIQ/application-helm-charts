@@ -5,6 +5,8 @@ services:
     build: .
     command:
       - --monitoring_config_file=/monitoring_config.txt
+      - --enable_batching
+      - --batching_parameters_file=/batching_config.txt
     ports:
       - "8500:8500"
       - "8501:8501"
