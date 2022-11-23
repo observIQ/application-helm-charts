@@ -2,7 +2,7 @@
 
 while :
 do
-    curl -v \
+    curl \
         --silent \
         --output /dev/null \
         -d '{"instances": [13.0, 23.0, 53.0, 103.0, 503.0, 15, 17]}' \
