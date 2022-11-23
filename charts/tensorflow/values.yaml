@@ -1,2 +1,2 @@
 image: ghcr.io/observiq/tensorflow:071f499
-loadimage: ghcr.io/observiq/tensorflowload:071f499
+loadimage: ghcr.io/observiq/tensorflowload:d57e9b2
