@@ -19,4 +19,9 @@ data:
         labels:
           instance: ${INSTANCE}:9363
           job: integrations/clickhouse
-          __path__: /var/log/clickhouse-server/*err.log
+          __path__: /var/log/clickhouse-server/clickhouse-server.err.log
+      pipeline_stages:
+      - multiline:
+          firstline: '^([\d]{4}).([\d]{1,2}).([\d]{1,2}) (([\d]+):([\d]+):([\d]+).([\d]+))'
+      - regex:
+          expression: '(?P<timestamp>(([\d]{4}).([\d]{1,2}).([\d]{1,2}) (([\d]+):([\d]+):([\d]+).([\d]+))) (?P<message>(?s:.*))$)'
