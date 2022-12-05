@@ -15,3 +15,6 @@ spec:
       containers:
       - name: wildfly
         image: {{ .Values.image }}
+        ports:
+        - containerPort: 9990
+          name: jmx
