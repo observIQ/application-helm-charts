@@ -15,6 +15,7 @@ jobs:
           - "clickhouse"
           - "discourse"
           - "tensorflow"
+          - "wildfly"
 
     runs-on: ubuntu-latest
     steps:

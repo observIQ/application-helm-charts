@@ -55,3 +55,17 @@ To uninstall the chart:
 ```bash
 helm delete discourse
 ```
+
+#### Wildfly
+
+To install the Wildfly chart:
+
+```bash
+helm install wildfly observiq/wildfly
+```
+
+To uninstall the chart:
+
+```bash
+helm delete wildfly
+```
