@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+  wildfly:
+    restart: always
+    build:
+      context: .
+    ports:
+      - "8080:8080"
+      - "9990:9990"
