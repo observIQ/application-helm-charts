@@ -1,4 +1,4 @@
-FROM tensorflow/serving:2.9.2
+FROM tensorflow/serving:2.11.0
 
 COPY monitoring_config.txt /monitoring_config.txt
 COPY batching_config.txt /batching_config.txt
