@@ -1,0 +1,3 @@
+image: mcr.microsoft.com/mssql/server:2022-latest
+# This password is hardcoded for local development use only.
+mssql_sa_password: X#BcoDVsH^u9tp

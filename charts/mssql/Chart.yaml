@@ -1,0 +1,13 @@
+apiVersion: v2
+appVersion: 2022-latest
+engine: gotpl
+home: https://github.com/observIQ/charts/tree/main/charts/mssql
+keywords:
+  - community
+  - forum
+maintainers:
+  - name: observIQ
+name: mssql
+sources:
+  - https://github.com/Microsoft/mssql-docker
+version: 0.0.1

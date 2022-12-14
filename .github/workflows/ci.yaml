@@ -16,6 +16,7 @@ jobs:
           - "discourse"
           - "tensorflow"
           - "wildfly"
+          - "mssql"
 
     runs-on: ubuntu-latest
     steps:
