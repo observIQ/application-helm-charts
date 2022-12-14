@@ -529,6 +529,23 @@ entries:
     urls:
     - https://github.com/observIQ/charts/releases/download/discourse-9.0.0/discourse-9.0.0.tgz
     version: 9.0.0
+  mssql:
+  - apiVersion: v2
+    appVersion: 2022-latest
+    created: "2022-12-14T14:34:49.338326482Z"
+    digest: 625916e251f125266040628cc74d406b5e1555ca87279a66d657f4295e4fbf12
+    home: https://github.com/observIQ/charts/tree/main/charts/mssql
+    keywords:
+    - community
+    - forum
+    maintainers:
+    - name: observIQ
+    name: mssql
+    sources:
+    - https://github.com/Microsoft/mssql-docker
+    urls:
+    - https://github.com/observIQ/charts/releases/download/mssql-0.0.1/mssql-0.0.1.tgz
+    version: 0.0.1
   tensorflow:
   - apiVersion: v2
     appVersion: 2.11.0
@@ -691,4 +708,4 @@ entries:
     urls:
     - https://github.com/observIQ/charts/releases/download/wildfly-0.0.1/wildfly-0.0.1.tgz
     version: 0.0.1
-generated: "2022-12-07T15:42:23.665575005Z"
+generated: "2022-12-14T14:34:49.338373684Z"
