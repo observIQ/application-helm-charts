@@ -69,3 +69,17 @@ To uninstall the chart:
 ```bash
 helm delete wildfly
 ```
+
+#### MSSQL
+
+To install the Wildfly chart:
+
+```bash
+helm install mssql observiq/mssql
+```
+
+To uninstall the chart:
+
+```bash
+helm delete mssql
+```
