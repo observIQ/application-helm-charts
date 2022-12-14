@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mssql
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/app: mssql
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/app: mssql
+    spec:
+      containers:
+      - name: mssql
+        image: {{ .Values.image }}
+        env:
+        - name: ACCEPT_EULA
+          value: "Y"
+        - name: MSSQL_SA_PASSWORD
+          value: {{ .Values.mssql_sa_password }}
+        ports:
+        - containerPort: 1433
+          name: mssql

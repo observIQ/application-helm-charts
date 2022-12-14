@@ -1,0 +1,2 @@
+image: mcr.microsoft.com/mssql/server:2022-latest
+mssql_sa_password: X#BcoDVsH^u9tp
