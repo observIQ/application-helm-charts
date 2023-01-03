@@ -15,5 +15,8 @@ spec:
       containers:
       - name: oracledbxe
         image: gvenzl/oracle-xe:21.3.0
+        env:
+        - name: ORACLE_RANDOM_PASSWORD
+          value: yes
         ports:
         - containerPort: 1521
