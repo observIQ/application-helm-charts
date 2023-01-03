@@ -16,7 +16,7 @@ spec:
       - name: oracledbxe
         image: gvenzl/oracle-xe:21.3.0
         env:
-        - name: ORACLE_RANDOM_PASSWORD
-          value: yes
+        - name: ORACLE_PASSWORD
+          value: "medora5234!"
         ports:
         - containerPort: 1521
