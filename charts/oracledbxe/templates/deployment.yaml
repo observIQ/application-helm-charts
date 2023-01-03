@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: oracledbxe
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/app: oracledbxe
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/app: oracledbxe
+    spec:
+      containers:
+      - name: oracledbxe
+        image: gvenzl/oracle-xe:21.3.0
+        ports:
+        - containerPort: 1521
