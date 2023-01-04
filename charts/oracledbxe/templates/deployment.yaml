@@ -16,6 +16,8 @@ spec:
       - name: oracledbxe
         image: {{ .Values.image }}
         resources:
+          requests:
+            memory: "3G"
           limits:
             memory: "3G"
         env:
