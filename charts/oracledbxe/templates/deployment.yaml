@@ -17,6 +17,10 @@ spec:
         image: gvenzl/oracle-xe:21.3.0
         env:
         - name: ORACLE_PASSWORD
-          value: "medora5234!"
+          value: "Evergreen8080"
+        - name: APP_USER
+          value: "oracleUser"
+        - name: APP_USER_PASSWORD
+          value: "Evergreen8181"
         ports:
         - containerPort: 1521
