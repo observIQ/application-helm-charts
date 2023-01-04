@@ -17,10 +17,10 @@ spec:
         image: gvenzl/oracle-xe:21.3.0
         env:
         - name: ORACLE_PASSWORD
-          value: "Evergreen8080"
+          value: "r7DC9$8o8Op"
         - name: APP_USER
           value: "oracleUser"
         - name: APP_USER_PASSWORD
-          value: "Evergreen8181"
+          value: "r7DC9$8o8Op"
         ports:
         - containerPort: 1521
