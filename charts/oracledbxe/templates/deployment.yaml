@@ -14,7 +14,12 @@ spec:
     spec:
       containers:
       - name: oracledbxe
-        image: gvenzl/oracle-xe:21.3.0
+        image: {{ .Values.image }}
+        resources:
+          requests:
+            memory: "3G"
+          limits:
+            memory: "3G"
         env:
         - name: ORACLE_PASSWORD
           value: "r7DC9$8o8Op"
