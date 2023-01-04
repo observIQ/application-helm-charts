@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: oracledbxe
-        image: gvenzl/oracle-xe:21.3.0
+        image: {{ .Values.image }}
         env:
         - name: ORACLE_PASSWORD
           value: "Evergreen8080"
