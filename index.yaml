@@ -546,6 +546,23 @@ entries:
     urls:
     - https://github.com/observIQ/charts/releases/download/mssql-0.0.1/mssql-0.0.1.tgz
     version: 0.0.1
+  oracledbxe:
+  - apiVersion: v2
+    appVersion: 21.3.0
+    created: "2023-01-04T18:52:14.959404876Z"
+    digest: 5db6c11936d35ec26cf9e051196954cdf8d2ff963939fcba0ea6138fb3bc3c48
+    home: https://github.com/observIQ/charts/tree/main/charts/oracledbxe
+    keywords:
+    - community
+    - forum
+    maintainers:
+    - name: observIQ
+    name: oracledbxe
+    sources:
+    - https://github.com/gvenzl/oci-oracle-xe
+    urls:
+    - https://github.com/observIQ/charts/releases/download/oracledbxe-0.0.1/oracledbxe-0.0.1.tgz
+    version: 0.0.1
   tensorflow:
   - apiVersion: v2
     appVersion: 2.11.0
@@ -708,4 +725,4 @@ entries:
     urls:
     - https://github.com/observIQ/charts/releases/download/wildfly-0.0.1/wildfly-0.0.1.tgz
     version: 0.0.1
-generated: "2022-12-14T14:34:49.338373684Z"
+generated: "2023-01-04T18:52:14.959441278Z"
