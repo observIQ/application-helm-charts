@@ -17,6 +17,7 @@ jobs:
           - "tensorflow"
           - "wildfly"
           - "mssql"
+          - "oracledbxe"
 
     runs-on: ubuntu-latest
     steps:
