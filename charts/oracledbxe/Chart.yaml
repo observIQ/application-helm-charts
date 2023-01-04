@@ -1,0 +1,13 @@
+apiVersion: v2
+appVersion: 21.3.0
+engine: gotpl
+home: https://github.com/observIQ/charts/tree/main/charts/oracledbxe
+keywords:
+  - community
+  - forum
+maintainers:
+  - name: observIQ
+name: oracledbxe
+sources:
+  - https://github.com/gvenzl/oci-oracle-xe
+version: 0.0.1
