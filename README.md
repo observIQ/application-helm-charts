@@ -83,3 +83,17 @@ To uninstall the chart:
 ```bash
 helm delete mssql
 ```
+
+#### OracleDB Express Edition 21c (21.3.0)
+
+To install the OracleDB XE chart:
+
+```bash
+helm install oracledbxe observiq/oracledbxe
+```
+
+To uninstall the chart:
+
+```bash
+helm delete oracledbxe
+```
