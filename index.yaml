@@ -695,6 +695,22 @@ entries:
   wildfly:
   - apiVersion: v2
     appVersion: 27.0.0.Final
+    created: "2023-01-27T16:39:08.974985005Z"
+    digest: 781ea5d0c234a8502513fc38e05040d5d568923816e52b7f97342e8527e1e574
+    home: https://github.com/observIQ/charts/tree/main/charts/wildfly
+    keywords:
+    - community
+    - forum
+    maintainers:
+    - name: observIQ
+    name: wildfly
+    sources:
+    - https://github.com/wildfly/wildfly
+    urls:
+    - https://github.com/observIQ/charts/releases/download/wildfly-0.0.3/wildfly-0.0.3.tgz
+    version: 0.0.3
+  - apiVersion: v2
+    appVersion: 27.0.0.Final
     created: "2022-12-05T21:42:27.726137386Z"
     digest: 10c52543937418e3a4e5b0cfe671c52ee519cb7fa0db5e1b252d07d8ac2eeb8c
     home: https://github.com/observIQ/charts/tree/main/charts/wildfly
@@ -725,4 +741,4 @@ entries:
     urls:
     - https://github.com/observIQ/charts/releases/download/wildfly-0.0.1/wildfly-0.0.1.tgz
     version: 0.0.1
-generated: "2023-01-04T18:52:14.959441278Z"
+generated: "2023-01-27T16:39:08.975368511Z"
