@@ -29,10 +29,10 @@ observiq` to see the charts.
 ### Updating container images
 
 1. Open PR for changes to container image
-2. Approve and merge PR
+2. Request a review. Once approved, merge PR
 3. Watch main branch CI. It will build and push the image. The CI output will usually have the image tag.
 4. Open another PR changing the image used by the helm chart. Be sure to update the chart version.
-5. Approve and merge
+5. Request a review. Once approved, merge PR
 6. CI will release the helm chart
 7. Update your local helm repo to get the new chart version, which will have your new image.
 
