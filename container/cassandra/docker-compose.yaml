@@ -1,0 +1,20 @@
+version: "3.9"
+services:
+  cassandra1:
+    restart: always
+    build:
+      context: .
+    ports:
+      - "7199:7199"
+  cassandra2:
+    restart: always
+    build:
+      context: .
+    environment:
+      - CASSANDRA_SEEDS=cassandra1
+  cassandra3:
+    restart: always
+    build:
+      context: .
+    environment:
+      - CASSANDRA_SEEDS=cassandra1
