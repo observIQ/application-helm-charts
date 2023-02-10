@@ -1,0 +1,13 @@
+apiVersion: v2
+appVersion: 4.1.0
+engine: gotpl
+home: https://github.com/observIQ/charts/tree/main/charts/cassandra
+keywords:
+  - community
+  - forum
+maintainers:
+  - name: observIQ
+name: cassandra
+sources:
+  - https://github.com/apache/cassandra
+version: 0.0.1
