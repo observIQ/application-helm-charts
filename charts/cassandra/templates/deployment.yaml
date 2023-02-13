@@ -40,7 +40,6 @@ spec:
             value: "-Xms2048M -Xmx2048M -XX:MaxPermSize=2048M -XX:MaxHeapSize=2048M"
         resources:
           limits:
-            cpu: "500m"
             memory: 2G
           requests:
             cpu: "500m"
