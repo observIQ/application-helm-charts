@@ -3,6 +3,22 @@ entries:
   cassandra:
   - apiVersion: v2
     appVersion: 4.1.0
+    created: "2023-02-13T21:36:05.461025953Z"
+    digest: 38ac53ed530a03a7b2e4f62c27b7444e50adb58f888cbab8615afb135399b217
+    home: https://github.com/observIQ/charts/tree/main/charts/cassandra
+    keywords:
+    - community
+    - forum
+    maintainers:
+    - name: observIQ
+    name: cassandra
+    sources:
+    - https://github.com/apache/cassandra
+    urls:
+    - https://github.com/observIQ/charts/releases/download/cassandra-0.0.2/cassandra-0.0.2.tgz
+    version: 0.0.2
+  - apiVersion: v2
+    appVersion: 4.1.0
     created: "2023-02-13T19:10:01.712801576Z"
     digest: 1307d3892d00df9caff47b90326879819b970f044d1654812770047936dd96f9
     home: https://github.com/observIQ/charts/tree/main/charts/cassandra
@@ -774,4 +790,4 @@ entries:
     urls:
     - https://github.com/observIQ/charts/releases/download/wildfly-0.0.1/wildfly-0.0.1.tgz
     version: 0.0.1
-generated: "2023-02-13T19:10:01.712862576Z"
+generated: "2023-02-13T21:36:05.461083354Z"
