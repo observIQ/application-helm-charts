@@ -37,7 +37,7 @@ spec:
           - name: CASSANDRA_SEEDS
             value: "cassandra-0.cassandra.default.svc.cluster.local"
           - name: JVM_OPTS
-            value: "-Xms1024M -Xmx2048M -XX:MaxPermSize=2048M -XX:MaxHeapSize=2048M"
+            value: "-Xms2048M -Xmx2048M -XX:MaxPermSize=2048M -XX:MaxHeapSize=2048M"
         resources:
           limits:
             cpu: "500m"
