@@ -1,1 +1,1 @@
-image: bmedora/cassandra:4.1.0-jmx
+image: ghcr.io/observiq/cassandra:e6af083
