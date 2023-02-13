@@ -36,3 +36,10 @@ spec:
         env:
           - name: CASSANDRA_SEEDS
             value: "cassandra-0.cassandra.default.svc.cluster.local"
+        resources:
+          limits:
+            cpu: "500m"
+            memory: 4G
+          requests:
+            cpu: "500m"
+            memory: 4G
