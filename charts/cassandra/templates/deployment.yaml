@@ -134,6 +134,9 @@ spec:
       protocol: TCP
       port: 7000
       targetPort: 7000
+    - name: exporter
+      protocol: TCP
+      targetPort: 9000
 ---
 apiVersion: apps/v1
 kind: StatefulSet
