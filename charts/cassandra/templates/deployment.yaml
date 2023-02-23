@@ -178,6 +178,9 @@ spec:
             memory: 2G
       - name: jmx-exporter
         image: bitnami/jmx-exporter:0.17.2
+        ports:
+        - name: exporter
+          containerPort: 9000
         command:
           - java
           - -jar
