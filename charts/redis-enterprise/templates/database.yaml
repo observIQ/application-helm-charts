@@ -1,0 +1,8 @@
+apiVersion: app.redislabs.com/v1alpha1
+kind: RedisEnterpriseDatabase
+metadata:
+  name: test-db-2
+spec:
+  memorySize: 100MB
+  redisEnterpriseCluster:
+    name: my-rec
