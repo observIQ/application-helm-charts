@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: extra-jobs
+  namespace: default
+stringData:
+  jobs.yaml: |
+    - job_name: integrations/redis-enterprise
+      metrics_path: "/metrics"
+      scheme: https
+      scrape_interval: 1m
+      static_configs:
+        - targets:
+          - my-rec-prom:8070
+      tls_config:
+        insecure_skip_verify: true

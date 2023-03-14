@@ -1,0 +1,20 @@
+apiVersion: monitoring.grafana.com/v1alpha1
+kind: MetricsInstance
+metadata:
+  name: primary
+  namespace: default
+  labels:
+    agent: grafana-agent-metrics
+spec:
+  remoteWrite:
+    - basicAuth:
+        password:
+          name: primary-credentials-metrics
+          key: password
+        username: 
+          name: primary-credentials-metrics
+          key: username
+      url: https://prometheus-us-central1.grafana.net/api/prom/push
+  additionalScrapeConfigs:
+    name: extra-jobs
+    key: jobs.yaml

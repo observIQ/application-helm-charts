@@ -1,0 +1,14 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PodMonitor
+metadata:
+  labels:
+    instance: primary
+  name: rec-prometheus-monitor
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      instance: primary
+  podMetricsEndpoints:
+    - port: "8070"
+      path: "/"
