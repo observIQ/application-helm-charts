@@ -170,12 +170,21 @@ spec:
             valueFrom:
               fieldRef:
                 fieldPath: status.podIP
+        readinessProbe:
+          exec:
+            command:
+            - /bin/bash
+            - -c
+            - /ready-probe.sh
+          initialDelaySeconds: 60
+          timeoutSeconds: 30
+          failureThreshold: 5
         resources:
           limits:
-            memory: 2G
+            memory: 3G
           requests:
             cpu: "500m"
-            memory: 2G
+            memory: 3G
       - name: jmx-exporter
         image: bitnami/jmx-exporter:0.17.2
         ports:
