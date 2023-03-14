@@ -170,6 +170,14 @@ spec:
             valueFrom:
               fieldRef:
                 fieldPath: status.podIP
+        readinessProbe:
+          exec:
+            command:
+            - /bin/bash
+            - -c
+            - /ready-probe.sh
+          initialDelaySeconds: 30
+          timeoutSeconds: 5
         resources:
           limits:
             memory: 2G
