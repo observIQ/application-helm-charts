@@ -155,7 +155,7 @@ spec:
         image: {{ .Values.image }}
         env:
           - name: CASSANDRA_SEEDS
-            value: "cassandra-0.cassandra.default.svc.cluster.local"
+            value: "cassandra-0.cassandra.sample-apps.svc.cluster.local"
           - name: CASSANDRA_DC
             value: "TEST_DC"
           - name: CASSANDRA_CLUSTER_NAME
@@ -184,7 +184,7 @@ spec:
             memory: 3G
           requests:
             cpu: "500m"
-            memory: 3G
+            memory: 1G
       - name: jmx-exporter
         image: bitnami/jmx-exporter:0.17.2
         ports:
