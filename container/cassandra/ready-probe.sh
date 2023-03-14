@@ -1,4 +1,4 @@
-if [[ $(nodetool status | grep $POD_IP) == *"UN"* ]]; then
+if [[ $(nodetool status | grep $CASSANDRA_LISTEN_ADDRESS) == *"UN"* ]]; then
   if [[ $DEBUG ]]; then
     echo "UN";
   fi
