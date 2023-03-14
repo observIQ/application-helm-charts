@@ -176,8 +176,8 @@ spec:
             - /bin/bash
             - -c
             - /ready-probe.sh
-          initialDelaySeconds: 30
-          timeoutSeconds: 5
+          initialDelaySeconds: 45
+          timeoutSeconds: 15
         resources:
           limits:
             memory: 2G
