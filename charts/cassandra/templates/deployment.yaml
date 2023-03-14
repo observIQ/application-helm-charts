@@ -184,7 +184,7 @@ spec:
             memory: 3G
           requests:
             cpu: "500m"
-            memory: 1G
+            memory: 3G
       - name: jmx-exporter
         image: bitnami/jmx-exporter:0.17.2
         ports:
