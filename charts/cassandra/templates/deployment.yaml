@@ -155,7 +155,7 @@ spec:
         image: {{ .Values.image }}
         env:
           - name: CASSANDRA_SEEDS
-            value: "cassandra-0.cassandra.default.svc.cluster.local"
+            value: "cassandra-0.cassandra.sample-apps.svc.cluster.local"
           - name: CASSANDRA_DC
             value: "TEST_DC"
           - name: CASSANDRA_CLUSTER_NAME
