@@ -141,7 +141,7 @@ metadata:
   name: cassandra
 spec:
   serviceName: cassandra
-  replicas: 3
+  replicas: {{ .Values.replicas }}
   selector:
     matchLabels:
       app.kubernetes.io/app: cassandra
