@@ -31,7 +31,7 @@ jobs:
       #   run: echo "GITHUB_SHA_SHORT=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
       - name: Get Tag From Environment
         id: get-tag
-        run: printf '::set-output name=tag::%s' "$(printf '%s' "${{ github.ref }}" | sed 's/refs\/tags\///')"
+        run: printf '::set-output name=tag::%s' "$(git rev-parse --short HEAD)"
 
       - name: Set up Docker Buildx
         id: buildx
