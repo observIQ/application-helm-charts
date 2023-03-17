@@ -27,8 +27,11 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Set GITHUB_SHA_SHORT
-        run: echo "GITHUB_SHA_SHORT=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
+      # - name: Set GITHUB_SHA_SHORT
+      #   run: echo "GITHUB_SHA_SHORT=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
+      - name: Get Tag From Environment
+        id: get-tag
+        run: printf '::set-output name=tag::%s' "$(printf '%s' "${{ github.ref }}" | sed 's/refs\/tags\///')"
 
       - name: Set up Docker Buildx
         id: buildx
@@ -51,4 +54,4 @@ jobs:
           file: ./Dockerfile
           platforms: linux/amd64
           push: false # true
-          tags:  ghcr.io/observiq/${{ matrix.app }}:${GITHUB_SHA_SHORT}
+          tags:  ghcr.io/observiq/${{ matrix.app }}:${{ steps.get-tag.outputs.tag }}
