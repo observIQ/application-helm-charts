@@ -7,7 +7,6 @@ on:
     paths:
       - "container/**"
       - ".github/workflows/container.yaml"
-  pull_request:
 
 jobs:
   push-images:
@@ -27,8 +26,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      # - name: Set GITHUB_SHA_SHORT
-      #   run: echo "GITHUB_SHA_SHORT=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
       - name: Get Tag From Environment
         id: get-tag
         run: printf '::set-output name=tag::%s' "$(git rev-parse --short HEAD)"
@@ -53,5 +50,5 @@ jobs:
           context: container/${{ matrix.app }}
           file: container/${{ matrix.app }}/Dockerfile
           platforms: linux/amd64,linux/arm64
-          push: false # true
+          push:  true
           tags:  ghcr.io/observiq/${{ matrix.app }}:${{ steps.get-tag.outputs.tag }}
