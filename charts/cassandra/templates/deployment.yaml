@@ -181,10 +181,10 @@ spec:
           failureThreshold: 5
         resources:
           limits:
-            memory: 3G
+            memory: 2.5G
           requests:
             cpu: "500m"
-            memory: 3G
+            memory: 2.5G
       - name: jmx-exporter
         image: bitnami/jmx-exporter:0.17.2
         ports:
