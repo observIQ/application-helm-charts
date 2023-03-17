@@ -51,7 +51,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: container/${{ matrix.app }}
-          file: ./Dockerfile
+          file: container/${{ matrix.app }}/Dockerfile
           platforms: linux/amd64
           push: false # true
           tags:  ghcr.io/observiq/${{ matrix.app }}:${{ steps.get-tag.outputs.tag }}
