@@ -220,17 +220,19 @@ spec:
 apiVersion: batch/v1
 kind: CronJob
 metadata:
-  name: cassandra-loadgen
+  name: apache-cassandra-loadgen
   namespace: sample-apps
 spec:
   schedule: "*/5 * * * *"
+  successfulJobsHistoryLimit: 1
+  failedJobsHistoryLimit: 1
   jobTemplate:
     spec:
       parallelism: 1
       template:
         spec:
           containers:
-          - name: cassandra-loadgen
+          - name: apache-cassandra-loadgen
             image: ghcr.io/observiq/cassandra:cac2e00
             imagePullPolicy: IfNotPresent
             command:
