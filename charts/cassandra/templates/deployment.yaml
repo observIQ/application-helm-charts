@@ -223,7 +223,7 @@ metadata:
   name: cassandra-loadgen
   namespace: sample-apps
 spec:
-  schedule: "*/2 * * * *"
+  schedule: "*/5 * * * *"
   jobTemplate:
     spec:
       parallelism: 1
