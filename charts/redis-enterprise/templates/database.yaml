@@ -6,6 +6,10 @@ spec:
   memorySize: 100MB
   redisEnterpriseCluster:
     name: my-rec
+  rolesPermissions:
+    - type: redis-enterprise
+      role: "Admin"
+      acl: "Full Access"
 ---
 apiVersion: app.redislabs.com/v1alpha1
 kind: RedisEnterpriseDatabase
@@ -15,3 +19,7 @@ spec:
   memorySize: 100MB
   redisEnterpriseCluster:
     name: my-rec
+  rolesPermissions:
+    - type: redis-enterprise
+      role: "Admin"
+      acl: "Full Access"
