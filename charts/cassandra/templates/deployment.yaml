@@ -121,41 +121,45 @@ data:
 apiVersion: v1
 kind: Service
 metadata:
-  name: cassandra
+  name: apache-cassandra
 spec:
   selector:
-    app.kubernetes.io/app: cassandra
+    app.kubernetes.io/app: apache-cassandra
   ports:
     - name: jmx
       protocol: TCP
       port: 7199
       targetPort: 7199
-    - name: cassandra
+    - name: apache-cassandra
       protocol: TCP
       port: 7000
       targetPort: 7000
+    - name: client
+      protocol: TCP
+      port: 9042
+      targetPort: 9042
 ---
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: cassandra
+  name: apache-cassandra
 spec:
-  serviceName: cassandra
+  serviceName: apache-cassandra
   replicas: {{ .Values.replicas }}
   selector:
     matchLabels:
-      app.kubernetes.io/app: cassandra
+      app.kubernetes.io/app: apache-cassandra
   template:
     metadata:
       labels:
-        app.kubernetes.io/app: cassandra
+        app.kubernetes.io/app: apache-cassandra
     spec:
       containers:
-      - name: cassandra
+      - name: apache-cassandra
         image: {{ .Values.image }}
         env:
           - name: CASSANDRA_SEEDS
-            value: "cassandra-0.cassandra.sample-apps.svc.cluster.local"
+            value: "apache-cassandra-0.apache-cassandra.sample-apps.svc.cluster.local"
           - name: CASSANDRA_DC
             value: "TEST_DC"
           - name: CASSANDRA_CLUSTER_NAME
@@ -170,6 +174,9 @@ spec:
             valueFrom:
               fieldRef:
                 fieldPath: status.podIP
+        ports:
+        - name: client
+          containerPort: 9042
         readinessProbe:
           exec:
             command:
@@ -181,10 +188,10 @@ spec:
           failureThreshold: 5
         resources:
           limits:
-            memory: 3G
+            memory: 2.5G
           requests:
             cpu: "500m"
-            memory: 3G
+            memory: 2.5G
       - name: jmx-exporter
         image: bitnami/jmx-exporter:0.17.2
         ports:
@@ -209,3 +216,28 @@ spec:
           items:
           - key: config.yaml
             path: config.yaml
+---
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: apache-cassandra-loadgen
+  namespace: sample-apps
+spec:
+  schedule: "*/5 * * * *"
+  successfulJobsHistoryLimit: 1
+  failedJobsHistoryLimit: 1
+  jobTemplate:
+    spec:
+      parallelism: 1
+      template:
+        spec:
+          containers:
+          - name: apache-cassandra-loadgen
+            image: {{ .Values.image }}
+            imagePullPolicy: IfNotPresent
+            command:
+            - /bin/sh
+            - -c
+            # ignore errors as to skip read validations when running on mixed mode
+            - /opt/cassandra/tools/bin/cassandra-stress mixed n=10000 -node 'apache-cassandra.sample-apps.svc.cluster.local:9042 -errors ignore'
+          restartPolicy: Never
