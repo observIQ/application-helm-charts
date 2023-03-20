@@ -233,7 +233,7 @@ spec:
         spec:
           containers:
           - name: apache-cassandra-loadgen
-            image: ghcr.io/observiq/cassandra:cac2e00
+            image: {{ .Values.image }}
             imagePullPolicy: IfNotPresent
             command:
             - /bin/sh
