@@ -7,7 +7,7 @@ keywords:
   - forum
 maintainers:
   - name: observIQ
-name: cassandra
+name: apache-cassandra
 sources:
   - https://github.com/apache/cassandra
 version: 0.0.7

@@ -1,2 +1,2 @@
-image: ghcr.io/observiq/cassandra:1ba3b90
+image: ghcr.io/observiq/cassandra:cac2e00
 replicas: 3
