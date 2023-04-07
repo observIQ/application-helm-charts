@@ -6,6 +6,7 @@ spec:
   memorySize: 100MB
   redisEnterpriseCluster:
     name: my-rec
+  replication: true
   rolesPermissions:
     - type: redis-enterprise
       role: "Admin"
@@ -19,6 +20,7 @@ spec:
   memorySize: 100MB
   redisEnterpriseCluster:
     name: my-rec
+  replication: true
   rolesPermissions:
     - type: redis-enterprise
       role: "Admin"
