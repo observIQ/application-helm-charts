@@ -3,6 +3,7 @@ apiVersion: "app.redislabs.com/v1"
 kind: "RedisEnterpriseCluster"
 metadata:
   name: my-rec-1
+  namespace: redis-1
 spec:
   nodes: 3
   redisEnterpriseNodeResources:
