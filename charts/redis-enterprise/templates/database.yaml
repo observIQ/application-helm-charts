@@ -5,21 +5,7 @@ metadata:
 spec:
   memorySize: 100MB
   redisEnterpriseCluster:
-    name: my-rec
-  replication: true
-  rolesPermissions:
-    - type: redis-enterprise
-      role: "Admin"
-      acl: "Full Access"
----
-apiVersion: app.redislabs.com/v1alpha1
-kind: RedisEnterpriseDatabase
-metadata:
-  name: test-db-1
-spec:
-  memorySize: 100MB
-  redisEnterpriseCluster:
-    name: my-rec
+    name: my-rec-0
   replication: true
   rolesPermissions:
     - type: redis-enterprise
