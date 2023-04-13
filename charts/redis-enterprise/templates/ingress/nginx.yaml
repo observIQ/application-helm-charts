@@ -363,6 +363,7 @@ spec:
     app.kubernetes.io/component: controller
     app.kubernetes.io/instance: ingress-nginx
     app.kubernetes.io/name: ingress-nginx
+  loadBalancerIP: 104.155.171.190
   type: LoadBalancer
 ---
 apiVersion: v1
