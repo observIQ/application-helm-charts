@@ -11,8 +11,8 @@ stringData:
       scrape_interval: 1m
       static_configs:
         - targets:
-            - my-rec-0-prom:8070
-            - my-rec-1-prom:8070
+            - my-rec-0-prom.redis-0.svc.cluster.local:8070
+            - my-rec-1-prom.redis-1.svc.cluster.local:8070
           labels:
             redis_cluster: 'Redis Enterprise cluster'
       tls_config:

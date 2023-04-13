@@ -6,7 +6,7 @@ metadata:
     nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
     cert-manager.io/cluster-issuer: letsencrypt-production
   name: my-rec-0-ui
-  namespace: default
+  namespace: redis-0
 spec:
   rules:
   - host: redis-0-ui.data-metric.com
@@ -31,21 +31,21 @@ metadata:
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
     cert-manager.io/cluster-issuer: letsencrypt-production
-  name: my-rec-0
-  namespace: default
+  name: my-rec-1-ui
+  namespace: redis-1
 spec:
   rules:
-  - host: redis-0.data-metric.com
+  - host: redis-1-ui.data-metric.com
     http:
       paths:
       - backend:
           service:
-            name: my-rec-0
+            name: my-rec-1-ui
             port:
-              number: 9443
+              number: 8443
         path: /
         pathType: Prefix
   tls:
   - hosts:
-    - redis-0.data-metric.com
-    secretName: my-rec-0-tls
+    - redis-1-ui.data-metric.com
+    secretName: my-rec-1-ui-tls

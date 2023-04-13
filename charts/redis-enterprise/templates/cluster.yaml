@@ -1,0 +1,36 @@
+---
+apiVersion: "app.redislabs.com/v1"
+kind: "RedisEnterpriseCluster"
+metadata:
+  name: my-rec-0
+  namespace: redis-0
+spec:
+  redisEnterpriseImageSpec:
+    repository: bmedora/redis
+    versionTag: 6.4.2-61.4
+  serviceAccountName: default
+  nodes: 3
+  redisEnterpriseNodeResources:
+    requests:
+      cpu: "1000m"
+      memory: "4G"
+    limits:
+      memory: "4G"
+---
+apiVersion: "app.redislabs.com/v1"
+kind: "RedisEnterpriseCluster"
+metadata:
+  name: my-rec-1
+  namespace: redis-1
+spec:
+  redisEnterpriseImageSpec:
+    repository: bmedora/redis
+    versionTag: 6.4.2-61.4
+  serviceAccountName: default
+  nodes: 3
+  redisEnterpriseNodeResources:
+    requests:
+      cpu: "1000m"
+      memory: "4G"
+    limits:
+      memory: "4G"
