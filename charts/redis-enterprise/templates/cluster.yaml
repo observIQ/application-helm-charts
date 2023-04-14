@@ -6,8 +6,8 @@ metadata:
   namespace: redis-0
 spec:
   redisEnterpriseImageSpec:
-    repository: bmedora/redis
-    versionTag: 6.4.2-61.4
+    repository: redislabs/redis
+    versionTag: 6.4.2-61.focal
   serviceAccountName: default
   nodes: 3
   redisEnterpriseNodeResources:
@@ -24,8 +24,8 @@ metadata:
   namespace: redis-1
 spec:
   redisEnterpriseImageSpec:
-    repository: bmedora/redis
-    versionTag: 6.4.2-61.4
+    repository: redislabs/redis
+    versionTag: 6.4.2-61.focal
   serviceAccountName: default
   nodes: 3
   redisEnterpriseNodeResources:
