@@ -4,7 +4,7 @@ metadata:
   name: example-aadb-1
 spec:
   participatingClusters:
-    - name: my-rec-0
-    - name: my-rec-1
+    - name: rerc1
+    - name: rerc2
   globalConfigurations:
     shardCount: 1

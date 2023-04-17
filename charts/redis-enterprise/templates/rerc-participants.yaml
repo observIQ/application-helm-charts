@@ -1,0 +1,21 @@
+apiVersion: app.redislabs.com/v1alpha1
+kind: RedisEnterpriseRemoteCluster
+metadata:
+  name: rerc1
+spec:
+  recName: my-rec-0
+  recNamespace: redis-0
+  apiFqdnUrl: my-rec-0.redis-0.svc.cluster.local:9443
+  dbFqdnSuffix: -redis-0.data-metric.com
+  secretName: redis-enterprise-rerc1
+---
+apiVersion: app.redislabs.com/v1alpha1
+kind: RedisEnterpriseRemoteCluster
+metadata:
+  name: rerc2
+spec:
+  recName: my-rec-1
+  recNamespace: redis-1
+  apiFqdnUrl: my-rec-1.redis-1.svc.cluster.local:9443
+  dbFqdnSuffix: -redis-1.data-metric.com
+  secretName: redis-enterprise-rerc2
