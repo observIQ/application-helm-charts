@@ -1,0 +1,3 @@
+squidImage: bmedora/squid-disk-cache:v0.0.1
+loadgenImage: ghcr.io/jsirianni/util:latest
+exporterImage: boynux/squid-exporter:v1.9
