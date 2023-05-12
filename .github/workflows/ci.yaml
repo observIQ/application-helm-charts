@@ -19,6 +19,7 @@ jobs:
           - "mssql"
           - "oracledbxe"
           - "cassandra"
+          - "squid"
 
     runs-on: ubuntu-latest
     steps:
