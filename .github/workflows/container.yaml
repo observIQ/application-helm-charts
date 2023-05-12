@@ -20,6 +20,7 @@ jobs:
           - "tensorflowload"
           - "wildfly"
           - "cassandra"
+          - "squid"
     steps:
       - name: Checkout
         uses: actions/checkout@v2
