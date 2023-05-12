@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: squid-loadgen
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: squid-loadgen
+  template:
+    metadata:
+      labels:
+        app: squid-loadgen
+    spec:
+      containers:
+      - name: squid-loadgen
+        image: {{ .Values.loadgenImage }}
+        imagePullPolicy: IfNotPresent
+        command:
+        - /bin/sh
+        - -c
+        - seq 1 1500 | xargs -n1 -I -P5  curl "http://www.squid-cache.org/Doc/config/refresh_pattern/" -x http://squid-service.default.svc.cluster.local:3128
