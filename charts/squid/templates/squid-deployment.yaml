@@ -8,13 +8,16 @@ metadata:
 spec:
   ports:
   - port: 3128
+    name: squid
+  - port: 9301
+    name: exporter
   selector:
     app: squid
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: squid-deployment
+  name: squid
 spec:
   replicas: 1
   selector:
@@ -36,8 +39,6 @@ spec:
         - name: squid-config-volume
           mountPath: /etc/squid/squid.conf
           subPath: squid.conf
-        # - name: squid-data
-        #   mountPath: /var/spool/squid
       - name: exporter
         image: {{ .Values.exporterImage }}
         imagePullPolicy: IfNotPresent
@@ -59,23 +60,3 @@ spec:
             items:
             - key: squid.conf
               path: squid.conf
----
-apiVersion: batch/v1
-kind: CronJob
-metadata:
-  name: squid-loadgen
-spec:
-  schedule: "*/15 * * * *"
-  jobTemplate:
-    spec:
-      template:
-        spec:
-          containers:
-          - name: squid-loadgen
-            image: {{ .Values.loadgenImage }}
-            imagePullPolicy: IfNotPresent
-            command:
-            - /bin/sh
-            - -c
-            - seq 1 1500 | xargs -n1 -I -P5  curl "http://www.squid-cache.org/Doc/config/refresh_pattern/" -x squid-service:3128
-          restartPolicy: OnFailure
