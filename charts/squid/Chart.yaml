@@ -1,5 +1,5 @@
 apiVersion: v2
-appVersion: 5.7
+appVersion: "5.7"
 engine: gotpl
 home: https://github.com/observIQ/charts/tree/main/charts/squid
 keywords:
