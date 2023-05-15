@@ -1,2 +1,2 @@
-squidImage: bmedora/squid-disk-cache:v0.0.1
+squidImage: ubuntu/squid:edge
 exporterImage: boynux/squid-exporter:v1.9
