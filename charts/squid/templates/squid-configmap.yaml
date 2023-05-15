@@ -42,11 +42,4 @@ data:
     refresh_pattern \/(Translation-.*)(|\.bz2|\.gz|\.xz)$ 0 0% 0 refresh-ims
     refresh_pattern .		0	20%	4320
     logfile_rotate 0
-
-    memory_cache_mode disk
-    minimum_object_size 0 MB
-    maximum_object_size 128 MB
-    cache_dir ufs /var/cache/squid 1024 16 256
-    cache allow all
-    debug_options = ALL,2
 ---
