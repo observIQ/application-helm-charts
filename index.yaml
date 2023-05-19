@@ -725,6 +725,23 @@ entries:
     urls:
     - https://github.com/observIQ/charts/releases/download/oracledbxe-0.0.1/oracledbxe-0.0.1.tgz
     version: 0.0.1
+  squid:
+  - apiVersion: v2
+    appVersion: "5.7"
+    created: "2023-05-19T15:29:19.979160469Z"
+    digest: 4482a976316fc46332ebd5d4b80c45e16ee5d7feeedeb6f15ecaedbd4649c629
+    home: https://github.com/observIQ/charts/tree/main/charts/squid
+    keywords:
+    - community
+    - forum
+    maintainers:
+    - name: observIQ
+    name: squid
+    sources:
+    - https://github.com/squid-cache/squid
+    urls:
+    - https://github.com/observIQ/charts/releases/download/squid-0.0.1/squid-0.0.1.tgz
+    version: 0.0.1
   tensorflow:
   - apiVersion: v2
     appVersion: 2.11.0
@@ -903,4 +920,4 @@ entries:
     urls:
     - https://github.com/observIQ/charts/releases/download/wildfly-0.0.1/wildfly-0.0.1.tgz
     version: 0.0.1
-generated: "2023-03-21T14:31:31.389190341Z"
+generated: "2023-05-19T15:29:19.97923267Z"
