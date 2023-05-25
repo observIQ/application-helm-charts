@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mesos
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/app: mesos
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/app: mesos
+    spec:
+      hostNetwork: true
+      containers:
+      - name: mesos
+        image: {{ .Values.image }}
+        env:
+        - name: LD_LIBRARY_PATH
+          value: "/usr/local/lib"
+        ports:
+        - containerPort: 5050
+          name: mesos-master
+        - containerPort: 5051
+          name: mesos-agent
+        command: ["/bin/bash", "/startup.sh"]
+        volumeMounts:
+        - mountPath: /startup.sh
+          subPath: startup.sh
+          name: start-script
+      volumes:
+      - name: start-script
+        configMap:
+          name: start-script
+          defaultMode: 0644
+          items:
+          - key: startup.sh
+            path: startup.sh
