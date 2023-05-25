@@ -19,6 +19,7 @@ jobs:
           - "mssql"
           - "oracledbxe"
           - "cassandra"
+          - "mesos"
 
     runs-on: ubuntu-latest
     steps:
