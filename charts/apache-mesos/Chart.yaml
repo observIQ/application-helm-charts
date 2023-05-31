@@ -1,0 +1,13 @@
+apiVersion: v2
+appVersion: tbd
+engine: gotpl
+home: https://github.com/observIQ/charts/tree/main/charts/apache-mesos
+keywords:
+  - community
+  - forum
+maintainers:
+  - name: observIQ
+name: mesos
+sources:
+  - https://mesos.apache.org/
+version: 0.0.1

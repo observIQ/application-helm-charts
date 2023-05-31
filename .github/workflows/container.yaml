@@ -20,6 +20,7 @@ jobs:
           - "tensorflowload"
           - "wildfly"
           - "cassandra"
+          - "apache-mesos"
     steps:
       - name: Checkout
         uses: actions/checkout@v2
