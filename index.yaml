@@ -675,6 +675,23 @@ entries:
     urls:
     - https://github.com/observIQ/charts/releases/download/discourse-9.0.0/discourse-9.0.0.tgz
     version: 9.0.0
+  mesos:
+  - apiVersion: v2
+    appVersion: tbd
+    created: "2023-05-31T19:20:33.895250601Z"
+    digest: e2b64be832c621026434bf139becec4723519a270f7296d260a40872dad699be
+    home: https://github.com/observIQ/charts/tree/main/charts/apache-mesos
+    keywords:
+    - community
+    - forum
+    maintainers:
+    - name: observIQ
+    name: mesos
+    sources:
+    - https://mesos.apache.org/
+    urls:
+    - https://github.com/observIQ/charts/releases/download/mesos-0.0.1/mesos-0.0.1.tgz
+    version: 0.0.1
   mssql:
   - apiVersion: v2
     appVersion: 2022-latest
@@ -920,4 +937,4 @@ entries:
     urls:
     - https://github.com/observIQ/charts/releases/download/wildfly-0.0.1/wildfly-0.0.1.tgz
     version: 0.0.1
-generated: "2023-05-19T15:29:19.97923267Z"
+generated: "2023-05-31T19:20:33.895329403Z"
