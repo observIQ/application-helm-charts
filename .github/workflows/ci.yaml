@@ -18,9 +18,9 @@ jobs:
           - "wildfly"
           - "mssql"
           - "oracledbxe"
-          - "cassandra"
+          - "apache-cassandra"
           - "squid"
-          - "mesos"
+          - "apache-mesos"
 
     runs-on: ubuntu-latest
     steps:

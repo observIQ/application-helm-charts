@@ -19,11 +19,6 @@ spec:
         env:
         - name: LD_LIBRARY_PATH
           value: "/usr/local/lib"
-        ports:
-        - containerPort: 5050
-          name: mesos-master
-        - containerPort: 5051
-          name: mesos-agent
         command: ["/bin/bash", "/startup.sh"]
         volumeMounts:
         - mountPath: /startup.sh
