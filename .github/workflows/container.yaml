@@ -19,7 +19,7 @@ jobs:
           - "tensorflow"
           - "tensorflowload"
           - "wildfly"
-          - "apache-cassandra"
+          - "cassandra"
           - "apache-mesos"
     steps:
       - name: Checkout

@@ -18,7 +18,7 @@ jobs:
           - "wildfly"
           - "mssql"
           - "oracledbxe"
-          - "apache-cassandra"
+          - "cassandra"
           - "squid"
           - "apache-mesos"
 
