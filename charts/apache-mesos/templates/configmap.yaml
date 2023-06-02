@@ -8,8 +8,7 @@ data:
 
     # Run mesos master, agent, and exporter in the background
     mesos-master --work_dir=/var/lib/mesos --log_dir=/var/log/mesos/ &
-    # mesos-agent --work_dir=/var/lib/mesos/agent --master=172.17.0.2:5050 --launcher=posix &
-    mesos-agent --work_dir=/var/lib/mesos/agent --master=localhost:5050 --launcher=posix &
+    mesos-agent --work_dir=/var/lib/mesos/agent --master=localhost:5050 --launcher=posix --systemd_enable_support=false &
     /mesos_exporter-1.1.2.linux-arm64/mesos_exporter -master http://localhost:5050 &
 
     # Infinite loop to keep container alive
