@@ -1,1 +1,1 @@
-image: bmedora/apache-mesos-1.11:0.0.3
+image: ghcr.io/observiq/apache-mesos:c292be1
