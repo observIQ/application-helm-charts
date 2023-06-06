@@ -39,20 +39,6 @@ spec:
         - name: squid-config-volume
           mountPath: /etc/squid/squid.conf
           subPath: squid.conf
-      - name: exporter
-        image: {{ .Values.exporterImage }}
-        imagePullPolicy: IfNotPresent
-        env:
-        - name: SQUID_HOSTNAME
-          value: localhost
-        - name: SQUID_EXPORTER_LISTEN
-          value: ":9301"
-        - name: SQUID_PORT
-          value: "3128"
-        ports:
-        - name: metrics
-          containerPort: 9301
-          protocol: TCP
       volumes:
         - name: squid-config-volume
           configMap:
