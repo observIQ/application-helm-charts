@@ -777,6 +777,22 @@ entries:
   squid:
   - apiVersion: v2
     appVersion: "5.7"
+    created: "2023-06-06T18:49:16.98673062Z"
+    digest: 40e9aad4d2cd49dbbfbbb25c590d77c5590319bc53c0ca6ca87d5434d27ec0b8
+    home: https://github.com/observIQ/charts/tree/main/charts/squid
+    keywords:
+    - community
+    - forum
+    maintainers:
+    - name: observIQ
+    name: squid
+    sources:
+    - https://github.com/squid-cache/squid
+    urls:
+    - https://github.com/observIQ/charts/releases/download/squid-0.0.2/squid-0.0.2.tgz
+    version: 0.0.2
+  - apiVersion: v2
+    appVersion: "5.7"
     created: "2023-05-19T15:29:19.979160469Z"
     digest: 4482a976316fc46332ebd5d4b80c45e16ee5d7feeedeb6f15ecaedbd4649c629
     home: https://github.com/observIQ/charts/tree/main/charts/squid
@@ -969,4 +985,4 @@ entries:
     urls:
     - https://github.com/observIQ/charts/releases/download/wildfly-0.0.1/wildfly-0.0.1.tgz
     version: 0.0.1
-generated: "2023-06-02T21:05:16.788515757Z"
+generated: "2023-06-06T18:49:16.986798221Z"
