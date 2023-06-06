@@ -1,2 +1,1 @@
 squidImage: ubuntu/squid:edge
-exporterImage: boynux/squid-exporter:v1.9
