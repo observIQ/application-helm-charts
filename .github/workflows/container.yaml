@@ -24,9 +24,6 @@ jobs:
         architecture:
           - "arm64"
           - "amd64"
-        exclude:
-          - app: "apache-mesos"
-            architecture: "amd64"
     steps:
       - name: Checkout
         uses: actions/checkout@v2
