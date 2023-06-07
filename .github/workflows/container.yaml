@@ -22,8 +22,8 @@ jobs:
           - "cassandra"
           - "apache-mesos"
         architecture:
-          - "arm64"
-          - "amd64"
+          - "linux/arm64"
+          - "linux/amd64"
     steps:
       - name: Checkout
         uses: actions/checkout@v2
