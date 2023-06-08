@@ -28,7 +28,7 @@ spec:
       - name: start-script
         configMap:
           name: start-script
-          defaultMode: 0644
+          defaultMode: 0777
           items:
           - key: startup.sh
             path: startup.sh
