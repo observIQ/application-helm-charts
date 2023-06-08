@@ -21,9 +21,6 @@ jobs:
           - "wildfly"
           - "cassandra"
           - "apache-mesos"
-        architecture:
-          - "linux/arm64"
-          - "linux/amd64"
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -53,6 +50,6 @@ jobs:
         with:
           context: container/${{ matrix.app }}
           file: container/${{ matrix.app }}/Dockerfile
-          platforms: ${{ matrix.architecture }}
+          platforms: linux/amd64,linux/arm64
           push:  true
           tags:  ghcr.io/observiq/${{ matrix.app }}:${{ steps.get-tag.outputs.tag }}
