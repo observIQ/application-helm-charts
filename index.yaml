@@ -678,6 +678,22 @@ entries:
   mesos:
   - apiVersion: v2
     appVersion: tbd
+    created: "2023-06-08T15:54:39.407745924Z"
+    digest: 2a3f26fa49e8e7bf5e54d4eb3487f24fc1ed859238dd71f9461a7f08e2c947bd
+    home: https://github.com/observIQ/charts/tree/main/charts/apache-mesos
+    keywords:
+    - community
+    - forum
+    maintainers:
+    - name: observIQ
+    name: mesos
+    sources:
+    - https://mesos.apache.org/
+    urls:
+    - https://github.com/observIQ/charts/releases/download/mesos-0.0.6/mesos-0.0.6.tgz
+    version: 0.0.6
+  - apiVersion: v2
+    appVersion: tbd
     created: "2023-06-08T14:11:18.029843218Z"
     digest: 4e5c3cf585dd24b9f12a7154ac6f649bc0277cb57cdd5aab67ef2473f3873692
     home: https://github.com/observIQ/charts/tree/main/charts/apache-mesos
@@ -1033,4 +1049,4 @@ entries:
     urls:
     - https://github.com/observIQ/charts/releases/download/wildfly-0.0.1/wildfly-0.0.1.tgz
     version: 0.0.1
-generated: "2023-06-08T14:11:18.029971219Z"
+generated: "2023-06-08T15:54:39.408586831Z"
