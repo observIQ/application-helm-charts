@@ -1,0 +1,348 @@
+---
+# Source: hadoop/templates/hdfs-dn-statefulset.yaml
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: hadoop-hadoop-hdfs-dn
+  annotations:
+    checksum/config: 79e26cb9566573abbcc0729e486c72f706591c0b6d99e3f26aa3ba8e3ecf9bf1
+  labels:
+    app.kubernetes.io/name: hadoop
+    helm.sh/chart: hadoop-1.2.0
+    app.kubernetes.io/instance: hadoop
+    app.kubernetes.io/component: hdfs-dn
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: hadoop
+      app.kubernetes.io/instance: hadoop
+      app.kubernetes.io/component: hdfs-dn
+  serviceName: hadoop-hadoop-hdfs-dn
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: hadoop
+        app.kubernetes.io/instance: hadoop
+        app.kubernetes.io/component: hdfs-dn
+    spec:
+      affinity:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+          - weight: 5
+            podAffinityTerm:
+              topologyKey: "kubernetes.io/hostname"
+              labelSelector:
+                matchLabels:
+                  app.kubernetes.io/name: hadoop
+                  app.kubernetes.io/instance: hadoop
+                  app.kubernetes.io/component: hdfs-dn
+      terminationGracePeriodSeconds: 0
+      containers:
+      - name: hdfs-dn
+        image: "farberg/apache-hadoop:3.3.2"
+        imagePullPolicy: "IfNotPresent"
+        command:
+           - "/bin/bash"
+           - "/tmp/hadoop-config/bootstrap.sh"
+           - "-d"
+        resources:
+          limits:
+            cpu: 1000m
+            memory: 2048Mi
+          requests:
+            cpu: 10m
+            memory: 256Mi
+        # readinessProbe:
+        #   httpGet:
+        #     path: /
+        #     port: 9864
+        #   initialDelaySeconds: 60
+        #   timeoutSeconds: 2
+        # livenessProbe:
+        #   httpGet:
+        #     path: /
+        #     port: 9864
+        #   initialDelaySeconds: 60
+        #   timeoutSeconds: 2
+        volumeMounts:
+        - name: hadoop-config
+          mountPath: /tmp/hadoop-config
+        - name: dfs
+          mountPath: /root/hdfs/datanode
+      volumes:
+      - name: hadoop-config
+        configMap:
+          name: hadoop-hadoop
+      - name: dfs
+        emptyDir: {}
+---
+# Source: hadoop/templates/hdfs-nn-statefulset.yaml
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: hadoop-hadoop-hdfs-nn
+  annotations:
+    checksum/config: 79e26cb9566573abbcc0729e486c72f706591c0b6d99e3f26aa3ba8e3ecf9bf1
+  labels:
+    app.kubernetes.io/name: hadoop
+    helm.sh/chart: hadoop-1.2.0
+    app.kubernetes.io/instance: hadoop
+    app.kubernetes.io/component: hdfs-nn
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: hadoop
+      app.kubernetes.io/instance: hadoop
+      app.kubernetes.io/component: hdfs-nn
+  serviceName: hadoop-hadoop-hdfs-nn
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: hadoop
+        app.kubernetes.io/instance: hadoop
+        app.kubernetes.io/component: hdfs-nn
+    spec:
+      affinity:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+          - weight: 5
+            podAffinityTerm:
+              topologyKey: "kubernetes.io/hostname"
+              labelSelector:
+                matchLabels:
+                  app.kubernetes.io/name: hadoop
+                  app.kubernetes.io/instance: hadoop
+                  app.kubernetes.io/component: hdfs-nn
+      terminationGracePeriodSeconds: 0
+      containers:
+      - name: hdfs-nn
+        image: "farberg/apache-hadoop:3.3.2"
+        imagePullPolicy: "IfNotPresent"
+        env:
+          - name: HDFS_NAMENODE_OPTS
+            value: "-Dcom.sun.management.jmxremote=true -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=1026"
+        command:
+        - "/bin/bash"
+        - "/tmp/hadoop-config/bootstrap.sh"
+        - "-d"
+        ports:
+        - containerPort: 1026
+          name: jmx
+        resources:
+          limits:
+            cpu: 1000m
+            memory: 2048Mi
+          requests:
+            cpu: 10m
+            memory: 256Mi
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 9870
+          initialDelaySeconds: 60
+          timeoutSeconds: 2
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 9870
+          initialDelaySeconds: 60
+          timeoutSeconds: 2
+        volumeMounts:
+        - name: hadoop-config
+          mountPath: /tmp/hadoop-config/
+        - name: dfs
+          mountPath: /root/hdfs/namenode
+      - name: jmx-exporter
+        image: bitnami/jmx-exporter:0.17.0
+        command:
+          - java
+          - -jar
+          - jmx_prometheus_httpserver.jar
+        args:
+          - "12345" 
+          - config.yaml
+        volumeMounts:
+        - mountPath: /opt/bitnami/jmx-exporter/config.yaml
+          subPath: config.yaml
+          name: exporter-config
+      volumes:
+      - name: hadoop-config
+        configMap:
+          name: hadoop-hadoop
+      - name: exporter-config
+        configMap:
+          name: jmx-exporter-config
+          items:
+          - key: config.yaml
+            path: config.yaml
+      - name: dfs
+        emptyDir: {}
+---
+# Source: hadoop/templates/yarn-nm-statefulset.yaml
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: hadoop-hadoop-yarn-nm
+  annotations:
+    checksum/config: 79e26cb9566573abbcc0729e486c72f706591c0b6d99e3f26aa3ba8e3ecf9bf1
+  labels:
+    app.kubernetes.io/name: hadoop
+    helm.sh/chart: hadoop-1.2.0
+    app.kubernetes.io/instance: hadoop
+    app.kubernetes.io/component: yarn-nm
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: hadoop
+      app.kubernetes.io/instance: hadoop
+      app.kubernetes.io/component: yarn-nm
+  serviceName: hadoop-hadoop-yarn-nm
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: hadoop
+        app.kubernetes.io/instance: hadoop
+        app.kubernetes.io/component: yarn-nm
+    spec:
+      affinity:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+          - weight: 5
+            podAffinityTerm:
+              topologyKey: "kubernetes.io/hostname"
+              labelSelector:
+                matchLabels:
+                  app.kubernetes.io/name: hadoop
+                  app.kubernetes.io/instance: hadoop
+                  app.kubernetes.io/component: yarn-nm
+      terminationGracePeriodSeconds: 0
+      containers:
+      - name: yarn-nm
+        image: "farberg/apache-hadoop:3.3.2"
+        imagePullPolicy: "IfNotPresent"
+        ports:
+        - containerPort: 8088
+          name: web
+        command:
+           - "/bin/bash"
+           - "/tmp/hadoop-config/bootstrap.sh"
+           - "-d"
+        resources:
+          limits:
+            cpu: 1000m
+            memory: 2048Mi
+          requests:
+            cpu: 1000m
+            memory: 2048Mi
+        readinessProbe:
+          httpGet:
+            path: /node
+            port: 8042
+          initialDelaySeconds: 10
+          timeoutSeconds: 2
+        livenessProbe:
+          httpGet:
+            path: /node
+            port: 8042
+          initialDelaySeconds: 10
+          timeoutSeconds: 2
+        env:
+        - name: MY_CPU_LIMIT
+          valueFrom:
+            resourceFieldRef:
+              containerName: yarn-nm
+              resource: limits.cpu
+              divisor: 1
+        - name: MY_MEM_LIMIT
+          valueFrom:
+            resourceFieldRef:
+              containerName: yarn-nm
+              resource: limits.memory
+              divisor: 1M
+        volumeMounts:
+        - name: hadoop-config
+          mountPath: /tmp/hadoop-config
+      volumes:
+      - name: hadoop-config
+        configMap:
+          name: hadoop-hadoop
+---
+# Source: hadoop/templates/yarn-rm-statefulset.yaml
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: hadoop-hadoop-yarn-rm
+  annotations:
+    checksum/config: 79e26cb9566573abbcc0729e486c72f706591c0b6d99e3f26aa3ba8e3ecf9bf1
+  labels:
+    app.kubernetes.io/name: hadoop
+    helm.sh/chart: hadoop-1.2.0
+    app.kubernetes.io/instance: hadoop
+    app.kubernetes.io/component: yarn-rm
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: hadoop
+      app.kubernetes.io/instance: hadoop
+      app.kubernetes.io/component: yarn-rm
+  serviceName: hadoop-hadoop-yarn-rm
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: hadoop
+        app.kubernetes.io/instance: hadoop
+        app.kubernetes.io/component: yarn-rm
+    spec:
+      affinity:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+          - weight: 5
+            podAffinityTerm:
+              topologyKey: "kubernetes.io/hostname"
+              labelSelector:
+                matchLabels:
+                  app.kubernetes.io/name: hadoop
+                  app.kubernetes.io/instance: hadoop
+                  app.kubernetes.io/component: yarn-rm
+      terminationGracePeriodSeconds: 0
+      containers:
+      - name: yarn-rm
+        image: "farberg/apache-hadoop:3.3.2"
+        imagePullPolicy: "IfNotPresent"
+        ports:
+        - containerPort: 8088
+          name: web
+        command:
+           - "/bin/bash"
+           - "/tmp/hadoop-config/bootstrap.sh"
+           - "-d"
+        resources:
+          limits:
+            cpu: 2000m
+            memory: 2048Mi
+          requests:
+            cpu: 10m
+            memory: 256Mi
+        readinessProbe:
+          httpGet:
+            path: /ws/v1/cluster/info
+            port: 8088
+          initialDelaySeconds: 5
+          timeoutSeconds: 2
+        livenessProbe:
+          httpGet:
+            path: /ws/v1/cluster/info
+            port: 8088
+          initialDelaySeconds: 10
+          timeoutSeconds: 2
+        volumeMounts:
+        - name: hadoop-config
+          mountPath: /tmp/hadoop-config
+      volumes:
+      - name: hadoop-config
+        configMap:
+          name: hadoop-hadoop
