@@ -1,0 +1,115 @@
+---
+# Source: hadoop/templates/hdfs-dn-svc.yaml
+# A headless service to create DNS records
+apiVersion: v1
+kind: Service
+metadata:
+  name: hadoop-hadoop-hdfs-dn
+  labels:
+    app.kubernetes.io/name: hadoop
+    helm.sh/chart: hadoop-1.2.0
+    app.kubernetes.io/instance: hadoop
+    app.kubernetes.io/component: hdfs-dn
+spec:
+  ports:
+  - name: dfs
+    port: 9000
+    protocol: TCP
+  # - name: webhdfs
+  #   port: 9864
+  clusterIP: None
+  selector:
+    app.kubernetes.io/name: hadoop
+    app.kubernetes.io/instance: hadoop
+    app.kubernetes.io/component: hdfs-dn
+---
+# Source: hadoop/templates/hdfs-nn-svc.yaml
+# A headless service to create DNS records
+apiVersion: v1
+kind: Service
+metadata:
+  name: hadoop-hadoop-hdfs-nn
+  labels:
+    app.kubernetes.io/name: hadoop
+    helm.sh/chart: hadoop-1.2.0
+    app.kubernetes.io/instance: hadoop
+    app.kubernetes.io/component: hdfs-nn
+spec:
+  ports:
+  - name: dfs
+    port: 9000
+    protocol: TCP
+  - name: webhdfs
+    port: 9870
+  clusterIP: None
+  selector:
+    app.kubernetes.io/name: hadoop
+    app.kubernetes.io/instance: hadoop
+    app.kubernetes.io/component: hdfs-nn
+---
+# Source: hadoop/templates/yarn-nm-svc.yaml
+# A headless service to create DNS records
+apiVersion: v1
+kind: Service
+metadata:
+  name: hadoop-hadoop-yarn-nm
+  labels:
+    app.kubernetes.io/name: hadoop
+    helm.sh/chart: hadoop-1.2.0
+    app.kubernetes.io/instance: hadoop
+    app.kubernetes.io/component: yarn-nm
+spec:
+  ports:
+  - port: 8088
+    name: web
+  - port: 8082
+    name: web2
+  - port: 8042
+    name: api
+  clusterIP: None
+  selector:
+    app.kubernetes.io/name: hadoop
+    app.kubernetes.io/instance: hadoop
+    app.kubernetes.io/component: yarn-nm
+---
+# Source: hadoop/templates/yarn-rm-svc.yaml
+# A headless service to create DNS records
+apiVersion: v1
+kind: Service
+metadata:
+  name: hadoop-hadoop-yarn-rm
+  labels:
+    app.kubernetes.io/name: hadoop
+    helm.sh/chart: hadoop-1.2.0
+    app.kubernetes.io/instance: hadoop
+    app.kubernetes.io/component: yarn-rm
+spec:
+  ports:
+  - port: 8088
+    name: web
+  clusterIP: None
+  selector:
+    app.kubernetes.io/name: hadoop
+    app.kubernetes.io/instance: hadoop
+    app.kubernetes.io/component: yarn-rm
+---
+# Source: hadoop/templates/yarn-ui-svc.yaml
+# Service to access the yarn web ui
+apiVersion: v1
+kind: Service
+metadata:
+  name: hadoop-hadoop-yarn-ui
+  labels:
+    app.kubernetes.io/name: hadoop
+    helm.sh/chart: hadoop-1.2.0
+    app.kubernetes.io/instance: hadoop
+    app.kubernetes.io/component: yarn-ui
+spec:
+  ports:
+  - port: 8088
+    name: web
+  selector:
+    app.kubernetes.io/name: hadoop
+    app.kubernetes.io/instance: hadoop
+    app.kubernetes.io/component: yarn-rm
+---
