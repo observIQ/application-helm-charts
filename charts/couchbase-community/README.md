@@ -2,17 +2,16 @@
 
 This chart deploys a StatefulSet with 3 replicas that are running Couchbase Community Edition.
 
-These nodes have basic configuration performed automatically on startup. The following actions are performed:
 
-* Set memory quotas
-* Configure services
-* Setup credentials
-* Enable memory-optimized indexes
-* Load samples
+## Configuring the nodes
+
+These nodes are unconfigured by default. To fix this, do the following:
+1. Forward the port for the container, to access the UI with your local browser
+2. Follow [these instructions](https://hub.docker.com/_/couchbase) to configure each node.
 
 ## Creating a cluster
 
-The three replicas have basic configuration performed, but a cluster has not been created. To add and rebalance nodes, do the following:
+After configuring each of the nodes, do the following:
 
 1. Forward port `8091` on the first pod in the statefulset by running the following command:
 ```
