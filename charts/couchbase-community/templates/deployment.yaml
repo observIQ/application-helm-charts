@@ -1,12 +1,4 @@
 apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: config-script
-data:
-  config.yaml: |
-    TBD
----
-apiVersion: v1
 kind: Service
 metadata:
   name: couchbase-community
@@ -18,30 +10,6 @@ spec:
       protocol: TCP
       port: 8091
       targetPort: 8091
-    # - name: capi-port
-    #   protocol: TCP
-    #   port: 8092
-    #   targetPort: 8092
-    # - name: query-port
-    #   protocol: TCP
-    #   port: 8093
-    #   targetPort: 8093
-    # - name: fts-http
-    #   protocol: TCP
-    #   port: 8094
-    #   targetPort: 8094
-    # - name: cbas-http
-    #   protocol: TCP
-    #   port: 8095
-    #   targetPort: 8095
-    # - name: eventing-http
-    #   protocol: TCP
-    #   port: 8096
-    #   targetPort: 8096
-    # - name: backup-http
-    #   protocol: TCP
-    #   port: 8097
-    #   targetPort: 8097
 ---
 apiVersion: apps/v1
 kind: StatefulSet
