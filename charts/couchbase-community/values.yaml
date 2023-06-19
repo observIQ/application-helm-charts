@@ -1,2 +1,2 @@
 replicas: 3
-image: couchbase:community-7.2.0
+image: bmedora/couchbase-ce:test
