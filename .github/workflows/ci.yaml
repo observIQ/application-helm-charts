@@ -21,7 +21,7 @@ jobs:
           - "cassandra"
           - "squid"
           - "apache-mesos"
-          - "couchbase"
+          - "couchbase-community"
 
     runs-on: ubuntu-latest
     steps:

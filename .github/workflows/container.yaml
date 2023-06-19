@@ -21,7 +21,7 @@ jobs:
           - "wildfly"
           - "cassandra"
           - "apache-mesos"
-          - "couchbase"
+          - "couchbase-community"
     steps:
       - name: Checkout
         uses: actions/checkout@v2
