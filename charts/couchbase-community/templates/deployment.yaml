@@ -1,0 +1,53 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: couchbase-community
+spec:
+  selector:
+    app.kubernetes.io/app: couchbase-community
+  ports:
+    - name: rest-port
+      protocol: TCP
+      port: 8091
+      targetPort: 8091
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: couchbase-community
+spec:
+  serviceName: couchbase-community
+  replicas: {{ .Values.replicas }}
+  selector:
+    matchLabels:
+      app.kubernetes.io/app: couchbase-community
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/app: couchbase-community
+    spec:
+      containers:
+      - name: couchbase-community
+        image: {{ .Values.image }}
+        ports:
+        - name: rest-port
+          protocol: TCP
+          containerPort: 8091
+        - name: capi-port
+          protocol: TCP
+          containerPort: 8092
+        - name: query-port
+          protocol: TCP
+          containerPort: 8093
+        - name: fts-http
+          protocol: TCP
+          containerPort: 8094
+        - name: cbas-http
+          protocol: TCP
+          containerPort: 8095
+        - name: eventing-http
+          protocol: TCP
+          containerPort: 8096
+        - name: backup-http
+          protocol: TCP
+          containerPort: 8097

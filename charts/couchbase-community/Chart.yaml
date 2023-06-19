@@ -1,0 +1,13 @@
+apiVersion: v2
+appVersion: 7.2.0
+engine: gotpl
+home: https://github.com/observIQ/charts/tree/main/charts/couchbase-community
+keywords:
+  - community
+  - forum
+maintainers:
+  - name: observIQ
+name: couchbase
+sources:
+  - https://www.couchbase.com/
+version: 0.0.1
