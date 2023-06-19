@@ -230,6 +230,23 @@ entries:
     urls:
     - https://github.com/observIQ/charts/releases/download/clickhouse-3.2.1/clickhouse-3.2.1.tgz
     version: 3.2.1
+  couchbase:
+  - apiVersion: v2
+    appVersion: 7.2.0
+    created: "2023-06-19T18:15:05.119221574Z"
+    digest: 7920c309b3aa32419c60480212a5db5c6046c0f6dee1577446e06bd5b6074b68
+    home: https://github.com/observIQ/charts/tree/main/charts/couchbase-community
+    keywords:
+    - community
+    - forum
+    maintainers:
+    - name: observIQ
+    name: couchbase
+    sources:
+    - https://www.couchbase.com/
+    urls:
+    - https://github.com/observIQ/charts/releases/download/couchbase-0.0.1/couchbase-0.0.1.tgz
+    version: 0.0.1
   discourse:
   - annotations:
       category: Forum
@@ -1049,4 +1066,4 @@ entries:
     urls:
     - https://github.com/observIQ/charts/releases/download/wildfly-0.0.1/wildfly-0.0.1.tgz
     version: 0.0.1
-generated: "2023-06-08T15:54:39.408586831Z"
+generated: "2023-06-19T18:15:05.119325074Z"
