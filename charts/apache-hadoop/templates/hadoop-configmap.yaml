@@ -157,6 +157,7 @@ data:
       # Wait with timeout for resourcemanager
       TMP_URL="http://{{ include "hadoop.fullname" . }}-yarn-rm:8088/ws/v1/cluster/info"
       if timeout 5m bash -c "until curl -sf $TMP_URL; do echo Waiting for $TMP_URL; sleep 5; done"; then
+        export YARN_NODEMANAGER_OPTS="-Dcom.sun.management.jmxremote=true -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.port=1029"
         $HADOOP_HOME/bin/yarn nodemanager --loglevel {{ .Values.logLevel }}
       else 
         echo "$0: Timeout waiting for $TMP_URL, exiting."
