@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: aerospike
+  labels:
+    app: aerospike
+spec:
+  serviceName: aerospike
+  replicas: 1
+  selector:
+    matchLabels:
+      app: aerospike
+  template:
+    metadata:
+      labels:
+        app: aerospike
+    spec:
+      containers:
+      - name: aerospike
+        image: aerospike/aerospike-server:6.3.0.5
+        ports:
+        - containerPort: 3000
+        resources:
+          limits:
+            cpu: "500m"
+            memory: 1Gi
+      - name: aerospike-prometheus-exporter
+        image: aerospike/aerospike-prometheus-exporter:1.11.0
+        ports:
+        - containerPort: 9145
+          name: prometheus
+        env:
+          - name: AS_HOST
+            value: localhost
+          - name: AS_PORT
+            value: "3000"
