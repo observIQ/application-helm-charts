@@ -1,23 +1,51 @@
----
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: jmx-exporter-config
+  name: jmx-exporter-nn-config
 data:
   config.yaml: |
     hostPort: localhost:1026
     lowercaseOutputName: true
     lowercaseOutputLabelNames: true
 ---
-# Source: hadoop/templates/hadoop-configmap.yaml
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: hadoop-hadoop
+  name: jmx-exporter-rm-config
+data:
+  config.yaml: |
+    hostPort: localhost:1027
+    lowercaseOutputName: true
+    lowercaseOutputLabelNames: true
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: jmx-exporter-dn-config
+data:
+  config.yaml: |
+    hostPort: localhost:1028
+    lowercaseOutputName: true
+    lowercaseOutputLabelNames: true
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: jmx-exporter-nm-config
+data:
+  config.yaml: |
+    hostPort: localhost:1029
+    lowercaseOutputName: true
+    lowercaseOutputLabelNames: true
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "hadoop.fullname" . }}
   labels:
-    app.kubernetes.io/name: hadoop
-    helm.sh/chart: hadoop-1.2.0
-    app.kubernetes.io/instance: hadoop
+    app.kubernetes.io/name: {{ include "hadoop.name" . }}
+    helm.sh/chart: {{ include "hadoop.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
 data:
   bootstrap.sh: |
     #!/bin/bash -x
@@ -68,7 +96,7 @@ data:
         # Only format if necessary
         $HADOOP_HOME/bin/hdfs namenode -format -force -nonInteractive && echo 1 > /root/hdfs/namenode/formated
       fi
-      $HADOOP_HOME/bin/hdfs --loglevel INFO --daemon start namenode
+      $HADOOP_HOME/bin/hdfs --loglevel {{ .Values.logLevel }} --daemon start namenode
     fi
 
     # ------------------------------------------------------
@@ -79,8 +107,8 @@ data:
       # Example hostname: hadoop-hadoop-hdfs-dn-0
       HOSTNAME_ARR=(${HOSTNAME//-/ })
       # Add instance number to start of external port ranges
-      EXTERNAL_HTTP_PORT=$((51000 + ${HOSTNAME_ARR[4]}))
-      EXTERNAL_DATA_PORT=$((50500 + ${HOSTNAME_ARR[4]}))
+      EXTERNAL_HTTP_PORT=$(({{ .Values.hdfs.dataNode.externalHTTPPortRangeStart }} + ${HOSTNAME_ARR[4]}))
+      EXTERNAL_DATA_PORT=$(({{ .Values.hdfs.dataNode.externalDataPortRangeStart }} + ${HOSTNAME_ARR[4]}))
 
       # sed command changing REPLACEME in $HADOOP_HOME/etc/hadoop/hdfs-site.xml to actual port numbers
       sed -i "s/EXTERNAL_HTTP_PORT_REPLACEME/${EXTERNAL_HTTP_PORT}/" $HADOOP_HOME/etc/hadoop/hdfs-site.xml
@@ -89,9 +117,9 @@ data:
       mkdir -p /root/hdfs/datanode
 
       #  Wait (with timeout) for namenode
-      TMP_URL="http://hadoop-hadoop-hdfs-nn:9870"
+      TMP_URL="http://{{ include "hadoop.fullname" . }}-hdfs-nn:9870"
       if timeout 5m bash -c "until curl -sf $TMP_URL; do echo Waiting for $TMP_URL; sleep 5; done"; then
-        $HADOOP_HOME/bin/hdfs --loglevel INFO --daemon start datanode
+        $HADOOP_HOME/bin/hdfs --loglevel {{ .Values.logLevel }} --daemon start datanode
       else 
         echo "$0: Timeout waiting for $TMP_URL, exiting."
         exit 1
@@ -103,8 +131,8 @@ data:
     # Start RESOURCE MANAGER and PROXY SERVER as daemons
     # ------------------------------------------------------
     if [[ "${HOSTNAME}" =~ "yarn-rm" ]]; then
-      $HADOOP_HOME/bin/yarn --loglevel INFO --daemon start resourcemanager 
-      $HADOOP_HOME/bin/yarn --loglevel INFO --daemon start proxyserver
+      $HADOOP_HOME/bin/yarn --loglevel {{ .Values.logLevel }} --daemon start resourcemanager 
+      $HADOOP_HOME/bin/yarn --loglevel {{ .Values.logLevel }} --daemon start proxyserver
     fi
 
     # ------------------------------------------------------
@@ -127,9 +155,9 @@ data:
       echo '</configuration>' >> $HADOOP_HOME/etc/hadoop/yarn-site.xml
 
       # Wait with timeout for resourcemanager
-      TMP_URL="http://hadoop-hadoop-yarn-rm:8088/ws/v1/cluster/info"
+      TMP_URL="http://{{ include "hadoop.fullname" . }}-yarn-rm:8088/ws/v1/cluster/info"
       if timeout 5m bash -c "until curl -sf $TMP_URL; do echo Waiting for $TMP_URL; sleep 5; done"; then
-        $HADOOP_HOME/bin/yarn nodemanager --loglevel INFO
+        $HADOOP_HOME/bin/yarn nodemanager --loglevel {{ .Values.logLevel }}
       else 
         echo "$0: Timeout waiting for $TMP_URL, exiting."
         exit 1
@@ -159,7 +187,7 @@ data:
     <configuration>
       <property>
             <name>fs.defaultFS</name>
-            <value>hdfs://hadoop-hadoop-hdfs-nn:9000/</value>
+            <value>hdfs://{{ include "hadoop.fullname" . }}-hdfs-nn:9000/</value>
             <description>NameNode URI</description>
         </property>
     </configuration>
@@ -167,10 +195,16 @@ data:
   hdfs-site.xml: |
     <?xml version="1.0"?>
     <?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
-    <configuration><property>
+    <configuration>
+    
+{{- if .Values.hdfs.webhdfs.enabled -}}
+      <property>
           <name>dfs.webhdfs.enabled</name>
           <value>true</value>
-      </property><property>
+      </property> 
+{{- end -}}
+
+      <property>
         <name>dfs.datanode.use.datanode.hostname</name>
         <value>false</value>
       </property>
@@ -182,7 +216,7 @@ data:
 
       <property>
         <name>dfs.datanode.hostname</name>
-        <value>example.com</value>
+        <value>{{ .Values.hdfs.dataNode.externalHostname }}</value>
       </property>
 
       <property>
@@ -241,11 +275,11 @@ data:
       </property>
       <property>
         <name>mapreduce.jobhistory.address</name>
-        <value>hadoop-hadoop-yarn-rm-0.hadoop-hadoop-yarn-rm.default.svc.cluster.local:10020</value>
+        <value>{{ include "hadoop.fullname" . }}-yarn-rm-0.{{ include "hadoop.fullname" . }}-yarn-rm.{{ .Release.Namespace }}.svc.cluster.local:10020</value>
       </property>
       <property>
         <name>mapreduce.jobhistory.webapp.address</name>
-        <value>hadoop-hadoop-yarn-rm-0.hadoop-hadoop-yarn-rm.default.svc.cluster.local:19888</value>
+        <value>{{ include "hadoop.fullname" . }}-yarn-rm-0.{{ include "hadoop.fullname" . }}-yarn-rm.{{ .Release.Namespace }}.svc.cluster.local:19888</value>
       </property>
     </configuration>
 
@@ -259,7 +293,7 @@ data:
     <configuration>
       <property>
         <name>yarn.resourcemanager.hostname</name>
-        <value>hadoop-hadoop-yarn-rm</value>
+        <value>{{ include "hadoop.fullname" . }}-yarn-rm</value>
       </property>
 
       <!-- Bind to all interfaces -->
@@ -325,4 +359,3 @@ data:
         </value>
       </property>
     </configuration>
----
