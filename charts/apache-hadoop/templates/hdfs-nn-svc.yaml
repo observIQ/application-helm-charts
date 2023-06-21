@@ -10,6 +10,9 @@ metadata:
     app.kubernetes.io/component: hdfs-nn
 spec:
   ports:
+  - name: exporter
+    port: 12345
+    protocol: TCP
   - name: dfs
     port: 9000
     protocol: TCP

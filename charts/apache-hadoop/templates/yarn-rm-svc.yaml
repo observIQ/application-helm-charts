@@ -10,6 +10,9 @@ metadata:
     app.kubernetes.io/component: yarn-rm
 spec:
   ports:
+  - name: exporter
+    port: 12345
+    protocol: TCP
   - port: 8088
     name: web
   clusterIP: None
