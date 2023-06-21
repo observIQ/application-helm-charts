@@ -22,6 +22,7 @@ jobs:
           - "squid"
           - "apache-mesos"
           - "couchbase-community"
+          - "apache-hadoop"
 
     runs-on: ubuntu-latest
     steps:
