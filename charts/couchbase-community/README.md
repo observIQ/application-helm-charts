@@ -2,16 +2,9 @@
 
 This chart deploys a StatefulSet with 3 replicas that are running Couchbase Community Edition.
 
-
-## Configuring the nodes
-
-These nodes are unconfigured by default. To fix this, do the following:
-1. Forward the port for the container, to access the UI with your local browser
-2. Follow [these instructions](https://hub.docker.com/_/couchbase) to configure each node.
+> NOTE: To run this, we recommend starting Docker/k8s with 4 cores and 8 gigabytes.
 
 ## Creating a cluster
-
-After configuring each of the nodes, do the following:
 
 1. Forward port `8091` on the first pod in the statefulset by running the following command:
 ```
