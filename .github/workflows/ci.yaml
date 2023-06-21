@@ -21,7 +21,10 @@ jobs:
           - "cassandra"
           - "squid"
           - "apache-mesos"
+<<<<<<< HEAD
           - "couchbase-community"
+=======
+>>>>>>> 46ebc0efc8c5b3278df11fab10e77d5456f2e7a5
           - "apache-hadoop"
 
     runs-on: ubuntu-latest
