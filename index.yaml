@@ -233,6 +233,22 @@ entries:
   couchbase:
   - apiVersion: v2
     appVersion: 7.2.0
+    created: "2023-06-21T14:30:19.259191334Z"
+    digest: 234ca00f8a87c6dde7927634aa1fe42acaaed46a8a1aef15f66aeb179feae8be
+    home: https://github.com/observIQ/charts/tree/main/charts/couchbase-community
+    keywords:
+    - community
+    - forum
+    maintainers:
+    - name: observIQ
+    name: couchbase
+    sources:
+    - https://www.couchbase.com/
+    urls:
+    - https://github.com/observIQ/charts/releases/download/couchbase-0.0.2/couchbase-0.0.2.tgz
+    version: 0.0.2
+  - apiVersion: v2
+    appVersion: 7.2.0
     created: "2023-06-19T18:15:05.119221574Z"
     digest: 7920c309b3aa32419c60480212a5db5c6046c0f6dee1577446e06bd5b6074b68
     home: https://github.com/observIQ/charts/tree/main/charts/couchbase-community
@@ -692,6 +708,23 @@ entries:
     urls:
     - https://github.com/observIQ/charts/releases/download/discourse-9.0.0/discourse-9.0.0.tgz
     version: 9.0.0
+  hadoop:
+  - apiVersion: v2
+    appVersion: 3.3.2
+    created: "2023-06-21T14:30:19.417083048Z"
+    digest: 20f40e24d5f8b7f03a0723426ae006d958f326aaf9d4504c1b301d36b2599e73
+    home: https://github.com/observIQ/charts/tree/main/charts/apache-hadoop
+    keywords:
+    - community
+    - forum
+    maintainers:
+    - name: observIQ
+    name: hadoop
+    sources:
+    - https://hadoop.apache.org/
+    urls:
+    - https://github.com/observIQ/charts/releases/download/hadoop-0.0.1/hadoop-0.0.1.tgz
+    version: 0.0.1
   mesos:
   - apiVersion: v2
     appVersion: tbd
@@ -1066,4 +1099,4 @@ entries:
     urls:
     - https://github.com/observIQ/charts/releases/download/wildfly-0.0.1/wildfly-0.0.1.tgz
     version: 0.0.1
-generated: "2023-06-19T18:15:05.119325074Z"
+generated: "2023-06-21T14:30:19.417164748Z"
