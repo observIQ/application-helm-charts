@@ -711,6 +711,22 @@ entries:
   hadoop:
   - apiVersion: v2
     appVersion: 3.3.2
+    created: "2023-06-22T18:32:43.764350371Z"
+    digest: d671d05c5eb80786c76b04c2468947bb0e4515a066aa37c49f5405f6e635229a
+    home: https://github.com/observIQ/charts/tree/main/charts/apache-hadoop
+    keywords:
+    - community
+    - forum
+    maintainers:
+    - name: observIQ
+    name: hadoop
+    sources:
+    - https://hadoop.apache.org/
+    urls:
+    - https://github.com/observIQ/charts/releases/download/hadoop-0.0.2/hadoop-0.0.2.tgz
+    version: 0.0.2
+  - apiVersion: v2
+    appVersion: 3.3.2
     created: "2023-06-21T14:30:19.417083048Z"
     digest: 20f40e24d5f8b7f03a0723426ae006d958f326aaf9d4504c1b301d36b2599e73
     home: https://github.com/observIQ/charts/tree/main/charts/apache-hadoop
@@ -1099,4 +1115,4 @@ entries:
     urls:
     - https://github.com/observIQ/charts/releases/download/wildfly-0.0.1/wildfly-0.0.1.tgz
     version: 0.0.1
-generated: "2023-06-21T14:30:19.417164748Z"
+generated: "2023-06-22T18:32:43.764565275Z"
