@@ -23,6 +23,7 @@ jobs:
           - "apache-mesos"
           - "couchbase-community"
           - "apache-hadoop"
+          - "varnish"
 
     runs-on: ubuntu-latest
     steps:
