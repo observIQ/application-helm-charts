@@ -22,7 +22,7 @@ jobs:
           - "cassandra"
           - "apache-mesos"
           - "couchbase-community"
-          - "varnish"
+          - "varnish-exporter"
     steps:
       - name: Checkout
         uses: actions/checkout@v2
