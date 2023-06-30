@@ -1069,6 +1069,22 @@ entries:
   varnish:
   - apiVersion: v2
     appVersion: 6.0.11
+    created: "2023-06-30T13:31:45.954780316Z"
+    digest: 2c0eeea58020444b7255f52f4acd74fa58541d84504f49fb5e096877cce9062f
+    home: https://github.com/observIQ/charts/tree/main/charts/varnish
+    keywords:
+    - community
+    - forum
+    maintainers:
+    - name: observIQ
+    name: varnish
+    sources:
+    - https://varnish-cache.org/
+    urls:
+    - https://github.com/observIQ/charts/releases/download/varnish-0.0.2/varnish-0.0.2.tgz
+    version: 0.0.2
+  - apiVersion: v2
+    appVersion: 6.0.11
     created: "2023-06-29T20:45:33.888295378Z"
     digest: 52d378f05cddf858f7451ea3def4e8c28d8a4a2016439a09e9eb3d5c070b3d4e
     home: https://github.com/observIQ/charts/tree/main/charts/varnish
@@ -1132,4 +1148,4 @@ entries:
     urls:
     - https://github.com/observIQ/charts/releases/download/wildfly-0.0.1/wildfly-0.0.1.tgz
     version: 0.0.1
-generated: "2023-06-29T20:45:33.888690384Z"
+generated: "2023-06-30T13:31:45.954930816Z"
