@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: varnish-service
+  labels:
+    app: varnish
+spec:
+  ports:
+  - port: 9131
+    name: varnish-exporter
+  selector:
+    app: varnish
