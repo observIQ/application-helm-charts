@@ -31,7 +31,7 @@ spec:
         env:
           - name: VARNISH_HTTP_PORT
             value: "8080"
-        image: varnish:stable
+        image: {{ .Values.varnishImage }}
         volumeMounts:
           - name: varnish-config
             mountPath: /etc/varnish/secret
@@ -41,7 +41,7 @@ spec:
       - name: exporter
         command:
           - "/prometheus_varnish_exporter"
-        image: bmedora/varnish-exporter:stable
+        image: {{ .Values.exporterImage }}
         volumeMounts:
           - name: shared-data
             mountPath: /var/lib/varnish
