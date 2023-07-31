@@ -1,2 +1,2 @@
 replicas: 3
-image: bmedora/couchbase-ce:test
+image: ghcr.io/observiq/couchbase-community:9b20a5f
