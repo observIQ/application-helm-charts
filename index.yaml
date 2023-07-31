@@ -233,6 +233,22 @@ entries:
   couchbase:
   - apiVersion: v2
     appVersion: 7.2.0
+    created: "2023-07-31T17:02:44.878473704Z"
+    digest: b21cee485b36e7c09a4e1a437eae6605547108a4cefc7b6eb8a58a928679247d
+    home: https://github.com/observIQ/charts/tree/main/charts/couchbase-community
+    keywords:
+    - community
+    - forum
+    maintainers:
+    - name: observIQ
+    name: couchbase
+    sources:
+    - https://www.couchbase.com/
+    urls:
+    - https://github.com/observIQ/charts/releases/download/couchbase-0.0.3/couchbase-0.0.3.tgz
+    version: 0.0.3
+  - apiVersion: v2
+    appVersion: 7.2.0
     created: "2023-06-21T14:30:19.259191334Z"
     digest: 234ca00f8a87c6dde7927634aa1fe42acaaed46a8a1aef15f66aeb179feae8be
     home: https://github.com/observIQ/charts/tree/main/charts/couchbase-community
@@ -1180,4 +1196,4 @@ entries:
     urls:
     - https://github.com/observIQ/charts/releases/download/wildfly-0.0.1/wildfly-0.0.1.tgz
     version: 0.0.1
-generated: "2023-07-05T13:31:02.883870552Z"
+generated: "2023-07-31T17:02:44.878571706Z"
