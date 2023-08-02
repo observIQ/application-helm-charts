@@ -8,7 +8,7 @@ spec:
   ports:
   - port: 9131
     name: varnish-exporter
-  - port: 8080
-    name: nginx
+  - port: 80
+    name: varnish-reverse-proxy
   selector:
     app: varnish
