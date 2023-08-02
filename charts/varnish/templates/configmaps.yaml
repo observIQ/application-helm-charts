@@ -41,8 +41,18 @@ metadata:
 data:
   default.vcl: |
     vcl 4.1;
+
+    probe health {
+        .url = "/";
+        .timeout = 2s;
+        .interval = 5s;
+        .window = 5;
+        .threshold = 3;
+    } 
+
     backend server_nginx_0 {
         .host = "localhost";
         .port = "8080";
+        .probe = health;
     }
 ---
