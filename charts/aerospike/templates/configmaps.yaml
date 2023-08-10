@@ -4,14 +4,6 @@ metadata:
   name: aerospike-config
 data:
   aerospike.conf: |
-    # Aerospike database configuration file
-    # This template sets up a single-node, single namespace developer environment.
-    #
-    # Alternatively, you can pass in your own configuration file.
-    # You can see more examples at
-    # https://github.com/aerospike/aerospike-server/tree/master/as/etc
-
-    # This stanza must come first.
     service {
 
     }
@@ -26,7 +18,7 @@ data:
     network {
             service {
                     address any
-                    access-address aerospike-0
+                    access-address aerospike-0.aerospike.default.svc.cluster.local
                     port 3000
             }
 
