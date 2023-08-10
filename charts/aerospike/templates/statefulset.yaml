@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: aerospike
-        image: aerospike/aerospike-server:6.3.0.5
+        image: {{ .Values.aerospikeImage }}
         args:
           - --config-file=/opt/aerospike/etc/aerospike.conf
         ports:
@@ -33,7 +33,7 @@ spec:
           mountPath: /opt/aerospike/etc/aerospike.conf
           subPath: aerospike.conf
       - name: aerospike-prometheus-exporter
-        image: aerospike/aerospike-prometheus-exporter:1.12.0
+        image: {{ .Values.exporterImage }}
         ports:
         - containerPort: 9145
           name: prometheus
