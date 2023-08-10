@@ -6,7 +6,7 @@ metadata:
     app: aerospike
 spec:
   serviceName: aerospike
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: aerospike
@@ -18,14 +18,22 @@ spec:
       containers:
       - name: aerospike
         image: aerospike/aerospike-server:6.3.0.5
+        args:
+          - --config-file=/opt/aerospike/etc/aerospike.conf
         ports:
         - containerPort: 3000
+        - containerPort: 3001
+        - containerPort: 3002
         resources:
           limits:
             cpu: "500m"
             memory: 1Gi
+        volumeMounts:
+        - name: aerospike-config-volume
+          mountPath: /opt/aerospike/etc/aerospike.conf
+          subPath: aerospike.conf
       - name: aerospike-prometheus-exporter
-        image: aerospike/aerospike-prometheus-exporter:1.11.0
+        image: aerospike/aerospike-prometheus-exporter:1.12.0
         ports:
         - containerPort: 9145
           name: prometheus
@@ -34,3 +42,10 @@ spec:
             value: localhost
           - name: AS_PORT
             value: "3000"
+      volumes:
+        - name: aerospike-config-volume
+          configMap:
+            name: aerospike-config
+            items:
+            - key: aerospike.conf
+              path: aerospike.conf
