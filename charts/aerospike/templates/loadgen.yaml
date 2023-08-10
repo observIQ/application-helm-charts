@@ -16,7 +16,7 @@ spec:
         spec:
           containers:
           - name: asbench
-            image: bmedora/aerospike-benchmark:0.0.1
+            image: {{ .Values.loadgenImage }}
             args:
               - -h
               - aerospike.default.svc.cluster.local
