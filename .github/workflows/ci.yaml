@@ -24,6 +24,7 @@ jobs:
           - "couchbase-community"
           - "apache-hadoop"
           - "varnish"
+          - "aerospike"
 
     runs-on: ubuntu-latest
     steps:

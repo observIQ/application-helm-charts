@@ -23,6 +23,7 @@ jobs:
           - "apache-mesos"
           - "couchbase-community"
           - "varnish-exporter"
+          - "aerospike-benchmark"
     steps:
       - name: Checkout
         uses: actions/checkout@v2
