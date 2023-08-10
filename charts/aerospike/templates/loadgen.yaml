@@ -1,0 +1,27 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: aerospike-loadgen
+  namespace: default
+spec:
+  schedule: "*/2 * * * *"
+  concurrencyPolicy: Forbid
+  successfulJobsHistoryLimit: 1
+  failedJobsHistoryLimit: 1
+  jobTemplate:
+    spec:
+      parallelism: 1
+      backoffLimit: 0
+      template:
+        spec:
+          containers:
+          - name: asbench
+            image: bmedora/aerospike-benchmark:0.0.1
+            args:
+              - -h
+              - aerospike.default.svc.cluster.local
+              - -k
+              - "1000"
+              - -w
+              - RU,50
+          restartPolicy: Never

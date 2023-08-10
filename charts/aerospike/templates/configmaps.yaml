@@ -1,0 +1,54 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: aerospike-config
+data:
+  aerospike.conf: |
+    service {
+
+    }
+
+    logging {
+            # Send log messages to stdout
+            console {
+                    context any info
+            }
+    }
+
+    network {
+            service {
+                    address any
+                    access-address aerospike-0.aerospike.default.svc.cluster.local
+                    port 3000
+            }
+
+            heartbeat {
+                    mode mesh
+                    port 3002
+
+                    mesh-seed-address-port aerospike-0.aerospike.default.svc.cluster.local 3002
+                    mesh-seed-address-port aerospike-1.aerospike.default.svc.cluster.local 3002
+                    mesh-seed-address-port aerospike-2.aerospike.default.svc.cluster.local 3002
+
+                    interval 150
+                    timeout 10
+            }
+
+            fabric {
+                    port 3001
+            }
+
+    }
+
+    namespace test {
+            default-ttl 30d # use 0 to never expire/evict.
+            memory-size 1G
+            nsup-period 120
+            replication-factor 1
+            storage-engine device {
+                    data-in-memory false # if true, in-memory, persisted to the filesystem
+                    file /opt/aerospike/data/test.dat
+                    filesize 4G
+                    read-page-cache true
+            }
+    }

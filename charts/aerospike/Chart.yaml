@@ -1,0 +1,13 @@
+apiVersion: v2
+appVersion: 6.3.0.5
+engine: gotpl
+home: https://github.com/observIQ/charts/tree/main/charts/aerospike
+keywords:
+  - community
+  - forum
+maintainers:
+  - name: observIQ
+name: aerospike
+sources:
+  - https://aerospike.com/
+version: 0.0.1
