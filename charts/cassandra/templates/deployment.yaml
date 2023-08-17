@@ -36,7 +36,7 @@ data:
       type: GAUGE
 
     # name is always the same, the name of the GC
-    - pattern: 'java.lang<type=GarbageCollector, name=[^,]+, key=([^>]+)><LastGcInfo, memoryUsageAfterGc>(used|commited): (\d+)'
+    - pattern: 'java.lang<type=GarbageCollector, name=[^,]+, key=([^>]+)><LastGcInfo, memoryUsageAfterGc>(used|committed): (\d+)'
       name: jvm_memory_after_gc_$2_bytes
       value: $3
       labels:
