@@ -18,7 +18,7 @@ data:
     network {
             service {
                     address any
-                    access-address aerospike-0.aerospike.default.svc.cluster.local
+                    access-address aerospike-0.aerospike.sample-apps.svc.cluster.local
                     port 3000
             }
 
@@ -26,9 +26,9 @@ data:
                     mode mesh
                     port 3002
 
-                    mesh-seed-address-port aerospike-0.aerospike.default.svc.cluster.local 3002
-                    mesh-seed-address-port aerospike-1.aerospike.default.svc.cluster.local 3002
-                    mesh-seed-address-port aerospike-2.aerospike.default.svc.cluster.local 3002
+                    mesh-seed-address-port aerospike-0.aerospike.sample-apps.svc.cluster.local 3002
+                    mesh-seed-address-port aerospike-1.aerospike.sample-apps.svc.cluster.local 3002
+                    mesh-seed-address-port aerospike-2.aerospike.sample-apps.svc.cluster.local 3002
 
                     interval 150
                     timeout 10
