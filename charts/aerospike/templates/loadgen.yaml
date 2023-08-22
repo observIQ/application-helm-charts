@@ -2,7 +2,7 @@ apiVersion: batch/v1
 kind: CronJob
 metadata:
   name: aerospike-loadgen
-  namespace: default
+  namespace: sample-apps
 spec:
   schedule: "*/2 * * * *"
   concurrencyPolicy: Forbid
