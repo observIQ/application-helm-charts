@@ -19,7 +19,7 @@ spec:
             image: {{ .Values.loadgenImage }}
             args:
               - -h
-              - aerospike.default.svc.cluster.local
+              - aerospike.sample-apps.svc.cluster.local
               - -k
               - "1000"
               - -w

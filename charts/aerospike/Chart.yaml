@@ -10,4 +10,4 @@ maintainers:
 name: aerospike
 sources:
   - https://aerospike.com/
-version: 0.0.4
+version: 0.0.5
