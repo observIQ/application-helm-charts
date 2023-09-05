@@ -124,6 +124,7 @@ metadata:
   name: apache-cassandra
   labels:
     app.kubernetes.io/service: apache-cassandra
+    cassandra_cluster: test-cluster
 spec:
   selector:
     app.kubernetes.io/app: apache-cassandra
