@@ -6,4 +6,4 @@ This file lists the maintainers of the charts project. The responsibilities of m
 | Name | GitHub ID | Affiliation |
 | ---- | --------- | ----------- |
 | [Austin Georgiades](mailto:austin.georgiades@observiq.com.com) | [algchoo](https://github.com/algchoo) | observIQ |
-| [Joe Sirianni](mailto:joe.sirianni@observiq.com.com) | [jhowellbm](https://github.com/jsirianni) | observIQ |
+| [Joe Sirianni](mailto:joe.sirianni@observiq.com.com) | [jsirianni](https://github.com/jsirianni) | observIQ |
