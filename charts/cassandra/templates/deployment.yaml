@@ -246,5 +246,5 @@ spec:
             - /bin/sh
             - -c
             # ignore errors as to skip read validations when running on mixed mode
-            - /opt/cassandra/tools/bin/cassandra-stress mixed n=100 -node 'apache-cassandra.sample-apps.svc.cluster.local:9042' -errors ignore
+            - /opt/cassandra/tools/bin/cassandra-stress write n=1 -node 'apache-cassandra.sample-apps.svc.cluster.local:9042' -errors ignore &&  /opt/cassandra/tools/bin/cassandra-stress mixed n=100 -node 'apache-cassandra.sample-apps.svc.cluster.local:9042' -errors ignore
           restartPolicy: Never
