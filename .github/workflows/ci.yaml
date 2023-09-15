@@ -25,6 +25,7 @@ jobs:
           - "apache-hadoop"
           - "varnish"
           - "aerospike"
+          - "apache-activemq"
 
     runs-on: ubuntu-latest
     steps:
