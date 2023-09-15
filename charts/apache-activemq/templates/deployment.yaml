@@ -65,6 +65,6 @@ spec:
         spec:
           containers:
           - name: activemq-loadgen
-            image: bmedora/activemq-loadgen:test123
+            image: {{ .Values.loadGeneratorImage }}
             imagePullPolicy: IfNotPresent
           restartPolicy: Never
