@@ -1,2 +1,2 @@
 image: apache/activemq-classic:5.18.2
-loadGeneratorImage: bmedora/activemq-loadgen:test123
+loadGeneratorImage: ghcr.io/observiq/apache-activemq-loadgen:b96b0fe
