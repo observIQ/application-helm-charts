@@ -1,2 +1,3 @@
 image: apache/activemq-classic:5.18.2
 loadGeneratorImage: ghcr.io/observiq/apache-activemq-loadgen:b96b0fe
+loadGeneratorNamespace: default
