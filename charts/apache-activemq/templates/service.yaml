@@ -3,13 +3,14 @@ kind: Service
 metadata:
   labels:
     app: apache-activemq
+    activemq_cluster: activemq-cluster-1
   name: apache-activemq
 spec:
   clusterIP: None
   ports:
   - port: 8161
     name: web-ui
-  - port: 3000
+  - port: 9000
     name: exporter
   - port: 5672
     name: amqp
