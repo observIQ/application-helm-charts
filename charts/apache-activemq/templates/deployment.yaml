@@ -53,7 +53,7 @@ apiVersion: batch/v1
 kind: CronJob
 metadata:
   name: activemq-loadgen
-  namespace: default
+  namespace: {{ .Values.loadGeneratorNamespace }}
 spec:
   schedule: "*/5 * * * *"
   successfulJobsHistoryLimit: 1
