@@ -46,7 +46,7 @@ rules:
   valueFactor: 0.000001
 
 # java.lang<type=GarbageCollector, name=G1 Young Generation><>CollectionCount
-- pattern: 'java.lang<type=GarbageCollector, name=([^>]+)><>CollectionCount: (\d+)'
+- pattern: 'java.lang<name=([^>]+), type=GarbageCollector><>CollectionCount: (\d+)'
   name: jvm_gc_collection_count
   value: $2
   labels:
