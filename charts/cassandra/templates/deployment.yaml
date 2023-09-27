@@ -12,6 +12,7 @@ spec:
     metadata:
       labels:
         app.kubernetes.io/app: apache-cassandra
+        cassandra_cluster: test-cluster
     spec:
       containers:
       - name: apache-cassandra
