@@ -3,7 +3,6 @@ kind: Service
 metadata:
   labels:
     app: apache-activemq
-    activemq_cluster: activemq-cluster-1
   name: apache-activemq
 spec:
   clusterIP: None

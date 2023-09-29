@@ -10,4 +10,4 @@ maintainers:
 name: apache-activemq
 sources:
   - https://activemq.apache.org/components/classic/documentation
-version: 0.0.4
+version: 0.0.5
