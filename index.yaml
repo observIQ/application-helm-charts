@@ -116,6 +116,22 @@ entries:
   apache-activemq:
   - apiVersion: v2
     appVersion: 5.18.2
+    created: "2023-09-29T17:22:15.805568396Z"
+    digest: cd8c3bda4f31f5cf73b2717dd811f327c031ebfe26df7a2e7877187bab74bde8
+    home: https://github.com/observIQ/charts/tree/main/charts/apache-activemq
+    keywords:
+    - community
+    - forum
+    maintainers:
+    - name: observIQ
+    name: apache-activemq
+    sources:
+    - https://activemq.apache.org/components/classic/documentation
+    urls:
+    - https://github.com/observIQ/charts/releases/download/apache-activemq-0.0.6/apache-activemq-0.0.6.tgz
+    version: 0.0.6
+  - apiVersion: v2
+    appVersion: 5.18.2
     created: "2023-09-29T16:40:09.220188319Z"
     digest: 16a6ad82e30481d9453abadd5c1b0f4070e6969d60d2cdea9658a089e9541269
     home: https://github.com/observIQ/charts/tree/main/charts/apache-activemq
@@ -1550,4 +1566,4 @@ entries:
     urls:
     - https://github.com/observIQ/charts/releases/download/wildfly-0.0.1/wildfly-0.0.1.tgz
     version: 0.0.1
-generated: "2023-09-29T17:10:14.292541353Z"
+generated: "2023-09-29T17:22:15.805728535Z"
