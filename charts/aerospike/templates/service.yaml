@@ -3,7 +3,6 @@ kind: Service
 metadata:
   labels:
     app: aerospike
-    aerospike_cluster: as-cluster-0
   name: aerospike
 spec:
   clusterIP: None
