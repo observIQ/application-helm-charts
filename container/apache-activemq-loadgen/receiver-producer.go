@@ -11,8 +11,10 @@ import (
 )
 
 const host = "apache-activemq"
-const topic = "topic://test-topic"
-const queue = "queue://test-queue"
+const topicOne = "topic://test-topic-1"
+const topicTwo = "topic://test-topic-2"
+const queueOne = "queue://test-queue-1"
+const queueTwo = "queue://test-queue-2"
 const port = "5672"
 const username = "admin"
 const password = "admin"
@@ -107,10 +109,15 @@ func main() {
 	var wg sync.WaitGroup
 	wg.Add(1)
 
-	go startReceiver(topic, &wg)
-	go startProducer(topic, &wg)
-	go startReceiver(queue, &wg)
-	go startProducer(queue, &wg)
+	go startReceiver(topicOne, &wg)
+	go startProducer(topicOne, &wg)
+	go startReceiver(queueOne, &wg)
+	go startProducer(queueOne, &wg)
+
+	go startReceiver(topicTwo, &wg)
+	go startProducer(topicTwo, &wg)
+	go startReceiver(queueTwo, &wg)
+	go startProducer(queueTwo, &wg)
 
 	fmt.Println("Waiting for goroutines to finish...")
 	wg.Wait()
