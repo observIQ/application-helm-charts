@@ -35,3 +35,19 @@ data:
       name: activemq_$2_usage_ratio
       type: GAUGE
       valueFactor: 0.01
+
+    - pattern: 'java.lang<name=([^>]+), type=GarbageCollector><LastGcInfo>duration: (\d+)'
+      name: jvm_gc_duration_seconds
+      value: $2
+      labels:
+        name: $1
+      type: GAUGE
+      # Convert microseconds to seconds
+      valueFactor: 0.000001
+
+    - pattern: 'java.lang<name=([^>]+), type=GarbageCollector><>CollectionCount: (\d+)'
+      name: jvm_gc_collection_count
+      value: $2
+      labels:
+        name: $1
+      type: GAUGE
