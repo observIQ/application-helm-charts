@@ -3,6 +3,22 @@ entries:
   aerospike:
   - apiVersion: v2
     appVersion: 6.3.0.5
+    created: "2023-09-29T17:10:14.292212349Z"
+    digest: 06fa4c094dc31fc3afd6268e389c53b66f713dbd3ebfd711368ea679a649d7e3
+    home: https://github.com/observIQ/charts/tree/main/charts/aerospike
+    keywords:
+    - community
+    - forum
+    maintainers:
+    - name: observIQ
+    name: aerospike
+    sources:
+    - https://aerospike.com/
+    urls:
+    - https://github.com/observIQ/charts/releases/download/aerospike-0.0.7/aerospike-0.0.7.tgz
+    version: 0.0.7
+  - apiVersion: v2
+    appVersion: 6.3.0.5
     created: "2023-09-14T15:18:14.507804724Z"
     digest: a5a7310c1a91a09d01cbcb781464ea081e99198d53fbdf79ec6e1cd7c994087e
     home: https://github.com/observIQ/charts/tree/main/charts/aerospike
@@ -1534,4 +1550,4 @@ entries:
     urls:
     - https://github.com/observIQ/charts/releases/download/wildfly-0.0.1/wildfly-0.0.1.tgz
     version: 0.0.1
-generated: "2023-09-29T16:40:09.22042542Z"
+generated: "2023-09-29T17:10:14.292541353Z"
