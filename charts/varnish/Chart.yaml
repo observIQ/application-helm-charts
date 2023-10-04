@@ -10,4 +10,4 @@ maintainers:
 name: varnish
 sources:
   - https://varnish-cache.org/
-version: 0.0.7
+version: 0.0.8

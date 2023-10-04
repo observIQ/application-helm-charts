@@ -10,4 +10,4 @@ maintainers:
 name: mssql
 sources:
   - https://github.com/Microsoft/mssql-docker
-version: 0.0.2
+version: 0.0.3
