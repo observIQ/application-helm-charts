@@ -38,7 +38,7 @@ data:
         name: $1
       type: GAUGE
       # Convert microseconds to seconds
-      valueFactor: 0.000001
+      valueFactor: 0.001
 
     - pattern: 'java.lang<name=([^>]+), type=GarbageCollector><>CollectionCount: (\d+)'
       name: jvm_gc_collection_count
