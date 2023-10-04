@@ -1,7 +1,7 @@
 apiVersion: v2
 appVersion: 4.1.0
 engine: gotpl
-home: https://github.com/observIQ/charts/tree/main/charts/cassandra
+home: https://github.com/observIQ/application-helm-charts/tree/main/charts/cassandra
 keywords:
   - community
   - forum

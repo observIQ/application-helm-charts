@@ -1,7 +1,7 @@
 apiVersion: v2
 appVersion: "5.7"
 engine: gotpl
-home: https://github.com/observIQ/charts/tree/main/charts/squid
+home: https://github.com/observIQ/application-helm-charts/tree/main/charts/squid
 keywords:
   - community
   - forum
