@@ -10,4 +10,4 @@ maintainers:
 name: squid
 sources:
   - https://github.com/squid-cache/squid
-version: 0.0.3
+version: 0.0.4
