@@ -471,6 +471,27 @@ entries:
   clickhouse:
   - apiVersion: v1
     appVersion: 22.6.8.35
+    created: "2023-10-04T19:14:19.466232331Z"
+    description: ClickHouse is an open source column-oriented database management
+      system capable of real time generation of analytical data reports using SQL
+      queries
+    digest: b5ddc7f1dcc97b7c44c77fe7383772865317866cde62e1a3f56ef7772ebce54b
+    home: https://clickhouse.yandex/
+    icon: https://clickhouse.yandex/images/logo.png
+    keywords:
+    - clickhouse
+    - olap
+    - database
+    maintainers:
+    - name: observIQ
+    name: clickhouse
+    sources:
+    - https://github.com/observIQ/charts
+    urls:
+    - https://github.com/observIQ/application-helm-charts/releases/download/clickhouse-3.2.5/clickhouse-3.2.5.tgz
+    version: 3.2.5
+  - apiVersion: v1
+    appVersion: 22.6.8.35
     created: "2022-11-30T17:48:25.639402503Z"
     description: ClickHouse is an open source column-oriented database management
       system capable of real time generation of analytical data reports using SQL
@@ -602,6 +623,43 @@ entries:
     - https://github.com/observIQ/charts/releases/download/couchbase-0.0.1/couchbase-0.0.1.tgz
     version: 0.0.1
   discourse:
+  - annotations:
+      category: Forum
+    apiVersion: v2
+    appVersion: 2.8.9
+    created: "2023-10-04T19:14:19.683437266Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 17.X.X
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.X.X
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: Discourse is an open source discussion platform with built-in moderation
+      and governance systems that let discussion communities protect themselves from
+      bad actors even without official moderators.
+    digest: ddb6ac6d884b3846c49e6a64c704deca9fe7a35203e33b28d0f9d3326accfe8c
+    home: https://github.com/observIQ/application-helm-charts/tree/main/charts/discourse
+    keywords:
+    - community
+    - forum
+    maintainers:
+    - name: observIQ
+    name: discourse
+    sources:
+    - https://github.com/bitnami/containers/tree/main/bitnami/discourse
+    - https://github.com/spinnaker
+    - https://www.discourse.org/
+    urls:
+    - https://github.com/observIQ/application-helm-charts/releases/download/discourse-9.0.12/discourse-9.0.12.tgz
+    version: 9.0.12
   - annotations:
       category: Forum
     apiVersion: v2
@@ -1566,4 +1624,4 @@ entries:
     urls:
     - https://github.com/observIQ/charts/releases/download/wildfly-0.0.1/wildfly-0.0.1.tgz
     version: 0.0.1
-generated: "2023-09-29T17:22:15.805728535Z"
+generated: "2023-10-04T19:14:19.683606765Z"
