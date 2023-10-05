@@ -1,7 +1,7 @@
 apiVersion: v2
 appVersion: 5.18.2
 engine: gotpl
-home: https://github.com/observIQ/application-helm-charts/tree/main/charts/apache-activemq
+home: https://github.com/observIQ/charts/tree/main/charts/apache-activemq
 keywords:
   - community
   - forum
