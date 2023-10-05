@@ -1,7 +1,7 @@
 apiVersion: v2
 appVersion: 3.3.2
 engine: gotpl
-home: https://github.com/observIQ/application-helm-charts/tree/main/charts/apache-hadoop
+home: https://github.com/observIQ/charts/tree/main/charts/apache-hadoop
 keywords:
   - community
   - forum
