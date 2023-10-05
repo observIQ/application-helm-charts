@@ -10,4 +10,4 @@ maintainers:
 name: tensorflow
 sources:
   - https://github.com/tensorflow/serving
-version: 0.0.9
+version: 1.0.0

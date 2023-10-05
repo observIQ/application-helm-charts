@@ -10,4 +10,4 @@ maintainers:
 name: wildfly
 sources:
   - https://github.com/wildfly/wildfly
-version: 0.0.4
+version: 1.0.0
