@@ -3,6 +3,22 @@ entries:
   aerospike:
   - apiVersion: v2
     appVersion: 6.3.0.5
+    created: "2023-10-05T15:14:13.92158659Z"
+    digest: 36508fa27fd5fbabd01c2ae8cbf0f6bf3e0f1253e85dff1ca33658762feb548a
+    home: https://github.com/observIQ/charts/tree/main/charts/aerospike
+    keywords:
+    - community
+    - forum
+    maintainers:
+    - name: observIQ
+    name: aerospike
+    sources:
+    - https://aerospike.com/
+    urls:
+    - https://github.com/observIQ/charts/releases/download/aerospike-1.0.0/aerospike-1.0.0.tgz
+    version: 1.0.0
+  - apiVersion: v2
+    appVersion: 6.3.0.5
     created: "2023-09-29T17:10:14.292212349Z"
     digest: 06fa4c094dc31fc3afd6268e389c53b66f713dbd3ebfd711368ea679a649d7e3
     home: https://github.com/observIQ/charts/tree/main/charts/aerospike
@@ -116,6 +132,22 @@ entries:
   apache-activemq:
   - apiVersion: v2
     appVersion: 5.18.2
+    created: "2023-10-05T15:14:14.084253617Z"
+    digest: ebf766493fbaf05a98871c326ec478f83920dbc5d5560357a3d6c73612f856cd
+    home: https://github.com/observIQ/charts/tree/main/charts/apache-activemq
+    keywords:
+    - community
+    - forum
+    maintainers:
+    - name: observIQ
+    name: apache-activemq
+    sources:
+    - https://activemq.apache.org/components/classic/documentation
+    urls:
+    - https://github.com/observIQ/charts/releases/download/apache-activemq-1.0.0/apache-activemq-1.0.0.tgz
+    version: 1.0.0
+  - apiVersion: v2
+    appVersion: 5.18.2
     created: "2023-09-29T17:22:15.805568396Z"
     digest: cd8c3bda4f31f5cf73b2717dd811f327c031ebfe26df7a2e7877187bab74bde8
     home: https://github.com/observIQ/charts/tree/main/charts/apache-activemq
@@ -211,6 +243,22 @@ entries:
     - https://github.com/observIQ/charts/releases/download/apache-activemq-0.0.1/apache-activemq-0.0.1.tgz
     version: 0.0.1
   apache-cassandra:
+  - apiVersion: v2
+    appVersion: 4.1.0
+    created: "2023-10-05T15:14:14.230054027Z"
+    digest: 3c774d5b7820c41dbb75a525d4ac18010f8f86c127ed04ae688596889e7a1b74
+    home: https://github.com/observIQ/charts/tree/main/charts/cassandra
+    keywords:
+    - community
+    - forum
+    maintainers:
+    - name: observIQ
+    name: apache-cassandra
+    sources:
+    - https://github.com/apache/cassandra
+    urls:
+    - https://github.com/observIQ/charts/releases/download/apache-cassandra-1.0.0/apache-cassandra-1.0.0.tgz
+    version: 1.0.0
   - apiVersion: v2
     appVersion: 4.1.0
     created: "2023-09-27T17:39:40.927704898Z"
@@ -573,7 +621,44 @@ entries:
     urls:
     - https://github.com/observIQ/charts/releases/download/clickhouse-3.2.1/clickhouse-3.2.1.tgz
     version: 3.2.1
+  - apiVersion: v1
+    appVersion: 22.6.8.35
+    created: "2023-10-05T15:14:14.419034736Z"
+    description: ClickHouse is an open source column-oriented database management
+      system capable of real time generation of analytical data reports using SQL
+      queries
+    digest: f558d8ebd5d9e6c5d51c888edba70a4e7b4792e492a42c19723ce5636c069b04
+    home: https://clickhouse.yandex/
+    icon: https://clickhouse.yandex/images/logo.png
+    keywords:
+    - clickhouse
+    - olap
+    - database
+    maintainers:
+    - name: observIQ
+    name: clickhouse
+    sources:
+    - https://github.com/observIQ/charts
+    urls:
+    - https://github.com/observIQ/charts/releases/download/clickhouse-1.0.0/clickhouse-1.0.0.tgz
+    version: 1.0.0
   couchbase:
+  - apiVersion: v2
+    appVersion: 7.2.0
+    created: "2023-10-05T15:14:14.588056607Z"
+    digest: a3b06f0368f97580d02497b422d47bce6814c2fb1ca2c96eb7b2d115aeddac78
+    home: https://github.com/observIQ/charts/tree/main/charts/couchbase-community
+    keywords:
+    - community
+    - forum
+    maintainers:
+    - name: observIQ
+    name: couchbase
+    sources:
+    - https://www.couchbase.com/
+    urls:
+    - https://github.com/observIQ/charts/releases/download/couchbase-1.0.0/couchbase-1.0.0.tgz
+    version: 1.0.0
   - apiVersion: v2
     appVersion: 7.2.0
     created: "2023-07-31T17:02:44.878473704Z"
@@ -623,6 +708,43 @@ entries:
     - https://github.com/observIQ/charts/releases/download/couchbase-0.0.1/couchbase-0.0.1.tgz
     version: 0.0.1
   discourse:
+  - annotations:
+      category: Forum
+    apiVersion: v2
+    appVersion: 2.8.9
+    created: "2023-10-05T15:14:14.758247086Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 17.X.X
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.X.X
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: Discourse is an open source discussion platform with built-in moderation
+      and governance systems that let discussion communities protect themselves from
+      bad actors even without official moderators.
+    digest: 5fe1240b10176c63aba7b1e7232860ae2be468df01f5845f0f7f447f05d23627
+    home: https://github.com/observIQ/charts/tree/main/charts/discourse
+    keywords:
+    - community
+    - forum
+    maintainers:
+    - name: observIQ
+    name: discourse
+    sources:
+    - https://github.com/bitnami/containers/tree/main/bitnami/discourse
+    - https://github.com/spinnaker
+    - https://www.discourse.org/
+    urls:
+    - https://github.com/observIQ/charts/releases/download/discourse-9.0.13/discourse-9.0.13.tgz
+    version: 9.0.13
   - annotations:
       category: Forum
     apiVersion: v2
@@ -1107,6 +1229,22 @@ entries:
   hadoop:
   - apiVersion: v2
     appVersion: 3.3.2
+    created: "2023-10-05T15:14:14.930915282Z"
+    digest: f5b9ab3b58de0d3e6e609654fa09934453dc8da33149bed423243da6f998dbff
+    home: https://github.com/observIQ/charts/tree/main/charts/apache-hadoop
+    keywords:
+    - community
+    - forum
+    maintainers:
+    - name: observIQ
+    name: hadoop
+    sources:
+    - https://hadoop.apache.org/
+    urls:
+    - https://github.com/observIQ/charts/releases/download/hadoop-1.0.0/hadoop-1.0.0.tgz
+    version: 1.0.0
+  - apiVersion: v2
+    appVersion: 3.3.2
     created: "2023-06-22T18:32:43.764350371Z"
     digest: d671d05c5eb80786c76b04c2468947bb0e4515a066aa37c49f5405f6e635229a
     home: https://github.com/observIQ/charts/tree/main/charts/apache-hadoop
@@ -1138,6 +1276,22 @@ entries:
     - https://github.com/observIQ/charts/releases/download/hadoop-0.0.1/hadoop-0.0.1.tgz
     version: 0.0.1
   mesos:
+  - apiVersion: v2
+    appVersion: tbd
+    created: "2023-10-05T15:14:15.097831239Z"
+    digest: 84306bcc25fa11a29b36fb47f654a7857310c243b5e459185599df37aef96ac3
+    home: https://github.com/observIQ/charts/tree/main/charts/apache-mesos
+    keywords:
+    - community
+    - forum
+    maintainers:
+    - name: observIQ
+    name: mesos
+    sources:
+    - https://mesos.apache.org/
+    urls:
+    - https://github.com/observIQ/charts/releases/download/mesos-1.0.0/mesos-1.0.0.tgz
+    version: 1.0.0
   - apiVersion: v2
     appVersion: tbd
     created: "2023-06-08T15:54:39.407745924Z"
@@ -1237,6 +1391,22 @@ entries:
   mssql:
   - apiVersion: v2
     appVersion: 2022-latest
+    created: "2023-10-05T15:14:15.606893666Z"
+    digest: 7d9a1a2dff5928a6097e19df3893fb1a0c32ec6b36d3086c9c89241277c92464
+    home: https://github.com/observIQ/charts/tree/main/charts/mssql
+    keywords:
+    - community
+    - forum
+    maintainers:
+    - name: observIQ
+    name: mssql
+    sources:
+    - https://github.com/Microsoft/mssql-docker
+    urls:
+    - https://github.com/observIQ/charts/releases/download/mssql-1.0.0/mssql-1.0.0.tgz
+    version: 1.0.0
+  - apiVersion: v2
+    appVersion: 2022-latest
     created: "2023-02-01T17:10:51.677496039Z"
     digest: 940fbffe70b22d5e6b627e67642c30d659864662b776edb2de4f7209cd021a70
     home: https://github.com/observIQ/charts/tree/main/charts/mssql
@@ -1270,6 +1440,22 @@ entries:
   oracledbxe:
   - apiVersion: v2
     appVersion: 21.3.0
+    created: "2023-10-05T15:14:15.76342625Z"
+    digest: 96e4389990275ae53bceb3d443a0251fe669df09fb420f8d25bbf02715ef78e9
+    home: https://github.com/observIQ/charts/tree/main/charts/oracledbxe
+    keywords:
+    - community
+    - forum
+    maintainers:
+    - name: observIQ
+    name: oracledbxe
+    sources:
+    - https://github.com/gvenzl/oci-oracle-xe
+    urls:
+    - https://github.com/observIQ/charts/releases/download/oracledbxe-1.0.0/oracledbxe-1.0.0.tgz
+    version: 1.0.0
+  - apiVersion: v2
+    appVersion: 21.3.0
     created: "2023-01-04T18:52:14.959404876Z"
     digest: 5db6c11936d35ec26cf9e051196954cdf8d2ff963939fcba0ea6138fb3bc3c48
     home: https://github.com/observIQ/charts/tree/main/charts/oracledbxe
@@ -1285,6 +1471,22 @@ entries:
     - https://github.com/observIQ/charts/releases/download/oracledbxe-0.0.1/oracledbxe-0.0.1.tgz
     version: 0.0.1
   squid:
+  - apiVersion: v2
+    appVersion: "5.7"
+    created: "2023-10-05T15:14:15.947640726Z"
+    digest: 9dc64c0f2d243d66a0bebb72ddac086b38ae1cedfc98f037afdcae82d6f635cf
+    home: https://github.com/observIQ/charts/tree/main/charts/squid
+    keywords:
+    - community
+    - forum
+    maintainers:
+    - name: observIQ
+    name: squid
+    sources:
+    - https://github.com/squid-cache/squid
+    urls:
+    - https://github.com/observIQ/charts/releases/download/squid-1.0.0/squid-1.0.0.tgz
+    version: 1.0.0
   - apiVersion: v2
     appVersion: "5.7"
     created: "2023-06-07T18:15:08.49506349Z"
@@ -1334,6 +1536,22 @@ entries:
     - https://github.com/observIQ/charts/releases/download/squid-0.0.1/squid-0.0.1.tgz
     version: 0.0.1
   tensorflow:
+  - apiVersion: v2
+    appVersion: 2.11.0
+    created: "2023-10-05T15:14:16.150571332Z"
+    digest: 30659b84a22beaca96eb48e588b829d7f929b18632492c4c5c399da5eb6f4902
+    home: https://github.com/observIQ/charts/tree/main/charts/tensorflow
+    keywords:
+    - community
+    - forum
+    maintainers:
+    - name: observIQ
+    name: tensorflow
+    sources:
+    - https://github.com/tensorflow/serving
+    urls:
+    - https://github.com/observIQ/charts/releases/download/tensorflow-1.0.0/tensorflow-1.0.0.tgz
+    version: 1.0.0
   - apiVersion: v2
     appVersion: 2.11.0
     created: "2022-12-07T15:42:23.665516505Z"
@@ -1465,6 +1683,22 @@ entries:
   varnish:
   - apiVersion: v2
     appVersion: 6.0.11
+    created: "2023-10-05T15:14:16.310613741Z"
+    digest: 34736b5abbb5fb53c119079f5a5b319a419450b59bb6b53ae755484c9b477dd1
+    home: https://github.com/observIQ/charts/tree/main/charts/varnish
+    keywords:
+    - community
+    - forum
+    maintainers:
+    - name: observIQ
+    name: varnish
+    sources:
+    - https://varnish-cache.org/
+    urls:
+    - https://github.com/observIQ/charts/releases/download/varnish-1.0.0/varnish-1.0.0.tgz
+    version: 1.0.0
+  - apiVersion: v2
+    appVersion: 6.0.11
     created: "2023-08-03T15:52:43.138327364Z"
     digest: db14515b10f3811b0d01688befeaf3acdb7c53a809a2e721aa0b520ff6eaed1f
     home: https://github.com/observIQ/charts/tree/main/charts/varnish
@@ -1578,6 +1812,22 @@ entries:
   wildfly:
   - apiVersion: v2
     appVersion: 27.0.0.Final
+    created: "2023-10-05T15:14:16.452075721Z"
+    digest: d377df88d6e45605e10caaff64c9795adda260f3b178e7ef816b5fb546e4f5d0
+    home: https://github.com/observIQ/charts/tree/main/charts/wildfly
+    keywords:
+    - community
+    - forum
+    maintainers:
+    - name: observIQ
+    name: wildfly
+    sources:
+    - https://github.com/wildfly/wildfly
+    urls:
+    - https://github.com/observIQ/charts/releases/download/wildfly-1.0.0/wildfly-1.0.0.tgz
+    version: 1.0.0
+  - apiVersion: v2
+    appVersion: 27.0.0.Final
     created: "2023-01-27T16:39:08.974985005Z"
     digest: 781ea5d0c234a8502513fc38e05040d5d568923816e52b7f97342e8527e1e574
     home: https://github.com/observIQ/charts/tree/main/charts/wildfly
@@ -1624,4 +1874,4 @@ entries:
     urls:
     - https://github.com/observIQ/charts/releases/download/wildfly-0.0.1/wildfly-0.0.1.tgz
     version: 0.0.1
-generated: "2023-10-04T19:14:19.683606765Z"
+generated: "2023-10-05T15:14:16.452366523Z"
