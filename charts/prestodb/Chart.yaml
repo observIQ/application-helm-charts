@@ -1,6 +1,6 @@
 apiVersion: v2
 name: presto
-description: The official Helm chart for Presto
+description: Customized version of the official Helm chart for Presto
 type: application
 version: 0.1.0
 appVersion: "0.283"
