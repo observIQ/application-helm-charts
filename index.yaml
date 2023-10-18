@@ -1502,6 +1502,25 @@ entries:
     urls:
     - https://github.com/observIQ/charts/releases/download/oracledbxe-0.0.1/oracledbxe-0.0.1.tgz
     version: 0.0.1
+  presto:
+  - apiVersion: v2
+    appVersion: "0.283"
+    created: "2023-10-18T14:57:27.173073131Z"
+    description: Customized version of the official Helm chart for Presto
+    digest: 5677de96e34f0aef725dbcbe638e5a3dd646ea90fc0f84a3d60e1024c3ac77d8
+    home: https://prestodb.io
+    icon: https://prestodb.io/docs/current/_static/logo.png
+    keywords:
+    - presto
+    - prestodb
+    name: presto
+    sources:
+    - https://github.com/prestodb/presto
+    - https://github.com/prestodb/presto-helm-charts
+    type: application
+    urls:
+    - https://github.com/observIQ/charts/releases/download/presto-0.1.0/presto-0.1.0.tgz
+    version: 0.1.0
   squid:
   - apiVersion: v2
     appVersion: "5.7"
@@ -1906,4 +1925,4 @@ entries:
     urls:
     - https://github.com/observIQ/charts/releases/download/wildfly-0.0.1/wildfly-0.0.1.tgz
     version: 0.0.1
-generated: "2023-10-05T15:49:22.677189621Z"
+generated: "2023-10-18T14:57:27.173258632Z"
