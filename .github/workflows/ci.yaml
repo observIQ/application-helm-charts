@@ -26,6 +26,7 @@ jobs:
           - "varnish"
           - "aerospike"
           - "apache-activemq"
+          - "prestodb"
 
     runs-on: ubuntu-latest
     steps:
