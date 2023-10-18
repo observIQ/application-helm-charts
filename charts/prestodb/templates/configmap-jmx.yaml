@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: config-script
+data:
+  config.yaml: |
+    hostPort: localhost:9001
+    lowercaseOutputLabelNames: true
+    lowercaseOutputName: true
+    rules:
+    - pattern: ".*"

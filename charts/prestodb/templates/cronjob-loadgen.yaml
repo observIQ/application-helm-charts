@@ -1,0 +1,23 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: prestodb-loadgen
+  namespace: {{ .Values.loadgenNamespace }}
+spec:
+  schedule: "*/10 * * * *"
+  successfulJobsHistoryLimit: 1
+  failedJobsHistoryLimit: 1
+  jobTemplate:
+    spec:
+      parallelism: 1
+      template:
+        spec:
+          containers:
+          - name: prestodb-cli
+            image: {{ .Values.loadgenImage }}
+            imagePullPolicy: IfNotPresent
+            command:
+            - /bin/sh
+            - -c
+            - ./opt/presto-cli --server prestodb:8080 --catalog tpch --schema sf100 -f /opt/prestodb-tpch.sql
+          restartPolicy: Never
