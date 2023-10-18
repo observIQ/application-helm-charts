@@ -26,6 +26,7 @@ jobs:
           - "varnish-exporter"
           - "aerospike-benchmark"
           - "apache-activemq-loadgen"
+          - "prestodb-loadgen"
     steps:
       - name: Checkout
         uses: actions/checkout@v2
