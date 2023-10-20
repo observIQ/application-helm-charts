@@ -1,5 +1,5 @@
 # Default values for presto
-loadgenImage: docker pull ghcr.io/observiq/prestodb-loadgen:efea7c5
+loadgenImage: ghcr.io/observiq/prestodb-loadgen:efea7c5
 loadgenNamespace: default
 
 image:
