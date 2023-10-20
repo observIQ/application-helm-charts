@@ -1,43 +1,44 @@
-{{- $env := concat .Values.env .Values.coordinator.env }}
-{{- $envFrom := concat .Values.envFrom .Values.coordinator.envFrom }}
-{{- $volumes := concat .Values.volumes .Values.coordinator.volumes }}
-{{- $volumeMounts := concat .Values.volumeMounts .Values.coordinator.volumeMounts }}
-{{- $containers := concat .Values.containers .Values.coordinator.containers }}
-{{- $initContainers := concat .Values.initContainers .Values.coordinator.initContainers }}
-{{- $nodeSelector := or .Values.coordinator.nodeSelector .Values.nodeSelector }}
-{{- $affinity := or .Values.coordinator.affinity .Values.affinity }}
-{{- $tolerations := or .Values.coordinator.tolerations .Values.tolerations }}
-{{- $securityContext := or .Values.coordinator.securityContext .Values.securityContext }}
+{{- $env := concat .Values.env .Values.worker.env }}
+{{- $envFrom := concat .Values.envFrom .Values.worker.envFrom }}
+{{- $volumes := concat .Values.volumes .Values.worker.volumes }}
+{{- $volumeMounts := concat .Values.volumeMounts .Values.worker.volumeMounts }}
+{{- $containers := concat .Values.containers .Values.worker.containers }}
+{{- $initContainers := concat .Values.initContainers .Values.worker.initContainers }}
+{{- $nodeSelector := or .Values.worker.nodeSelector .Values.nodeSelector }}
+{{- $affinity := or .Values.worker.affinity .Values.affinity }}
+{{- $tolerations := or .Values.worker.tolerations .Values.tolerations }}
+{{- $securityContext := or .Values.worker.securityContext .Values.securityContext }}
+{{- if or (eq .Values.mode "cluster") (eq .Values.mode "ha-cluster") }}
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: prestodb-coordinator
+  name: prestodb-worker
   labels:
     helm.sh/chart: {{ .Chart.Name }}-{{ .Chart.Version }}
     app.kubernetes.io/name: {{ .Chart.Name }}
     app.kubernetes.io/instance: prestodb
-    app.kubernetes.io/component: coordinator
+    app.kubernetes.io/component: worker
     app.kubernetes.io/version: {{ .Values.image.tag | default .Chart.AppVersion | quote }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
 spec:
-  replicas: {{ eq .Values.mode "ha-cluster" | ternary .Values.coordinator.replicas 1 }}
+  replicas: {{ .Values.worker.replicas }}
   selector:
     matchLabels:
       app.kubernetes.io/name: {{ .Chart.Name }}
       app.kubernetes.io/instance: prestodb
-      app.kubernetes.io/component: coordinator
-  strategy: {{- toYaml .Values.coordinator.deployment.strategy | nindent 4 }}
-  revisionHistoryLimit: {{ toYaml .Values.coordinator.deployment.revisionHistoryLimit }}
+      app.kubernetes.io/component: worker
+  strategy: {{- toYaml .Values.worker.deployment.strategy | nindent 4 }}
+  revisionHistoryLimit: {{ toYaml .Values.worker.deployment.revisionHistoryLimit }}
   template:
     metadata:
       labels:
         app.kubernetes.io/name: {{ .Chart.Name }}
         app.kubernetes.io/instance: prestodb
-        app.kubernetes.io/component: coordinator
-        prestodb_cluster: operator-cluster
+        app.kubernetes.io/component: worker
+        presto_cluster: operator-cluster
       annotations:
         checksum/catalog: {{ include (print $.Template.BasePath "/configmap-catalog.yaml") . | sha256sum }}
-        checksum/coordinator: {{ include (print $.Template.BasePath "/configmap-coordinator.yaml") . | sha256sum }}
+        checksum/worker: {{ include (print $.Template.BasePath "/configmap-worker.yaml") . | sha256sum }}
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets: {{- toYaml . | nindent 8 }}
@@ -49,13 +50,13 @@ spec:
       initContainers: {{- tpl (toYaml .) $ | nindent 8 }}
       {{- end }}
       containers:
-        - name: coordinator
+        - name: worker
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
-          {{- with .Values.coordinator.command }}
+          {{- with .Values.worker.command }}
           command: {{- tpl (toYaml .) $ | nindent 12 }}
           {{- end }}
-          {{- with .Values.coordinator.args }}
+          {{- with .Values.worker.args }}
           args: {{- tpl (toYaml .) $ | nindent 12 }}
           {{- end }}
           {{- with $env }}
@@ -71,21 +72,21 @@ spec:
             httpGet:
               path: /v1/status
               port: http
-            initialDelaySeconds: {{ .Values.coordinator.livenessProbe.initialDelaySeconds }}
-            periodSeconds: {{ .Values.coordinator.livenessProbe.periodSeconds }}
-            timeoutSeconds: {{ .Values.coordinator.livenessProbe.timeoutSeconds }}
-            failureThreshold: {{ .Values.coordinator.livenessProbe.failureThreshold }}
-            successThreshold: {{ .Values.coordinator.livenessProbe.successThreshold }}
+            initialDelaySeconds: {{ .Values.worker.livenessProbe.initialDelaySeconds }}
+            periodSeconds: {{ .Values.worker.livenessProbe.periodSeconds }}
+            timeoutSeconds: {{ .Values.worker.livenessProbe.timeoutSeconds }}
+            failureThreshold: {{ .Values.worker.livenessProbe.failureThreshold }}
+            successThreshold: {{ .Values.worker.livenessProbe.successThreshold }}
           readinessProbe:
             httpGet:
               path: /v1/status
               port: http
-            initialDelaySeconds: {{ .Values.coordinator.readinessProbe.initialDelaySeconds }}
-            periodSeconds: {{ .Values.coordinator.readinessProbe.periodSeconds }}
-            timeoutSeconds: {{ .Values.coordinator.readinessProbe.timeoutSeconds }}
-            failureThreshold: {{ .Values.coordinator.readinessProbe.failureThreshold }}
-            successThreshold: {{ .Values.coordinator.readinessProbe.successThreshold }}
-          {{- with .Values.coordinator.resources }}
+            initialDelaySeconds: {{ .Values.worker.readinessProbe.initialDelaySeconds }}
+            periodSeconds: {{ .Values.worker.readinessProbe.periodSeconds }}
+            timeoutSeconds: {{ .Values.worker.readinessProbe.timeoutSeconds }}
+            failureThreshold: {{ .Values.worker.readinessProbe.failureThreshold }}
+            successThreshold: {{ .Values.worker.readinessProbe.successThreshold }}
+          {{- with .Values.worker.resources }}
           resources: {{- toYaml . | nindent 12 }}
           {{- end }}
           volumeMounts:
@@ -102,7 +103,7 @@ spec:
       volumes:
         - name: config
           configMap:
-            name: prestodb-coordinator
+            name: prestodb-worker
         - name: catalog
           configMap:
             name: prestodb-catalog
@@ -121,3 +122,4 @@ spec:
       {{- with $securityContext }}
       securityContext: {{- toYaml . | nindent 8 }}
       {{- end }}
+{{- end }}
