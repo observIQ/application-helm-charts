@@ -1,1 +1,1 @@
-https://github.com/observIQ/charts/blob/main/README.md
+https://github.com/observiq/application-helm-charts/blob/main/README.md
