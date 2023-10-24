@@ -10,7 +10,7 @@ keywords:
 - database
 name: clickhouse
 sources:
-- https://github.com/observIQ/charts
+- https://github.com/observiq/application-helm-charts
 version: 1.0.0
 maintainers:
   - name: observIQ
