@@ -5,7 +5,7 @@ entries:
     appVersion: 6.3.0.5
     created: "2023-10-05T15:14:13.92158659Z"
     digest: 36508fa27fd5fbabd01c2ae8cbf0f6bf3e0f1253e85dff1ca33658762feb548a
-    home: https://github.com/observIQ/charts/tree/main/charts/aerospike
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/aerospike
     keywords:
     - community
     - forum
@@ -15,13 +15,13 @@ entries:
     sources:
     - https://aerospike.com/
     urls:
-    - https://github.com/observIQ/charts/releases/download/aerospike-1.0.0/aerospike-1.0.0.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/aerospike-1.0.0/aerospike-1.0.0.tgz
     version: 1.0.0
   - apiVersion: v2
     appVersion: 6.3.0.5
     created: "2023-09-29T17:10:14.292212349Z"
     digest: 06fa4c094dc31fc3afd6268e389c53b66f713dbd3ebfd711368ea679a649d7e3
-    home: https://github.com/observIQ/charts/tree/main/charts/aerospike
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/aerospike
     keywords:
     - community
     - forum
@@ -31,13 +31,13 @@ entries:
     sources:
     - https://aerospike.com/
     urls:
-    - https://github.com/observIQ/charts/releases/download/aerospike-0.0.7/aerospike-0.0.7.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/aerospike-0.0.7/aerospike-0.0.7.tgz
     version: 0.0.7
   - apiVersion: v2
     appVersion: 6.3.0.5
     created: "2023-09-14T15:18:14.507804724Z"
     digest: a5a7310c1a91a09d01cbcb781464ea081e99198d53fbdf79ec6e1cd7c994087e
-    home: https://github.com/observIQ/charts/tree/main/charts/aerospike
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/aerospike
     keywords:
     - community
     - forum
@@ -47,13 +47,13 @@ entries:
     sources:
     - https://aerospike.com/
     urls:
-    - https://github.com/observIQ/charts/releases/download/aerospike-0.0.6/aerospike-0.0.6.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/aerospike-0.0.6/aerospike-0.0.6.tgz
     version: 0.0.6
   - apiVersion: v2
     appVersion: 6.3.0.5
     created: "2023-08-23T17:18:01.795203159Z"
     digest: 6aadf400735488e6722308f8f3f98351abe4d919bb2d3943e1fbf9afea59be72
-    home: https://github.com/observIQ/charts/tree/main/charts/aerospike
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/aerospike
     keywords:
     - community
     - forum
@@ -63,13 +63,13 @@ entries:
     sources:
     - https://aerospike.com/
     urls:
-    - https://github.com/observIQ/charts/releases/download/aerospike-0.0.5/aerospike-0.0.5.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/aerospike-0.0.5/aerospike-0.0.5.tgz
     version: 0.0.5
   - apiVersion: v2
     appVersion: 6.3.0.5
     created: "2023-08-22T20:04:25.347333693Z"
     digest: 3b0929c07a8dca0a8201a5c0fe714f34b53b5a7e772491b639eb489cae37ee9a
-    home: https://github.com/observIQ/charts/tree/main/charts/aerospike
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/aerospike
     keywords:
     - community
     - forum
@@ -79,13 +79,13 @@ entries:
     sources:
     - https://aerospike.com/
     urls:
-    - https://github.com/observIQ/charts/releases/download/aerospike-0.0.4/aerospike-0.0.4.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/aerospike-0.0.4/aerospike-0.0.4.tgz
     version: 0.0.4
   - apiVersion: v2
     appVersion: 6.3.0.5
     created: "2023-08-14T14:14:37.248430055Z"
     digest: 1d3a7151f34f77fca1bae68da58ecffcffc4550635dc938747b856aae899f8ff
-    home: https://github.com/observIQ/charts/tree/main/charts/aerospike
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/aerospike
     keywords:
     - community
     - forum
@@ -95,13 +95,13 @@ entries:
     sources:
     - https://aerospike.com/
     urls:
-    - https://github.com/observIQ/charts/releases/download/aerospike-0.0.3/aerospike-0.0.3.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/aerospike-0.0.3/aerospike-0.0.3.tgz
     version: 0.0.3
   - apiVersion: v2
     appVersion: 6.3.0.5
     created: "2023-08-10T19:42:53.310857824Z"
     digest: 89080fa4929002e29bab8e12e54f645e5c066b113b7ff5e83d22be5494f6d358
-    home: https://github.com/observIQ/charts/tree/main/charts/aerospike
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/aerospike
     keywords:
     - community
     - forum
@@ -111,13 +111,13 @@ entries:
     sources:
     - https://aerospike.com/
     urls:
-    - https://github.com/observIQ/charts/releases/download/aerospike-0.0.2/aerospike-0.0.2.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/aerospike-0.0.2/aerospike-0.0.2.tgz
     version: 0.0.2
   - apiVersion: v2
     appVersion: 6.3.0.5
     created: "2023-08-10T18:54:31.650943134Z"
     digest: 1e723ab3f1f8a5d0f140e0ec927f8a4aa045a3baa7fa68db3235520738a9c861
-    home: https://github.com/observIQ/charts/tree/main/charts/aerospike
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/aerospike
     keywords:
     - community
     - forum
@@ -127,14 +127,14 @@ entries:
     sources:
     - https://aerospike.com/
     urls:
-    - https://github.com/observIQ/charts/releases/download/aerospike-0.0.1/aerospike-0.0.1.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/aerospike-0.0.1/aerospike-0.0.1.tgz
     version: 0.0.1
   apache-activemq:
   - apiVersion: v2
     appVersion: 5.18.2
     created: "2023-10-05T15:14:14.084253617Z"
     digest: ebf766493fbaf05a98871c326ec478f83920dbc5d5560357a3d6c73612f856cd
-    home: https://github.com/observIQ/charts/tree/main/charts/apache-activemq
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/apache-activemq
     keywords:
     - community
     - forum
@@ -144,13 +144,13 @@ entries:
     sources:
     - https://activemq.apache.org/components/classic/documentation
     urls:
-    - https://github.com/observIQ/charts/releases/download/apache-activemq-1.0.0/apache-activemq-1.0.0.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/apache-activemq-1.0.0/apache-activemq-1.0.0.tgz
     version: 1.0.0
   - apiVersion: v2
     appVersion: 5.18.2
     created: "2023-09-29T17:22:15.805568396Z"
     digest: cd8c3bda4f31f5cf73b2717dd811f327c031ebfe26df7a2e7877187bab74bde8
-    home: https://github.com/observIQ/charts/tree/main/charts/apache-activemq
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/apache-activemq
     keywords:
     - community
     - forum
@@ -160,13 +160,13 @@ entries:
     sources:
     - https://activemq.apache.org/components/classic/documentation
     urls:
-    - https://github.com/observIQ/charts/releases/download/apache-activemq-0.0.6/apache-activemq-0.0.6.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/apache-activemq-0.0.6/apache-activemq-0.0.6.tgz
     version: 0.0.6
   - apiVersion: v2
     appVersion: 5.18.2
     created: "2023-09-29T16:40:09.220188319Z"
     digest: 16a6ad82e30481d9453abadd5c1b0f4070e6969d60d2cdea9658a089e9541269
-    home: https://github.com/observIQ/charts/tree/main/charts/apache-activemq
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/apache-activemq
     keywords:
     - community
     - forum
@@ -176,13 +176,13 @@ entries:
     sources:
     - https://activemq.apache.org/components/classic/documentation
     urls:
-    - https://github.com/observIQ/charts/releases/download/apache-activemq-0.0.5/apache-activemq-0.0.5.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/apache-activemq-0.0.5/apache-activemq-0.0.5.tgz
     version: 0.0.5
   - apiVersion: v2
     appVersion: 5.18.2
     created: "2023-09-19T14:35:10.03760754Z"
     digest: 9cab8b08c04012e9b9b5e1ce688ee4cb86ee908646d96c77c18626673dc2a851
-    home: https://github.com/observIQ/charts/tree/main/charts/apache-activemq
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/apache-activemq
     keywords:
     - community
     - forum
@@ -192,13 +192,13 @@ entries:
     sources:
     - https://activemq.apache.org/components/classic/documentation
     urls:
-    - https://github.com/observIQ/charts/releases/download/apache-activemq-0.0.4/apache-activemq-0.0.4.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/apache-activemq-0.0.4/apache-activemq-0.0.4.tgz
     version: 0.0.4
   - apiVersion: v2
     appVersion: 5.18.2
     created: "2023-09-18T20:24:00.813118195Z"
     digest: 563aa045f6b5e928ac58832999d884456fc2dc441f5e6772c70e11262cffa8e0
-    home: https://github.com/observIQ/charts/tree/main/charts/apache-activemq
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/apache-activemq
     keywords:
     - community
     - forum
@@ -208,13 +208,13 @@ entries:
     sources:
     - https://activemq.apache.org/components/classic/documentation
     urls:
-    - https://github.com/observIQ/charts/releases/download/apache-activemq-0.0.3/apache-activemq-0.0.3.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/apache-activemq-0.0.3/apache-activemq-0.0.3.tgz
     version: 0.0.3
   - apiVersion: v2
     appVersion: 5.18.2
     created: "2023-09-18T14:10:27.365929524Z"
     digest: 759a46ed7b55ab6d09161e41dcf06128c536ca63d0ac2c71a7f00799167e9d8c
-    home: https://github.com/observIQ/charts/tree/main/charts/apache-activemq
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/apache-activemq
     keywords:
     - community
     - forum
@@ -224,13 +224,13 @@ entries:
     sources:
     - https://activemq.apache.org/components/classic/documentation
     urls:
-    - https://github.com/observIQ/charts/releases/download/apache-activemq-0.0.2/apache-activemq-0.0.2.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/apache-activemq-0.0.2/apache-activemq-0.0.2.tgz
     version: 0.0.2
   - apiVersion: v2
     appVersion: 5.18.2
     created: "2023-09-15T21:15:35.492333546Z"
     digest: 91ed8c42c20cf5633246cd918bffc773d78f5af0c31d2073b94a6a2c11b5e0c9
-    home: https://github.com/observIQ/charts/tree/main/charts/apache-activemq
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/apache-activemq
     keywords:
     - community
     - forum
@@ -240,14 +240,14 @@ entries:
     sources:
     - https://activemq.apache.org/components/classic/documentation
     urls:
-    - https://github.com/observIQ/charts/releases/download/apache-activemq-0.0.1/apache-activemq-0.0.1.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/apache-activemq-0.0.1/apache-activemq-0.0.1.tgz
     version: 0.0.1
   apache-cassandra:
   - apiVersion: v2
     appVersion: 4.1.0
     created: "2023-10-05T15:49:22.677018917Z"
     digest: ce8f6874f24bc38aa42af0f36dd10220b2ce2786cb9ee443343b32c749764bdb
-    home: https://github.com/observIQ/charts/tree/main/charts/cassandra
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/cassandra
     keywords:
     - community
     - forum
@@ -257,13 +257,13 @@ entries:
     sources:
     - https://github.com/apache/cassandra
     urls:
-    - https://github.com/observIQ/charts/releases/download/apache-cassandra-1.0.2/apache-cassandra-1.0.2.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/apache-cassandra-1.0.2/apache-cassandra-1.0.2.tgz
     version: 1.0.2
   - apiVersion: v2
     appVersion: 4.1.0
     created: "2023-10-05T15:33:04.32258505Z"
     digest: b7fc585993f3799e9c91d974ee79e6fd0244f4a8e486decae012ecaabcbc8e0b
-    home: https://github.com/observIQ/charts/tree/main/charts/cassandra
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/cassandra
     keywords:
     - community
     - forum
@@ -273,13 +273,13 @@ entries:
     sources:
     - https://github.com/apache/cassandra
     urls:
-    - https://github.com/observIQ/charts/releases/download/apache-cassandra-1.0.1/apache-cassandra-1.0.1.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/apache-cassandra-1.0.1/apache-cassandra-1.0.1.tgz
     version: 1.0.1
   - apiVersion: v2
     appVersion: 4.1.0
     created: "2023-10-05T15:14:14.230054027Z"
     digest: 3c774d5b7820c41dbb75a525d4ac18010f8f86c127ed04ae688596889e7a1b74
-    home: https://github.com/observIQ/charts/tree/main/charts/cassandra
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/cassandra
     keywords:
     - community
     - forum
@@ -289,13 +289,13 @@ entries:
     sources:
     - https://github.com/apache/cassandra
     urls:
-    - https://github.com/observIQ/charts/releases/download/apache-cassandra-1.0.0/apache-cassandra-1.0.0.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/apache-cassandra-1.0.0/apache-cassandra-1.0.0.tgz
     version: 1.0.0
   - apiVersion: v2
     appVersion: 4.1.0
     created: "2023-09-27T17:39:40.927704898Z"
     digest: 6128713d8e43b994eafdd2081bc1430397ce6edaa1f18c345e94bfedee4b3ce2
-    home: https://github.com/observIQ/charts/tree/main/charts/cassandra
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/cassandra
     keywords:
     - community
     - forum
@@ -305,13 +305,13 @@ entries:
     sources:
     - https://github.com/apache/cassandra
     urls:
-    - https://github.com/observIQ/charts/releases/download/apache-cassandra-0.1.5/apache-cassandra-0.1.5.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/apache-cassandra-0.1.5/apache-cassandra-0.1.5.tgz
     version: 0.1.5
   - apiVersion: v2
     appVersion: 4.1.0
     created: "2023-09-22T19:24:35.088968255Z"
     digest: 0080e97086fbb268a4184c2f12bfcce95a869fb91bb905e76f9e422c83efd648
-    home: https://github.com/observIQ/charts/tree/main/charts/cassandra
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/cassandra
     keywords:
     - community
     - forum
@@ -321,13 +321,13 @@ entries:
     sources:
     - https://github.com/apache/cassandra
     urls:
-    - https://github.com/observIQ/charts/releases/download/apache-cassandra-0.1.4/apache-cassandra-0.1.4.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/apache-cassandra-0.1.4/apache-cassandra-0.1.4.tgz
     version: 0.1.4
   - apiVersion: v2
     appVersion: 4.1.0
     created: "2023-09-22T17:47:19.662335146Z"
     digest: 565c598e85666e089ed8b265ed20856ddaa6470836bdd4b5f186b55edc0028fd
-    home: https://github.com/observIQ/charts/tree/main/charts/cassandra
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/cassandra
     keywords:
     - community
     - forum
@@ -337,13 +337,13 @@ entries:
     sources:
     - https://github.com/apache/cassandra
     urls:
-    - https://github.com/observIQ/charts/releases/download/apache-cassandra-0.1.3/apache-cassandra-0.1.3.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/apache-cassandra-0.1.3/apache-cassandra-0.1.3.tgz
     version: 0.1.3
   - apiVersion: v2
     appVersion: 4.1.0
     created: "2023-09-14T17:43:49.845761002Z"
     digest: 8dd04112221e12b14bfce4794e4aa60a4c934ea48212b713edb59b9c6ffec264
-    home: https://github.com/observIQ/charts/tree/main/charts/cassandra
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/cassandra
     keywords:
     - community
     - forum
@@ -353,13 +353,13 @@ entries:
     sources:
     - https://github.com/apache/cassandra
     urls:
-    - https://github.com/observIQ/charts/releases/download/apache-cassandra-0.1.2/apache-cassandra-0.1.2.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/apache-cassandra-0.1.2/apache-cassandra-0.1.2.tgz
     version: 0.1.2
   - apiVersion: v2
     appVersion: 4.1.0
     created: "2023-09-05T14:10:02.722192618Z"
     digest: 7ebfafc0f165786ac9c43dd6b3f04352671cdd7a745044d7ef4596f8f4e5ccea
-    home: https://github.com/observIQ/charts/tree/main/charts/cassandra
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/cassandra
     keywords:
     - community
     - forum
@@ -369,13 +369,13 @@ entries:
     sources:
     - https://github.com/apache/cassandra
     urls:
-    - https://github.com/observIQ/charts/releases/download/apache-cassandra-0.1.1/apache-cassandra-0.1.1.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/apache-cassandra-0.1.1/apache-cassandra-0.1.1.tgz
     version: 0.1.1
   - apiVersion: v2
     appVersion: 4.1.0
     created: "2023-08-17T21:21:52.582946082Z"
     digest: 3488b38b07994017f689a06e5b66bbe448a8dc1d82b728f3f270fa3916ce47a0
-    home: https://github.com/observIQ/charts/tree/main/charts/cassandra
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/cassandra
     keywords:
     - community
     - forum
@@ -385,13 +385,13 @@ entries:
     sources:
     - https://github.com/apache/cassandra
     urls:
-    - https://github.com/observIQ/charts/releases/download/apache-cassandra-0.1.0/apache-cassandra-0.1.0.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/apache-cassandra-0.1.0/apache-cassandra-0.1.0.tgz
     version: 0.1.0
   - apiVersion: v2
     appVersion: 4.1.0
     created: "2023-08-17T20:17:47.734065169Z"
     digest: c121a98505c8aeca7a35a8c6a5e67dcd7c47bae1e625f50e2204783fda3699ff
-    home: https://github.com/observIQ/charts/tree/main/charts/cassandra
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/cassandra
     keywords:
     - community
     - forum
@@ -401,13 +401,13 @@ entries:
     sources:
     - https://github.com/apache/cassandra
     urls:
-    - https://github.com/observIQ/charts/releases/download/apache-cassandra-0.0.10/apache-cassandra-0.0.10.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/apache-cassandra-0.0.10/apache-cassandra-0.0.10.tgz
     version: 0.0.10
   - apiVersion: v2
     appVersion: 4.1.0
     created: "2023-03-21T14:31:31.388759696Z"
     digest: ec7f5a094f38d19227ecfabc4458483e45536e9cbbaa56bcd85512d32ad48b6a
-    home: https://github.com/observIQ/charts/tree/main/charts/cassandra
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/cassandra
     keywords:
     - community
     - forum
@@ -417,13 +417,13 @@ entries:
     sources:
     - https://github.com/apache/cassandra
     urls:
-    - https://github.com/observIQ/charts/releases/download/apache-cassandra-0.0.9/apache-cassandra-0.0.9.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/apache-cassandra-0.0.9/apache-cassandra-0.0.9.tgz
     version: 0.0.9
   - apiVersion: v2
     appVersion: 4.1.0
     created: "2023-03-20T19:14:28.299945145Z"
     digest: 08a63a4bf39f66cd3c45d724d311e0b6c0dee1cb37a515fbfaed04f082f83b6f
-    home: https://github.com/observIQ/charts/tree/main/charts/cassandra
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/cassandra
     keywords:
     - community
     - forum
@@ -433,14 +433,14 @@ entries:
     sources:
     - https://github.com/apache/cassandra
     urls:
-    - https://github.com/observIQ/charts/releases/download/apache-cassandra-0.0.8/apache-cassandra-0.0.8.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/apache-cassandra-0.0.8/apache-cassandra-0.0.8.tgz
     version: 0.0.8
   cassandra:
   - apiVersion: v2
     appVersion: 4.1.0
     created: "2023-03-16T20:01:08.803758542Z"
     digest: e143c777a1da912dc898827926cf541644053505b6133d32320311e69bc368e8
-    home: https://github.com/observIQ/charts/tree/main/charts/cassandra
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/cassandra
     keywords:
     - community
     - forum
@@ -450,13 +450,13 @@ entries:
     sources:
     - https://github.com/apache/cassandra
     urls:
-    - https://github.com/observIQ/charts/releases/download/cassandra-0.0.7/cassandra-0.0.7.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/cassandra-0.0.7/cassandra-0.0.7.tgz
     version: 0.0.7
   - apiVersion: v2
     appVersion: 4.1.0
     created: "2023-03-16T19:54:46.838012594Z"
     digest: 96023d617ce5fb3beacc6f3264732d0de36439632afcd746e9e8dcedc7559f51
-    home: https://github.com/observIQ/charts/tree/main/charts/cassandra
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/cassandra
     keywords:
     - community
     - forum
@@ -466,13 +466,13 @@ entries:
     sources:
     - https://github.com/apache/cassandra
     urls:
-    - https://github.com/observIQ/charts/releases/download/cassandra-0.0.6/cassandra-0.0.6.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/cassandra-0.0.6/cassandra-0.0.6.tgz
     version: 0.0.6
   - apiVersion: v2
     appVersion: 4.1.0
     created: "2023-03-14T20:34:37.812286571Z"
     digest: c6a565391c98e226f18c2d7b84828fdd426add1cee69c31a9eee3867ef8ef11a
-    home: https://github.com/observIQ/charts/tree/main/charts/cassandra
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/cassandra
     keywords:
     - community
     - forum
@@ -482,13 +482,13 @@ entries:
     sources:
     - https://github.com/apache/cassandra
     urls:
-    - https://github.com/observIQ/charts/releases/download/cassandra-0.0.5/cassandra-0.0.5.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/cassandra-0.0.5/cassandra-0.0.5.tgz
     version: 0.0.5
   - apiVersion: v2
     appVersion: 4.1.0
     created: "2023-02-23T21:52:23.23618839Z"
     digest: f54dd64183f29b2211cf8894890e0f2e71afa15cc2e3eee98b798f2325151ec3
-    home: https://github.com/observIQ/charts/tree/main/charts/cassandra
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/cassandra
     keywords:
     - community
     - forum
@@ -498,13 +498,13 @@ entries:
     sources:
     - https://github.com/apache/cassandra
     urls:
-    - https://github.com/observIQ/charts/releases/download/cassandra-0.0.4/cassandra-0.0.4.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/cassandra-0.0.4/cassandra-0.0.4.tgz
     version: 0.0.4
   - apiVersion: v2
     appVersion: 4.1.0
     created: "2023-02-23T20:54:35.556466552Z"
     digest: a8ff10bca9f1bcf2a5a8d4f656ba6e0778d289c26ee1f70adad7fd704327cdd1
-    home: https://github.com/observIQ/charts/tree/main/charts/cassandra
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/cassandra
     keywords:
     - community
     - forum
@@ -514,13 +514,13 @@ entries:
     sources:
     - https://github.com/apache/cassandra
     urls:
-    - https://github.com/observIQ/charts/releases/download/cassandra-0.0.3/cassandra-0.0.3.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/cassandra-0.0.3/cassandra-0.0.3.tgz
     version: 0.0.3
   - apiVersion: v2
     appVersion: 4.1.0
     created: "2023-02-13T21:36:05.461025953Z"
     digest: 38ac53ed530a03a7b2e4f62c27b7444e50adb58f888cbab8615afb135399b217
-    home: https://github.com/observIQ/charts/tree/main/charts/cassandra
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/cassandra
     keywords:
     - community
     - forum
@@ -530,13 +530,13 @@ entries:
     sources:
     - https://github.com/apache/cassandra
     urls:
-    - https://github.com/observIQ/charts/releases/download/cassandra-0.0.2/cassandra-0.0.2.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/cassandra-0.0.2/cassandra-0.0.2.tgz
     version: 0.0.2
   - apiVersion: v2
     appVersion: 4.1.0
     created: "2023-02-13T19:10:01.712801576Z"
     digest: 1307d3892d00df9caff47b90326879819b970f044d1654812770047936dd96f9
-    home: https://github.com/observIQ/charts/tree/main/charts/cassandra
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/cassandra
     keywords:
     - community
     - forum
@@ -546,7 +546,7 @@ entries:
     sources:
     - https://github.com/apache/cassandra
     urls:
-    - https://github.com/observIQ/charts/releases/download/cassandra-0.0.1/cassandra-0.0.1.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/cassandra-0.0.1/cassandra-0.0.1.tgz
     version: 0.0.1
   clickhouse:
   - apiVersion: v1
@@ -566,7 +566,7 @@ entries:
     - name: observIQ
     name: clickhouse
     sources:
-    - https://github.com/observIQ/charts
+    - https://github.com/observiq/application-helm-charts
     urls:
     - https://github.com/observIQ/application-helm-charts/releases/download/clickhouse-3.2.5/clickhouse-3.2.5.tgz
     version: 3.2.5
@@ -587,9 +587,9 @@ entries:
     - name: observIQ
     name: clickhouse
     sources:
-    - https://github.com/observIQ/charts
+    - https://github.com/observiq/application-helm-charts
     urls:
-    - https://github.com/observIQ/charts/releases/download/clickhouse-3.2.4/clickhouse-3.2.4.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/clickhouse-3.2.4/clickhouse-3.2.4.tgz
     version: 3.2.4
   - apiVersion: v1
     appVersion: 22.6.8.35
@@ -608,9 +608,9 @@ entries:
     - name: observIQ
     name: clickhouse
     sources:
-    - https://github.com/observIQ/charts
+    - https://github.com/observiq/application-helm-charts
     urls:
-    - https://github.com/observIQ/charts/releases/download/clickhouse-3.2.3/clickhouse-3.2.3.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/clickhouse-3.2.3/clickhouse-3.2.3.tgz
     version: 3.2.3
   - apiVersion: v1
     created: "2022-11-10T20:06:15.625509503Z"
@@ -628,9 +628,9 @@ entries:
     - name: observIQ
     name: clickhouse
     sources:
-    - https://github.com/observIQ/charts
+    - https://github.com/observiq/application-helm-charts
     urls:
-    - https://github.com/observIQ/charts/releases/download/clickhouse-3.2.2/clickhouse-3.2.2.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/clickhouse-3.2.2/clickhouse-3.2.2.tgz
     version: 3.2.2
   - apiVersion: v1
     appVersion: "19.14"
@@ -651,7 +651,7 @@ entries:
     sources:
     - https://github.com/sentry-kubernetes/charts
     urls:
-    - https://github.com/observIQ/charts/releases/download/clickhouse-3.2.1/clickhouse-3.2.1.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/clickhouse-3.2.1/clickhouse-3.2.1.tgz
     version: 3.2.1
   - apiVersion: v1
     appVersion: 22.6.8.35
@@ -670,16 +670,16 @@ entries:
     - name: observIQ
     name: clickhouse
     sources:
-    - https://github.com/observIQ/charts
+    - https://github.com/observiq/application-helm-charts
     urls:
-    - https://github.com/observIQ/charts/releases/download/clickhouse-1.0.0/clickhouse-1.0.0.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/clickhouse-1.0.0/clickhouse-1.0.0.tgz
     version: 1.0.0
   couchbase:
   - apiVersion: v2
     appVersion: 7.2.0
     created: "2023-10-05T15:14:14.588056607Z"
     digest: a3b06f0368f97580d02497b422d47bce6814c2fb1ca2c96eb7b2d115aeddac78
-    home: https://github.com/observIQ/charts/tree/main/charts/couchbase-community
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/couchbase-community
     keywords:
     - community
     - forum
@@ -689,13 +689,13 @@ entries:
     sources:
     - https://www.couchbase.com/
     urls:
-    - https://github.com/observIQ/charts/releases/download/couchbase-1.0.0/couchbase-1.0.0.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/couchbase-1.0.0/couchbase-1.0.0.tgz
     version: 1.0.0
   - apiVersion: v2
     appVersion: 7.2.0
     created: "2023-07-31T17:02:44.878473704Z"
     digest: b21cee485b36e7c09a4e1a437eae6605547108a4cefc7b6eb8a58a928679247d
-    home: https://github.com/observIQ/charts/tree/main/charts/couchbase-community
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/couchbase-community
     keywords:
     - community
     - forum
@@ -705,13 +705,13 @@ entries:
     sources:
     - https://www.couchbase.com/
     urls:
-    - https://github.com/observIQ/charts/releases/download/couchbase-0.0.3/couchbase-0.0.3.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/couchbase-0.0.3/couchbase-0.0.3.tgz
     version: 0.0.3
   - apiVersion: v2
     appVersion: 7.2.0
     created: "2023-06-21T14:30:19.259191334Z"
     digest: 234ca00f8a87c6dde7927634aa1fe42acaaed46a8a1aef15f66aeb179feae8be
-    home: https://github.com/observIQ/charts/tree/main/charts/couchbase-community
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/couchbase-community
     keywords:
     - community
     - forum
@@ -721,13 +721,13 @@ entries:
     sources:
     - https://www.couchbase.com/
     urls:
-    - https://github.com/observIQ/charts/releases/download/couchbase-0.0.2/couchbase-0.0.2.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/couchbase-0.0.2/couchbase-0.0.2.tgz
     version: 0.0.2
   - apiVersion: v2
     appVersion: 7.2.0
     created: "2023-06-19T18:15:05.119221574Z"
     digest: 7920c309b3aa32419c60480212a5db5c6046c0f6dee1577446e06bd5b6074b68
-    home: https://github.com/observIQ/charts/tree/main/charts/couchbase-community
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/couchbase-community
     keywords:
     - community
     - forum
@@ -737,7 +737,7 @@ entries:
     sources:
     - https://www.couchbase.com/
     urls:
-    - https://github.com/observIQ/charts/releases/download/couchbase-0.0.1/couchbase-0.0.1.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/couchbase-0.0.1/couchbase-0.0.1.tgz
     version: 0.0.1
   discourse:
   - annotations:
@@ -763,7 +763,7 @@ entries:
       and governance systems that let discussion communities protect themselves from
       bad actors even without official moderators.
     digest: 5fe1240b10176c63aba7b1e7232860ae2be468df01f5845f0f7f447f05d23627
-    home: https://github.com/observIQ/charts/tree/main/charts/discourse
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/discourse
     keywords:
     - community
     - forum
@@ -775,7 +775,7 @@ entries:
     - https://github.com/spinnaker
     - https://www.discourse.org/
     urls:
-    - https://github.com/observIQ/charts/releases/download/discourse-9.0.13/discourse-9.0.13.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/discourse-9.0.13/discourse-9.0.13.tgz
     version: 9.0.13
   - annotations:
       category: Forum
@@ -837,7 +837,7 @@ entries:
       and governance systems that let discussion communities protect themselves from
       bad actors even without official moderators.
     digest: 26e62ba5856c506ec53ca17fcf5d36b769366fc8a50b2f0a639f68b826c7faf5
-    home: https://github.com/observIQ/charts/tree/main/charts/discourse
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/discourse
     keywords:
     - community
     - forum
@@ -849,7 +849,7 @@ entries:
     - https://github.com/spinnaker
     - https://www.discourse.org/
     urls:
-    - https://github.com/observIQ/charts/releases/download/discourse-9.0.11/discourse-9.0.11.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/discourse-9.0.11/discourse-9.0.11.tgz
     version: 9.0.11
   - annotations:
       category: Forum
@@ -874,7 +874,7 @@ entries:
       and governance systems that let discussion communities protect themselves from
       bad actors even without official moderators.
     digest: d6af783b6006912abcf6141328fe6b0f08f8d28d3ebacb46bb52c7e384376baf
-    home: https://github.com/observIQ/charts/tree/main/charts/discourse
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/discourse
     keywords:
     - community
     - forum
@@ -886,7 +886,7 @@ entries:
     - https://github.com/spinnaker
     - https://www.discourse.org/
     urls:
-    - https://github.com/observIQ/charts/releases/download/discourse-9.0.10/discourse-9.0.10.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/discourse-9.0.10/discourse-9.0.10.tgz
     version: 9.0.10
   - annotations:
       category: Forum
@@ -911,7 +911,7 @@ entries:
       and governance systems that let discussion communities protect themselves from
       bad actors even without official moderators.
     digest: bf95cacbd1ebdac312ad933adf48bc44603353bcdb9ac882c17856c0997d0683
-    home: https://github.com/observIQ/charts/tree/main/charts/discourse
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/discourse
     keywords:
     - community
     - forum
@@ -923,7 +923,7 @@ entries:
     - https://github.com/spinnaker
     - https://www.discourse.org/
     urls:
-    - https://github.com/observIQ/charts/releases/download/discourse-9.0.9/discourse-9.0.9.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/discourse-9.0.9/discourse-9.0.9.tgz
     version: 9.0.9
   - annotations:
       category: Forum
@@ -948,7 +948,7 @@ entries:
       and governance systems that let discussion communities protect themselves from
       bad actors even without official moderators.
     digest: 72d780332225ee8492ba9a202de962137c950a6e41eaaa80a04a73a122d66795
-    home: https://github.com/observIQ/charts/tree/main/charts/discourse
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/discourse
     keywords:
     - community
     - forum
@@ -960,7 +960,7 @@ entries:
     - https://github.com/spinnaker
     - https://www.discourse.org/
     urls:
-    - https://github.com/observIQ/charts/releases/download/discourse-9.0.8/discourse-9.0.8.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/discourse-9.0.8/discourse-9.0.8.tgz
     version: 9.0.8
   - annotations:
       category: Forum
@@ -985,7 +985,7 @@ entries:
       and governance systems that let discussion communities protect themselves from
       bad actors even without official moderators.
     digest: f85ce1ced252e216fbda59f7bc2c064894adf2e464b8cb17846c4b78f90768a8
-    home: https://github.com/observIQ/charts/tree/main/charts/discourse
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/discourse
     keywords:
     - community
     - forum
@@ -997,7 +997,7 @@ entries:
     - https://github.com/spinnaker
     - https://www.discourse.org/
     urls:
-    - https://github.com/observIQ/charts/releases/download/discourse-9.0.7/discourse-9.0.7.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/discourse-9.0.7/discourse-9.0.7.tgz
     version: 9.0.7
   - annotations:
       category: Forum
@@ -1022,7 +1022,7 @@ entries:
       and governance systems that let discussion communities protect themselves from
       bad actors even without official moderators.
     digest: 720cba4a0ef544948e11cc5e85f4a2410a3d2f085080bfbffeebc6e1ea3f378e
-    home: https://github.com/observIQ/charts/tree/main/charts/discourse
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/discourse
     keywords:
     - community
     - forum
@@ -1034,7 +1034,7 @@ entries:
     - https://github.com/spinnaker
     - https://www.discourse.org/
     urls:
-    - https://github.com/observIQ/charts/releases/download/discourse-9.0.6/discourse-9.0.6.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/discourse-9.0.6/discourse-9.0.6.tgz
     version: 9.0.6
   - annotations:
       category: Forum
@@ -1059,7 +1059,7 @@ entries:
       and governance systems that let discussion communities protect themselves from
       bad actors even without official moderators.
     digest: d34eafb979c7c1201e629afc125673ecfdb7e840ad2de50e1a7b43d2b77ca6ca
-    home: https://github.com/observIQ/charts/tree/main/charts/discourse
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/discourse
     keywords:
     - community
     - forum
@@ -1071,7 +1071,7 @@ entries:
     - https://github.com/spinnaker
     - https://www.discourse.org/
     urls:
-    - https://github.com/observIQ/charts/releases/download/discourse-9.0.5/discourse-9.0.5.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/discourse-9.0.5/discourse-9.0.5.tgz
     version: 9.0.5
   - annotations:
       category: Forum
@@ -1096,7 +1096,7 @@ entries:
       and governance systems that let discussion communities protect themselves from
       bad actors even without official moderators.
     digest: 09291898ad4e6f536e304700af12a78eec1c579a43c3f31bdaf8c8ac974e39ca
-    home: https://github.com/observIQ/charts/tree/main/charts/discourse
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/discourse
     keywords:
     - community
     - forum
@@ -1108,7 +1108,7 @@ entries:
     - https://github.com/spinnaker
     - https://www.discourse.org/
     urls:
-    - https://github.com/observIQ/charts/releases/download/discourse-9.0.4/discourse-9.0.4.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/discourse-9.0.4/discourse-9.0.4.tgz
     version: 9.0.4
   - annotations:
       category: Forum
@@ -1133,7 +1133,7 @@ entries:
       and governance systems that let discussion communities protect themselves from
       bad actors even without official moderators.
     digest: a0c863acf2a5239478d023146f364b2502e9448fff7085e23e552431d83bfce2
-    home: https://github.com/observIQ/charts/tree/main/charts/discourse
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/discourse
     keywords:
     - community
     - forum
@@ -1145,7 +1145,7 @@ entries:
     - https://github.com/spinnaker
     - https://www.discourse.org/
     urls:
-    - https://github.com/observIQ/charts/releases/download/discourse-9.0.3/discourse-9.0.3.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/discourse-9.0.3/discourse-9.0.3.tgz
     version: 9.0.3
   - annotations:
       category: Forum
@@ -1170,7 +1170,7 @@ entries:
       and governance systems that let discussion communities protect themselves from
       bad actors even without official moderators.
     digest: 476dd6331766b2c5e225d2bf48181e38222e23848dc20d60c8c0ed3af246a2e3
-    home: https://github.com/observIQ/charts/tree/main/charts/discourse
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/discourse
     keywords:
     - community
     - forum
@@ -1182,7 +1182,7 @@ entries:
     - https://github.com/spinnaker
     - https://www.discourse.org/
     urls:
-    - https://github.com/observIQ/charts/releases/download/discourse-9.0.2/discourse-9.0.2.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/discourse-9.0.2/discourse-9.0.2.tgz
     version: 9.0.2
   - annotations:
       category: Forum
@@ -1207,7 +1207,7 @@ entries:
       and governance systems that let discussion communities protect themselves from
       bad actors even without official moderators.
     digest: 520c1003bf8fa6e5b2d71610bd063662c21fbae53a19acce58d93db0f7981b6f
-    home: https://github.com/observIQ/charts/tree/main/charts/discourse
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/discourse
     keywords:
     - community
     - forum
@@ -1219,7 +1219,7 @@ entries:
     - https://github.com/spinnaker
     - https://www.discourse.org/
     urls:
-    - https://github.com/observIQ/charts/releases/download/discourse-9.0.1/discourse-9.0.1.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/discourse-9.0.1/discourse-9.0.1.tgz
     version: 9.0.1
   - annotations:
       category: Forum
@@ -1244,7 +1244,7 @@ entries:
       and governance systems that let discussion communities protect themselves from
       bad actors even without official moderators.
     digest: 5a4ba202a3803978c04a870b9f9a4fdd7490bc277deb86777c78c555be7fde3d
-    home: https://github.com/observIQ/charts/tree/main/charts/discourse
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/discourse
     keywords:
     - community
     - forum
@@ -1256,14 +1256,14 @@ entries:
     - https://github.com/spinnaker
     - https://www.discourse.org/
     urls:
-    - https://github.com/observIQ/charts/releases/download/discourse-9.0.0/discourse-9.0.0.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/discourse-9.0.0/discourse-9.0.0.tgz
     version: 9.0.0
   hadoop:
   - apiVersion: v2
     appVersion: 3.3.2
     created: "2023-10-05T15:14:14.930915282Z"
     digest: f5b9ab3b58de0d3e6e609654fa09934453dc8da33149bed423243da6f998dbff
-    home: https://github.com/observIQ/charts/tree/main/charts/apache-hadoop
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/apache-hadoop
     keywords:
     - community
     - forum
@@ -1273,13 +1273,13 @@ entries:
     sources:
     - https://hadoop.apache.org/
     urls:
-    - https://github.com/observIQ/charts/releases/download/hadoop-1.0.0/hadoop-1.0.0.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/hadoop-1.0.0/hadoop-1.0.0.tgz
     version: 1.0.0
   - apiVersion: v2
     appVersion: 3.3.2
     created: "2023-06-22T18:32:43.764350371Z"
     digest: d671d05c5eb80786c76b04c2468947bb0e4515a066aa37c49f5405f6e635229a
-    home: https://github.com/observIQ/charts/tree/main/charts/apache-hadoop
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/apache-hadoop
     keywords:
     - community
     - forum
@@ -1289,13 +1289,13 @@ entries:
     sources:
     - https://hadoop.apache.org/
     urls:
-    - https://github.com/observIQ/charts/releases/download/hadoop-0.0.2/hadoop-0.0.2.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/hadoop-0.0.2/hadoop-0.0.2.tgz
     version: 0.0.2
   - apiVersion: v2
     appVersion: 3.3.2
     created: "2023-06-21T14:30:19.417083048Z"
     digest: 20f40e24d5f8b7f03a0723426ae006d958f326aaf9d4504c1b301d36b2599e73
-    home: https://github.com/observIQ/charts/tree/main/charts/apache-hadoop
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/apache-hadoop
     keywords:
     - community
     - forum
@@ -1305,14 +1305,14 @@ entries:
     sources:
     - https://hadoop.apache.org/
     urls:
-    - https://github.com/observIQ/charts/releases/download/hadoop-0.0.1/hadoop-0.0.1.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/hadoop-0.0.1/hadoop-0.0.1.tgz
     version: 0.0.1
   mesos:
   - apiVersion: v2
     appVersion: tbd
     created: "2023-10-05T15:14:15.097831239Z"
     digest: 84306bcc25fa11a29b36fb47f654a7857310c243b5e459185599df37aef96ac3
-    home: https://github.com/observIQ/charts/tree/main/charts/apache-mesos
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/apache-mesos
     keywords:
     - community
     - forum
@@ -1322,13 +1322,13 @@ entries:
     sources:
     - https://mesos.apache.org/
     urls:
-    - https://github.com/observIQ/charts/releases/download/mesos-1.0.0/mesos-1.0.0.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/mesos-1.0.0/mesos-1.0.0.tgz
     version: 1.0.0
   - apiVersion: v2
     appVersion: tbd
     created: "2023-06-08T15:54:39.407745924Z"
     digest: 2a3f26fa49e8e7bf5e54d4eb3487f24fc1ed859238dd71f9461a7f08e2c947bd
-    home: https://github.com/observIQ/charts/tree/main/charts/apache-mesos
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/apache-mesos
     keywords:
     - community
     - forum
@@ -1338,13 +1338,13 @@ entries:
     sources:
     - https://mesos.apache.org/
     urls:
-    - https://github.com/observIQ/charts/releases/download/mesos-0.0.6/mesos-0.0.6.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/mesos-0.0.6/mesos-0.0.6.tgz
     version: 0.0.6
   - apiVersion: v2
     appVersion: tbd
     created: "2023-06-08T14:11:18.029843218Z"
     digest: 4e5c3cf585dd24b9f12a7154ac6f649bc0277cb57cdd5aab67ef2473f3873692
-    home: https://github.com/observIQ/charts/tree/main/charts/apache-mesos
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/apache-mesos
     keywords:
     - community
     - forum
@@ -1354,13 +1354,13 @@ entries:
     sources:
     - https://mesos.apache.org/
     urls:
-    - https://github.com/observIQ/charts/releases/download/mesos-0.0.5/mesos-0.0.5.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/mesos-0.0.5/mesos-0.0.5.tgz
     version: 0.0.5
   - apiVersion: v2
     appVersion: tbd
     created: "2023-06-07T20:36:52.502415392Z"
     digest: 70bb4b5a11bb7af6408de7ef824c8fa219f921cf16de7e4cc80d3d68be5e5d33
-    home: https://github.com/observIQ/charts/tree/main/charts/apache-mesos
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/apache-mesos
     keywords:
     - community
     - forum
@@ -1370,13 +1370,13 @@ entries:
     sources:
     - https://mesos.apache.org/
     urls:
-    - https://github.com/observIQ/charts/releases/download/mesos-0.0.4/mesos-0.0.4.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/mesos-0.0.4/mesos-0.0.4.tgz
     version: 0.0.4
   - apiVersion: v2
     appVersion: tbd
     created: "2023-06-02T21:05:16.788433357Z"
     digest: 0a01ae68a839f46fe2e9a5d069a004397aa962bcc3f675ef9b3727bd44ed8b1f
-    home: https://github.com/observIQ/charts/tree/main/charts/apache-mesos
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/apache-mesos
     keywords:
     - community
     - forum
@@ -1386,13 +1386,13 @@ entries:
     sources:
     - https://mesos.apache.org/
     urls:
-    - https://github.com/observIQ/charts/releases/download/mesos-0.0.3/mesos-0.0.3.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/mesos-0.0.3/mesos-0.0.3.tgz
     version: 0.0.3
   - apiVersion: v2
     appVersion: tbd
     created: "2023-06-02T20:49:45.438014437Z"
     digest: 8e4def34b8c84cf4df75e80b12ae089f0934a674db73807ddd021ef582a0387a
-    home: https://github.com/observIQ/charts/tree/main/charts/apache-mesos
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/apache-mesos
     keywords:
     - community
     - forum
@@ -1402,13 +1402,13 @@ entries:
     sources:
     - https://mesos.apache.org/
     urls:
-    - https://github.com/observIQ/charts/releases/download/mesos-0.0.2/mesos-0.0.2.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/mesos-0.0.2/mesos-0.0.2.tgz
     version: 0.0.2
   - apiVersion: v2
     appVersion: tbd
     created: "2023-05-31T19:20:33.895250601Z"
     digest: e2b64be832c621026434bf139becec4723519a270f7296d260a40872dad699be
-    home: https://github.com/observIQ/charts/tree/main/charts/apache-mesos
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/apache-mesos
     keywords:
     - community
     - forum
@@ -1418,14 +1418,14 @@ entries:
     sources:
     - https://mesos.apache.org/
     urls:
-    - https://github.com/observIQ/charts/releases/download/mesos-0.0.1/mesos-0.0.1.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/mesos-0.0.1/mesos-0.0.1.tgz
     version: 0.0.1
   mssql:
   - apiVersion: v2
     appVersion: 2022-latest
     created: "2023-10-05T15:14:15.606893666Z"
     digest: 7d9a1a2dff5928a6097e19df3893fb1a0c32ec6b36d3086c9c89241277c92464
-    home: https://github.com/observIQ/charts/tree/main/charts/mssql
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/mssql
     keywords:
     - community
     - forum
@@ -1435,13 +1435,13 @@ entries:
     sources:
     - https://github.com/Microsoft/mssql-docker
     urls:
-    - https://github.com/observIQ/charts/releases/download/mssql-1.0.0/mssql-1.0.0.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/mssql-1.0.0/mssql-1.0.0.tgz
     version: 1.0.0
   - apiVersion: v2
     appVersion: 2022-latest
     created: "2023-02-01T17:10:51.677496039Z"
     digest: 940fbffe70b22d5e6b627e67642c30d659864662b776edb2de4f7209cd021a70
-    home: https://github.com/observIQ/charts/tree/main/charts/mssql
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/mssql
     keywords:
     - community
     - forum
@@ -1451,13 +1451,13 @@ entries:
     sources:
     - https://github.com/Microsoft/mssql-docker
     urls:
-    - https://github.com/observIQ/charts/releases/download/mssql-0.0.2/mssql-0.0.2.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/mssql-0.0.2/mssql-0.0.2.tgz
     version: 0.0.2
   - apiVersion: v2
     appVersion: 2022-latest
     created: "2022-12-14T14:34:49.338326482Z"
     digest: 625916e251f125266040628cc74d406b5e1555ca87279a66d657f4295e4fbf12
-    home: https://github.com/observIQ/charts/tree/main/charts/mssql
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/mssql
     keywords:
     - community
     - forum
@@ -1467,14 +1467,14 @@ entries:
     sources:
     - https://github.com/Microsoft/mssql-docker
     urls:
-    - https://github.com/observIQ/charts/releases/download/mssql-0.0.1/mssql-0.0.1.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/mssql-0.0.1/mssql-0.0.1.tgz
     version: 0.0.1
   oracledbxe:
   - apiVersion: v2
     appVersion: 21.3.0
     created: "2023-10-05T15:14:15.76342625Z"
     digest: 96e4389990275ae53bceb3d443a0251fe669df09fb420f8d25bbf02715ef78e9
-    home: https://github.com/observIQ/charts/tree/main/charts/oracledbxe
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/oracledbxe
     keywords:
     - community
     - forum
@@ -1484,13 +1484,13 @@ entries:
     sources:
     - https://github.com/gvenzl/oci-oracle-xe
     urls:
-    - https://github.com/observIQ/charts/releases/download/oracledbxe-1.0.0/oracledbxe-1.0.0.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/oracledbxe-1.0.0/oracledbxe-1.0.0.tgz
     version: 1.0.0
   - apiVersion: v2
     appVersion: 21.3.0
     created: "2023-01-04T18:52:14.959404876Z"
     digest: 5db6c11936d35ec26cf9e051196954cdf8d2ff963939fcba0ea6138fb3bc3c48
-    home: https://github.com/observIQ/charts/tree/main/charts/oracledbxe
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/oracledbxe
     keywords:
     - community
     - forum
@@ -1500,7 +1500,7 @@ entries:
     sources:
     - https://github.com/gvenzl/oci-oracle-xe
     urls:
-    - https://github.com/observIQ/charts/releases/download/oracledbxe-0.0.1/oracledbxe-0.0.1.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/oracledbxe-0.0.1/oracledbxe-0.0.1.tgz
     version: 0.0.1
   presto:
   - apiVersion: v2
@@ -1519,7 +1519,7 @@ entries:
     - https://github.com/prestodb/presto-helm-charts
     type: application
     urls:
-    - https://github.com/observIQ/charts/releases/download/presto-1.0.2/presto-1.0.2.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/presto-1.0.2/presto-1.0.2.tgz
     version: 1.0.2
   - apiVersion: v2
     appVersion: "0.283"
@@ -1537,7 +1537,7 @@ entries:
     - https://github.com/prestodb/presto-helm-charts
     type: application
     urls:
-    - https://github.com/observIQ/charts/releases/download/presto-1.0.1/presto-1.0.1.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/presto-1.0.1/presto-1.0.1.tgz
     version: 1.0.1
   - apiVersion: v2
     appVersion: "0.283"
@@ -1555,7 +1555,7 @@ entries:
     - https://github.com/prestodb/presto-helm-charts
     type: application
     urls:
-    - https://github.com/observIQ/charts/releases/download/presto-1.0.0/presto-1.0.0.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/presto-1.0.0/presto-1.0.0.tgz
     version: 1.0.0
   - apiVersion: v2
     appVersion: "0.283"
@@ -1573,14 +1573,14 @@ entries:
     - https://github.com/prestodb/presto-helm-charts
     type: application
     urls:
-    - https://github.com/observIQ/charts/releases/download/presto-0.1.0/presto-0.1.0.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/presto-0.1.0/presto-0.1.0.tgz
     version: 0.1.0
   squid:
   - apiVersion: v2
     appVersion: "5.7"
     created: "2023-10-05T15:14:15.947640726Z"
     digest: 9dc64c0f2d243d66a0bebb72ddac086b38ae1cedfc98f037afdcae82d6f635cf
-    home: https://github.com/observIQ/charts/tree/main/charts/squid
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/squid
     keywords:
     - community
     - forum
@@ -1590,13 +1590,13 @@ entries:
     sources:
     - https://github.com/squid-cache/squid
     urls:
-    - https://github.com/observIQ/charts/releases/download/squid-1.0.0/squid-1.0.0.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/squid-1.0.0/squid-1.0.0.tgz
     version: 1.0.0
   - apiVersion: v2
     appVersion: "5.7"
     created: "2023-06-07T18:15:08.49506349Z"
     digest: a27538f61a6cb9d166cd7125e2f6cc92c2c131ded60f1e0d4cd9ade0cd538a52
-    home: https://github.com/observIQ/charts/tree/main/charts/squid
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/squid
     keywords:
     - community
     - forum
@@ -1606,13 +1606,13 @@ entries:
     sources:
     - https://github.com/squid-cache/squid
     urls:
-    - https://github.com/observIQ/charts/releases/download/squid-0.0.3/squid-0.0.3.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/squid-0.0.3/squid-0.0.3.tgz
     version: 0.0.3
   - apiVersion: v2
     appVersion: "5.7"
     created: "2023-06-06T18:49:16.98673062Z"
     digest: 40e9aad4d2cd49dbbfbbb25c590d77c5590319bc53c0ca6ca87d5434d27ec0b8
-    home: https://github.com/observIQ/charts/tree/main/charts/squid
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/squid
     keywords:
     - community
     - forum
@@ -1622,13 +1622,13 @@ entries:
     sources:
     - https://github.com/squid-cache/squid
     urls:
-    - https://github.com/observIQ/charts/releases/download/squid-0.0.2/squid-0.0.2.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/squid-0.0.2/squid-0.0.2.tgz
     version: 0.0.2
   - apiVersion: v2
     appVersion: "5.7"
     created: "2023-05-19T15:29:19.979160469Z"
     digest: 4482a976316fc46332ebd5d4b80c45e16ee5d7feeedeb6f15ecaedbd4649c629
-    home: https://github.com/observIQ/charts/tree/main/charts/squid
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/squid
     keywords:
     - community
     - forum
@@ -1638,14 +1638,14 @@ entries:
     sources:
     - https://github.com/squid-cache/squid
     urls:
-    - https://github.com/observIQ/charts/releases/download/squid-0.0.1/squid-0.0.1.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/squid-0.0.1/squid-0.0.1.tgz
     version: 0.0.1
   tensorflow:
   - apiVersion: v2
     appVersion: 2.11.0
     created: "2023-10-05T15:14:16.150571332Z"
     digest: 30659b84a22beaca96eb48e588b829d7f929b18632492c4c5c399da5eb6f4902
-    home: https://github.com/observIQ/charts/tree/main/charts/tensorflow
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/tensorflow
     keywords:
     - community
     - forum
@@ -1655,13 +1655,13 @@ entries:
     sources:
     - https://github.com/tensorflow/serving
     urls:
-    - https://github.com/observIQ/charts/releases/download/tensorflow-1.0.0/tensorflow-1.0.0.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/tensorflow-1.0.0/tensorflow-1.0.0.tgz
     version: 1.0.0
   - apiVersion: v2
     appVersion: 2.11.0
     created: "2022-12-07T15:42:23.665516505Z"
     digest: 539fcffeb4ebead137edd48be6c8d27e2fd59ac894c9e26d9f1e11ead971b213
-    home: https://github.com/observIQ/charts/tree/main/charts/tensorflow
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/tensorflow
     keywords:
     - community
     - forum
@@ -1671,13 +1671,13 @@ entries:
     sources:
     - https://github.com/tensorflow/serving
     urls:
-    - https://github.com/observIQ/charts/releases/download/tensorflow-0.0.8/tensorflow-0.0.8.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/tensorflow-0.0.8/tensorflow-0.0.8.tgz
     version: 0.0.8
   - apiVersion: v2
     appVersion: 2.9.2
     created: "2022-11-23T19:30:35.987239509Z"
     digest: e13c9f3cb89fe0b1ddcbdacb71bd3f7653a3dd4a07250dc8eb1a907dbc3fbd4e
-    home: https://github.com/observIQ/charts/tree/main/charts/tensorflow
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/tensorflow
     keywords:
     - community
     - forum
@@ -1687,13 +1687,13 @@ entries:
     sources:
     - https://github.com/tensorflow/serving
     urls:
-    - https://github.com/observIQ/charts/releases/download/tensorflow-0.0.7/tensorflow-0.0.7.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/tensorflow-0.0.7/tensorflow-0.0.7.tgz
     version: 0.0.7
   - apiVersion: v2
     appVersion: 2.9.2
     created: "2022-11-23T13:40:16.769053314Z"
     digest: 4bd9bff28ac6010f0c752a7c0e664d6c3154df195de645453fe00aa971a09ee1
-    home: https://github.com/observIQ/charts/tree/main/charts/tensorflow
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/tensorflow
     keywords:
     - community
     - forum
@@ -1703,13 +1703,13 @@ entries:
     sources:
     - https://github.com/tensorflow/serving
     urls:
-    - https://github.com/observIQ/charts/releases/download/tensorflow-0.0.6/tensorflow-0.0.6.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/tensorflow-0.0.6/tensorflow-0.0.6.tgz
     version: 0.0.6
   - apiVersion: v2
     appVersion: 2.9.2
     created: "2022-11-22T19:22:31.464366139Z"
     digest: fb51e1e2da1c6aa95b3e768abdfc0c518d5922738fa14448c82410f67926b2b1
-    home: https://github.com/observIQ/charts/tree/main/charts/tensorflow
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/tensorflow
     keywords:
     - community
     - forum
@@ -1719,13 +1719,13 @@ entries:
     sources:
     - https://github.com/tensorflow/serving
     urls:
-    - https://github.com/observIQ/charts/releases/download/tensorflow-0.0.5/tensorflow-0.0.5.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/tensorflow-0.0.5/tensorflow-0.0.5.tgz
     version: 0.0.5
   - apiVersion: v2
     appVersion: 2.9.2
     created: "2022-11-18T16:02:53.497153791Z"
     digest: c9b564d4294e155de25842b88ba8d7bec910e79b974b473e786c3a2dfa4d930f
-    home: https://github.com/observIQ/charts/tree/main/charts/tensorflow
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/tensorflow
     keywords:
     - community
     - forum
@@ -1735,13 +1735,13 @@ entries:
     sources:
     - https://github.com/tensorflow/serving
     urls:
-    - https://github.com/observIQ/charts/releases/download/tensorflow-0.0.4/tensorflow-0.0.4.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/tensorflow-0.0.4/tensorflow-0.0.4.tgz
     version: 0.0.4
   - apiVersion: v2
     appVersion: 2.9.2
     created: "2022-11-17T21:06:08.515155372Z"
     digest: 6918bac480163339175f5ffb9521e173b6c892f5582422a72a8c2fa2b3a4beea
-    home: https://github.com/observIQ/charts/tree/main/charts/tensorflow
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/tensorflow
     keywords:
     - community
     - forum
@@ -1751,13 +1751,13 @@ entries:
     sources:
     - https://github.com/tensorflow/serving
     urls:
-    - https://github.com/observIQ/charts/releases/download/tensorflow-0.0.3/tensorflow-0.0.3.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/tensorflow-0.0.3/tensorflow-0.0.3.tgz
     version: 0.0.3
   - apiVersion: v2
     appVersion: 2.9.2
     created: "2022-11-17T21:02:19.163956222Z"
     digest: d56a1bebbef78eb7ea4bd0ad8fae509a3041714d59091157732e47f975ff5173
-    home: https://github.com/observIQ/charts/tree/main/charts/tensorflow
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/tensorflow
     keywords:
     - community
     - forum
@@ -1767,13 +1767,13 @@ entries:
     sources:
     - https://github.com/tensorflow/serving
     urls:
-    - https://github.com/observIQ/charts/releases/download/tensorflow-0.0.2/tensorflow-0.0.2.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/tensorflow-0.0.2/tensorflow-0.0.2.tgz
     version: 0.0.2
   - apiVersion: v2
     appVersion: 2.9.2
     created: "2022-11-17T18:51:20.327703621Z"
     digest: 1704399ff77554bcc68914b400be90994abcd49f11f9cbd0f2cc46ce1451e54d
-    home: https://github.com/observIQ/charts/tree/main/charts/tensorflow
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/tensorflow
     keywords:
     - community
     - forum
@@ -1783,14 +1783,14 @@ entries:
     sources:
     - https://github.com/tensorflow/serving
     urls:
-    - https://github.com/observIQ/charts/releases/download/tensorflow-0.0.1/tensorflow-0.0.1.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/tensorflow-0.0.1/tensorflow-0.0.1.tgz
     version: 0.0.1
   varnish:
   - apiVersion: v2
     appVersion: 6.0.11
     created: "2023-10-05T15:14:16.310613741Z"
     digest: 34736b5abbb5fb53c119079f5a5b319a419450b59bb6b53ae755484c9b477dd1
-    home: https://github.com/observIQ/charts/tree/main/charts/varnish
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/varnish
     keywords:
     - community
     - forum
@@ -1800,13 +1800,13 @@ entries:
     sources:
     - https://varnish-cache.org/
     urls:
-    - https://github.com/observIQ/charts/releases/download/varnish-1.0.0/varnish-1.0.0.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/varnish-1.0.0/varnish-1.0.0.tgz
     version: 1.0.0
   - apiVersion: v2
     appVersion: 6.0.11
     created: "2023-08-03T15:52:43.138327364Z"
     digest: db14515b10f3811b0d01688befeaf3acdb7c53a809a2e721aa0b520ff6eaed1f
-    home: https://github.com/observIQ/charts/tree/main/charts/varnish
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/varnish
     keywords:
     - community
     - forum
@@ -1816,13 +1816,13 @@ entries:
     sources:
     - https://varnish-cache.org/
     urls:
-    - https://github.com/observIQ/charts/releases/download/varnish-0.0.7/varnish-0.0.7.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/varnish-0.0.7/varnish-0.0.7.tgz
     version: 0.0.7
   - apiVersion: v2
     appVersion: 6.0.11
     created: "2023-08-02T15:54:11.285276896Z"
     digest: 22089d3763b5d34753db9f0fc237d7714bc68e66691d78c9699f287ba1a5a2d4
-    home: https://github.com/observIQ/charts/tree/main/charts/varnish
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/varnish
     keywords:
     - community
     - forum
@@ -1832,13 +1832,13 @@ entries:
     sources:
     - https://varnish-cache.org/
     urls:
-    - https://github.com/observIQ/charts/releases/download/varnish-0.0.6/varnish-0.0.6.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/varnish-0.0.6/varnish-0.0.6.tgz
     version: 0.0.6
   - apiVersion: v2
     appVersion: 6.0.11
     created: "2023-08-02T14:09:01.320213734Z"
     digest: c174647ad480cf30054a976ba0173261a1baa946a5065b2ed1c51ae1189cea1f
-    home: https://github.com/observIQ/charts/tree/main/charts/varnish
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/varnish
     keywords:
     - community
     - forum
@@ -1848,13 +1848,13 @@ entries:
     sources:
     - https://varnish-cache.org/
     urls:
-    - https://github.com/observIQ/charts/releases/download/varnish-0.0.5/varnish-0.0.5.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/varnish-0.0.5/varnish-0.0.5.tgz
     version: 0.0.5
   - apiVersion: v2
     appVersion: 6.0.11
     created: "2023-07-05T13:31:02.883176472Z"
     digest: 81a21e83bd49090dfeebfcd6575b2adeea9e97a752b0578d6dcbb80df1541f59
-    home: https://github.com/observIQ/charts/tree/main/charts/varnish
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/varnish
     keywords:
     - community
     - forum
@@ -1864,13 +1864,13 @@ entries:
     sources:
     - https://varnish-cache.org/
     urls:
-    - https://github.com/observIQ/charts/releases/download/varnish-0.0.4/varnish-0.0.4.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/varnish-0.0.4/varnish-0.0.4.tgz
     version: 0.0.4
   - apiVersion: v2
     appVersion: 6.0.11
     created: "2023-06-30T19:13:33.94929522Z"
     digest: ffb8fcb80d3ad38ab512dbbd9aad42492b25c321842dfb668c98182c23698013
-    home: https://github.com/observIQ/charts/tree/main/charts/varnish
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/varnish
     keywords:
     - community
     - forum
@@ -1880,13 +1880,13 @@ entries:
     sources:
     - https://varnish-cache.org/
     urls:
-    - https://github.com/observIQ/charts/releases/download/varnish-0.0.3/varnish-0.0.3.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/varnish-0.0.3/varnish-0.0.3.tgz
     version: 0.0.3
   - apiVersion: v2
     appVersion: 6.0.11
     created: "2023-06-30T13:31:45.954780316Z"
     digest: 2c0eeea58020444b7255f52f4acd74fa58541d84504f49fb5e096877cce9062f
-    home: https://github.com/observIQ/charts/tree/main/charts/varnish
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/varnish
     keywords:
     - community
     - forum
@@ -1896,13 +1896,13 @@ entries:
     sources:
     - https://varnish-cache.org/
     urls:
-    - https://github.com/observIQ/charts/releases/download/varnish-0.0.2/varnish-0.0.2.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/varnish-0.0.2/varnish-0.0.2.tgz
     version: 0.0.2
   - apiVersion: v2
     appVersion: 6.0.11
     created: "2023-06-29T20:45:33.888295378Z"
     digest: 52d378f05cddf858f7451ea3def4e8c28d8a4a2016439a09e9eb3d5c070b3d4e
-    home: https://github.com/observIQ/charts/tree/main/charts/varnish
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/varnish
     keywords:
     - community
     - forum
@@ -1912,14 +1912,14 @@ entries:
     sources:
     - https://varnish-cache.org/
     urls:
-    - https://github.com/observIQ/charts/releases/download/varnish-0.0.1/varnish-0.0.1.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/varnish-0.0.1/varnish-0.0.1.tgz
     version: 0.0.1
   wildfly:
   - apiVersion: v2
     appVersion: 27.0.0.Final
     created: "2023-10-05T15:14:16.452075721Z"
     digest: d377df88d6e45605e10caaff64c9795adda260f3b178e7ef816b5fb546e4f5d0
-    home: https://github.com/observIQ/charts/tree/main/charts/wildfly
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/wildfly
     keywords:
     - community
     - forum
@@ -1929,13 +1929,13 @@ entries:
     sources:
     - https://github.com/wildfly/wildfly
     urls:
-    - https://github.com/observIQ/charts/releases/download/wildfly-1.0.0/wildfly-1.0.0.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/wildfly-1.0.0/wildfly-1.0.0.tgz
     version: 1.0.0
   - apiVersion: v2
     appVersion: 27.0.0.Final
     created: "2023-01-27T16:39:08.974985005Z"
     digest: 781ea5d0c234a8502513fc38e05040d5d568923816e52b7f97342e8527e1e574
-    home: https://github.com/observIQ/charts/tree/main/charts/wildfly
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/wildfly
     keywords:
     - community
     - forum
@@ -1945,13 +1945,13 @@ entries:
     sources:
     - https://github.com/wildfly/wildfly
     urls:
-    - https://github.com/observIQ/charts/releases/download/wildfly-0.0.3/wildfly-0.0.3.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/wildfly-0.0.3/wildfly-0.0.3.tgz
     version: 0.0.3
   - apiVersion: v2
     appVersion: 27.0.0.Final
     created: "2022-12-05T21:42:27.726137386Z"
     digest: 10c52543937418e3a4e5b0cfe671c52ee519cb7fa0db5e1b252d07d8ac2eeb8c
-    home: https://github.com/observIQ/charts/tree/main/charts/wildfly
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/wildfly
     keywords:
     - community
     - forum
@@ -1961,13 +1961,13 @@ entries:
     sources:
     - https://github.com/wildfly/wildfly
     urls:
-    - https://github.com/observIQ/charts/releases/download/wildfly-0.0.2/wildfly-0.0.2.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/wildfly-0.0.2/wildfly-0.0.2.tgz
     version: 0.0.2
   - apiVersion: v2
     appVersion: 27.0.0.Final
     created: "2022-12-05T21:37:50.922603766Z"
     digest: 473fa29fb4e0d49fcaba80bb5a48be256dfcfc7f30e503790d1bae5505b4131d
-    home: https://github.com/observIQ/charts/tree/main/charts/wildfly
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/wildfly
     keywords:
     - community
     - forum
@@ -1977,6 +1977,6 @@ entries:
     sources:
     - https://github.com/wildfly/wildfly
     urls:
-    - https://github.com/observIQ/charts/releases/download/wildfly-0.0.1/wildfly-0.0.1.tgz
+    - https://github.com/observiq/application-helm-charts/releases/download/wildfly-0.0.1/wildfly-0.0.1.tgz
     version: 0.0.1
 generated: "2023-10-20T19:06:33.962231201Z"
