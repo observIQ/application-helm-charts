@@ -10,4 +10,4 @@ maintainers:
 name: apache-cassandra
 sources:
   - https://github.com/apache/cassandra
-version: 1.0.2
+version: 1.0.3

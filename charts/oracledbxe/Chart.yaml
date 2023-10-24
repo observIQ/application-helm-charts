@@ -10,4 +10,4 @@ maintainers:
 name: oracledbxe
 sources:
   - https://github.com/gvenzl/oci-oracle-xe
-version: 1.0.0
+version: 1.0.1

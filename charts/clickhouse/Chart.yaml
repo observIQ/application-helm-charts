@@ -11,6 +11,6 @@ keywords:
 name: clickhouse
 sources:
 - https://github.com/observiq/application-helm-charts
-version: 1.0.0
+version: 1.0.1
 maintainers:
   - name: observIQ
