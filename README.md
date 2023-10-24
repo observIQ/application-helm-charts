@@ -1,5 +1,5 @@
-[![CI](https://github.com/observIQ/charts/actions/workflows/ci.yaml/badge.svg)](https://github.com/observIQ/charts/actions/workflows/ci.yaml)
-[![Release Container Images](https://github.com/observIQ/charts/actions/workflows/container.yaml/badge.svg)](https://github.com/observIQ/charts/actions/workflows/container.yaml)
+[![CI](https://github.com/observiq/application-helm-charts/actions/workflows/ci.yaml/badge.svg)](https://github.com/observiq/application-helm-charts/actions/workflows/ci.yaml)
+[![Release Container Images](https://github.com/observiq/application-helm-charts/actions/workflows/container.yaml/badge.svg)](https://github.com/observiq/application-helm-charts/actions/workflows/container.yaml)
 
 # Charts
 
@@ -17,7 +17,7 @@ Helm's [documentation](https://helm.sh/docs) to get started.
 Add the observIQ Helm repository.
 
 ```bash
-helm repo add observiq https://observiq.github.io/charts
+helm repo add observiq https://observiq.github.io/application-helm-charts
 ```
 
 ### Update Repo
