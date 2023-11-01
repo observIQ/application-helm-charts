@@ -1691,6 +1691,24 @@ entries:
   presto:
   - apiVersion: v2
     appVersion: "0.283"
+    created: "2023-11-01T18:27:15.189018076Z"
+    description: Customized version of the official Helm chart for Presto
+    digest: 0dbf2d9ac5e1efb075dd5e7a3c2c609afe3033aacb7477de373b16302d273aaf
+    home: https://prestodb.io
+    icon: https://prestodb.io/docs/current/_static/logo.png
+    keywords:
+    - presto
+    - prestodb
+    name: presto
+    sources:
+    - https://github.com/prestodb/presto
+    - https://github.com/prestodb/presto-helm-charts
+    type: application
+    urls:
+    - https://github.com/observIQ/application-helm-charts/releases/download/presto-1.0.4/presto-1.0.4.tgz
+    version: 1.0.4
+  - apiVersion: v2
+    appVersion: "0.283"
     created: "2023-10-24T20:01:21.79841882Z"
     description: Customized version of the official Helm chart for Presto
     digest: 95803a59df4a0b1bdf4b1b6d00ccd494e051b8cbbe8912a6ebd9ef5f421f7401
@@ -2247,4 +2265,4 @@ entries:
     urls:
     - https://github.com/observiq/application-helm-charts/releases/download/wildfly-0.0.1/wildfly-0.0.1.tgz
     version: 0.0.1
-generated: "2023-10-24T20:01:22.531814655Z"
+generated: "2023-11-01T18:27:15.189769773Z"
