@@ -5,8 +5,6 @@ metadata:
 data:
   config.yaml: |
     hostPort: localhost:9001
-    lowercaseOutputLabelNames: true
-    lowercaseOutputName: true
     rules:
       - pattern: "com.facebook.presto.execution<name=TaskManager><>(.+): (.*)"
         name: "presto_TaskManager_$1"
