@@ -27,6 +27,7 @@ jobs:
           - "aerospike"
           - "apache-activemq"
           - "presto"
+          - "influxdb"
 
     runs-on: ubuntu-latest
     steps:
