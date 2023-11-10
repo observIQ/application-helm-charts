@@ -2,7 +2,7 @@ apiVersion: batch/v1
 kind: CronJob
 metadata:
   name: influxdb-loadgen
-  namespace: default
+  namespace: {{ .Values.loadgenNamespace }}
 spec:
   schedule: "*/10 * * * *"
   successfulJobsHistoryLimit: 1

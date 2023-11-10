@@ -1,4 +1,5 @@
 loadgenImage: ghcr.io/observiq/influxdb-loadgen:5ef8a34
+loadgenNamespace: sample-apps
 image:
   repository: influxdb
   tag: 2.3.0-alpine
