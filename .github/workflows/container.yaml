@@ -27,6 +27,7 @@ jobs:
           - "aerospike-benchmark"
           - "apache-activemq-loadgen"
           - "prestodb-loadgen"
+          - "influxdb-loadgen"
     steps:
       - name: Checkout
         uses: actions/checkout@v2
