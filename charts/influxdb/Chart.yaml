@@ -3,4 +3,4 @@ appVersion: 2.3.0
 name: influxdb2
 description: A customized InfluxDB v2 chart for development
 type: application
-version: 1.0.0
+version: 1.0.1

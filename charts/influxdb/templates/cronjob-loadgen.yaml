@@ -1,0 +1,19 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: influxdb-loadgen
+  namespace: {{ .Values.loadgenNamespace }}
+spec:
+  schedule: "*/10 * * * *"
+  successfulJobsHistoryLimit: 1
+  failedJobsHistoryLimit: 1
+  jobTemplate:
+    spec:
+      parallelism: 1
+      template:
+        spec:
+          containers:
+          - name: influxdb-loadgen
+            image: {{ .Values.loadgenImage }}
+            imagePullPolicy: IfNotPresent
+          restartPolicy: Never
