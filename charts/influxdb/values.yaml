@@ -1,4 +1,4 @@
-loadgenImage: ghcr.io/observiq/influxdb-loadgen:5ef8a34
+loadgenImage: ghcr.io/observiq/influxdb-loadgen:5e0ef74
 loadgenNamespace: sample-apps
 image:
   repository: influxdb
