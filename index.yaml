@@ -1448,6 +1448,16 @@ entries:
   influxdb2:
   - apiVersion: v2
     appVersion: 2.3.0
+    created: "2023-11-29T18:15:03.504510299Z"
+    description: A customized InfluxDB v2 chart for development
+    digest: 0822c1e47548af6f5337e9f8120a148395af0aa8db7a56733c9976bdb2cdeedd
+    name: influxdb2
+    type: application
+    urls:
+    - https://github.com/observIQ/application-helm-charts/releases/download/influxdb2-1.0.2/influxdb2-1.0.2.tgz
+    version: 1.0.2
+  - apiVersion: v2
+    appVersion: 2.3.0
     created: "2023-11-10T21:31:00.852123614Z"
     description: A customized InfluxDB v2 chart for development
     digest: d1e94891278e4edb7e0b3586c7f5fc92d86f5d7bd88d1290f57a94102d99ce0e
@@ -2304,4 +2314,4 @@ entries:
     urls:
     - https://github.com/observiq/application-helm-charts/releases/download/wildfly-0.0.1/wildfly-0.0.1.tgz
     version: 0.0.1
-generated: "2023-11-10T21:31:00.85241992Z"
+generated: "2023-11-29T18:15:03.504814269Z"
