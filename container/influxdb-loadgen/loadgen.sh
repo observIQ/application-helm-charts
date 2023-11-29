@@ -11,8 +11,7 @@ influx bucket create --name loadgen-1
 influx write --bucket loadgen-0 --file /influxdb2-sample-data-master/air-sensor-data/air-sensor-data.lp
 influx write --bucket loadgen-1 --file /influxdb2-sample-data-master/bitcoin-price-data/currentprice.lp
 influx write --bucket loadgen-0 --file /influxdb2-sample-data-master/noaa-ndbc-data/latest-observations.lp
-influx write --bucket loadgen-1 --file /influxdb2-sample-data-master/bird-migration-data/bird-migration.line
-influx write --bucket loadgen-0 --file /influxdb2-sample-data-master/usgs-earthquake-data/all_week.lp
+influx write --bucket loadgen-1 --file /influxdb2-sample-data-master/usgs-earthquake-data/all_week.lp
 
 # Query data from buckets for 5m
 end=$((SECONDS+300))
