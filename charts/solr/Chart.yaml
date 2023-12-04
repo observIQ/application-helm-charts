@@ -1,0 +1,53 @@
+annotations:
+  artifacthub.io/alternativeName: solrcloud
+  artifacthub.io/category: database
+  artifacthub.io/changes: |
+    - kind: changed
+      description: The minimum supported version of Solr is now 8.11
+      links:
+        - name: Github Issue
+          url: https://github.com/apache/solr-operator/issues/616
+        - name: Version Compatibility Documentation
+          url: https://apache.github.io/solr-operator/docs/upgrade-notes.html#solr-versions
+  artifacthub.io/containsSecurityUpdates: "false"
+  artifacthub.io/images: |
+    - name: solr
+      image: solr:8.11
+      whitelisted: true
+  artifacthub.io/links: |
+    - name: "Solr Source"
+      url: https://github.com/apache/solr
+    - name: "Helm Chart Source"
+      url: https://github.com/apache/solr-operator
+    - name: "Solr Documentation"
+      url: https://solr.apache.org/guide/
+    - name: "Solr on Kube Tutorials"
+      url: https://solr.apache.org/operator/resources#tutorials
+  artifacthub.io/operator: "false"
+  artifacthub.io/prerelease: "false"
+  artifacthub.io/recommendations: |
+    - url: https://artifacthub.io/packages/helm/apache-solr/solr-operator
+  artifacthub.io/signKey: |
+    fingerprint: E05FDF113D89E7FB4A2DF4B2684D544160392455
+    url: https://dist.apache.org/repos/dist/release/solr/KEYS
+apiVersion: v2
+appVersion: 8.11.1
+description: A SolrCloud cluster running on Kubernetes via the Solr Operator
+home: https://solr.apache.org
+icon: https://solr.apache.org/theme/images/identity/Solr_Logo_on_white.png
+keywords:
+- solr
+- apache
+- search
+- lucene
+kubeVersion: '>= 1.22.0-0'
+maintainers:
+- email: dev@solr.apache.org
+  name: Solr Dev Community
+- email: houston@apache.org
+  name: Houston Putman
+name: solr
+sources:
+- https://github.com/apache/solr
+- https://github.com/apache/solr-operator
+version: 0.8.0
