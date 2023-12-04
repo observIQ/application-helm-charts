@@ -1,0 +1,6 @@
+dependencies:
+- name: zookeeper-operator
+  repository: https://charts.pravega.io
+  version: 0.2.15
+digest: sha256:796e94f08d1c74deb96b6650a4f68b198733b4ea902c93c700d749c17902351d
+generated: "2023-10-16T13:32:58.419897-04:00"
