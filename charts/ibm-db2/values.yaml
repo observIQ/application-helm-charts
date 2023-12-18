@@ -1,1 +1,13 @@
 imageName: "icr.io/obs/hdm/db2u/db2u.tools:11.5.4.0-56-x86_64"
+arch: x86_64
+servicename: db2poc
+global:
+  dbType: db2oltp
+database:
+  name: BLUDB
+generateSecrets: true
+storage:
+  storageClassName: standard
+  useDynamicProvisioning: true
+ldap:
+  ldap-server: db2poc-db2u-ldap
