@@ -1,0 +1,6 @@
+apiVersion: v2
+appVersion: 2.3.0
+name: IBM DB2
+description: A customized IBM DB2 chart for development
+type: application
+version: 1.0.0

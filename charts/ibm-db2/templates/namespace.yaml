@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  creationTimestamp: "2023-12-14T21:18:52Z"
+  labels:
+    kubernetes.io/metadata.name: db2
+  name: db2
+  resourceVersion: "817"
+  uid: d81a308d-32aa-4d21-986e-8b0ba6c8f7d2
+spec:
+  finalizers:
+    - kubernetes
+status:
+  phase: Active
