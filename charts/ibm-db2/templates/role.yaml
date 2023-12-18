@@ -2,6 +2,7 @@ kind: Role
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
   name: ibm-db2-role
+  namespace: db2
 rules:
   - apiGroups: [""]
     resources: ["pods", "pods/log", "pods/exec"]
