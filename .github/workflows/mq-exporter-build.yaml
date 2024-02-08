@@ -20,6 +20,12 @@ jobs:
           fetch-depth: 0
           submodules: 'true'
 
+      - name: Custom tests 🧪
+        uses: ./
+        with:
+          command: tree
+          working-directory: submodules/
+
       - name: Get Tag From Environment
         id: get-tag
         run: printf '::set-output name=tag::%s' "$(git rev-parse --short HEAD)"
