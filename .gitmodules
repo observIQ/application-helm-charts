@@ -1,0 +1,3 @@
+[submodule "submodules/mq-metric-samples"]
+	path = submodules/mq-metric-samples
+	url = git@github.com:ibm-messaging/mq-metric-samples.git
