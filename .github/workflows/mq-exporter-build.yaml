@@ -1,7 +1,7 @@
 name: Build/Release IBM MQ Exporter
 
 on:
-  pull_request:
+  workflow_dispatch:
     branches:
       - main
 
