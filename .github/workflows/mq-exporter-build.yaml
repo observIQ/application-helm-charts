@@ -20,11 +20,9 @@ jobs:
           fetch-depth: 0
           submodules: 'true'
 
-      - name: Custom tests 🧪
-        uses: ./
-        with:
-          command: tree
-          working-directory: submodules/
+      - name: Custom tests
+        id: print-submodule
+        run: tree submodules
 
       - name: Get Tag From Environment
         id: get-tag
