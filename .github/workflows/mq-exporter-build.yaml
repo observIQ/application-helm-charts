@@ -14,8 +14,11 @@ jobs:
         app:
           - "mq-metric-samples"
     steps:
-      - name: Initialize Submodules
-        uses: snickerbockers/submodules-init@v4
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          submodules: 'true'
 
       - name: Get Tag From Environment
         id: get-tag
