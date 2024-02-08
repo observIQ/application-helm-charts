@@ -1,12 +1,9 @@
 name: Build/Release IBM MQ Exporter
 
-# on:
-#   push:
-#     branches:
-#       - main
-#     paths:
-#       - "container/**"
-#       - ".github/workflows/container.yaml"
+on:
+  pull_request:
+    branches:
+      - main
 
 jobs:
   push-images:
