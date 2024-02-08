@@ -14,11 +14,9 @@ jobs:
         app:
           - "mq-metric-samples"
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-          
+      - name: Initialize Submodules
+        uses: snickerbockers/submodules-init@v4
+
       - name: Get Tag From Environment
         id: get-tag
         run: printf '::set-output name=tag::%s' "$(git rev-parse --short HEAD)"
