@@ -129,9 +129,9 @@ RUN mkdir -p /opt/bin \
 COPY genericresources/createcerts/server.pem /opt/mqm/server.pem
 
 # Create the keystore using a script
-COPY genericresources/createcerts/create-keystore.sh /opt/mqm/create-keystore.sh
-RUN chmod +x /opt/mqm/create-keystore.sh
-RUN /opt/mqm/create-keystore.sh
+COPY genericresources/createcerts/entrypoint.sh /opt/mqm/entrypoint.sh
+RUN chmod +x /opt/mqm/entrypoint.sh
+RUN /opt/mqm/entrypoint.sh
 
 # Install packages
 RUN apt-get update \
@@ -154,4 +154,4 @@ ENV EXPORTER=${EXPORTER} \
 COPY --chmod=555 --from=builder /go/bin/${EXPORTER} /opt/bin/${EXPORTER}
 COPY             --from=builder /opt/mqm/ /opt/mqm/
 
-CMD ["sh", "-c", "/opt/bin/${EXPORTER}"]
+CMD ["/bin/bash", "/opt/mqm/entrypoint.sh"]
