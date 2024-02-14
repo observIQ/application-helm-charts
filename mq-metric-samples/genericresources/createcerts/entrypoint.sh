@@ -7,3 +7,6 @@ set -e
 
 # Import certificate into the keystore
 /opt/mqm/bin/runmqakm -cert  -import -target /opt/mqm/key.kdb -stashed -file /opt/mqm/server.pem
+
+# Start the exporter
+/opt/bin/mq_prometheus
