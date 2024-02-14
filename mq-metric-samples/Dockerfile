@@ -131,7 +131,6 @@ COPY genericresources/createcerts/server.pem /opt/mqm/server.pem
 # Create the keystore using a script
 COPY genericresources/createcerts/entrypoint.sh /opt/mqm/entrypoint.sh
 RUN chmod +x /opt/mqm/entrypoint.sh
-RUN /opt/mqm/entrypoint.sh
 
 # Install packages
 RUN apt-get update \
