@@ -125,14 +125,13 @@ RUN mkdir -p /opt/bin \
     && mkdir -p /opt/config \
     && chmod a+rx /opt/config
 
-# Create the keystore
-RUN /opt/mqm/bin/runmqakm -keydb -create -db /opt/mqm/key.kdb -pw passw0rd -stash -type kdb
-
 # Copy the server's public certificate to container
-COPY genericresources/createcerts/server.crt /opt/mqm/server.crt
+COPY genericresources/createcerts/server.pem /opt/mqm/server.pem
 
-# Import certificate into the keystore
-RUN /opt/mqm/bin/runmqakm -cert  -import -target /opt/mqm/key.kdb -stashed -file /opt/mqm/server.crt
+# Create the keystore using a script
+COPY genericresources/createcerts/create-keystore.sh /opt/mqm/create-keystore.sh
+RUN chmod +x /opt/mqm/create-keystore.sh
+RUN /opt/mqm/create-keystore.sh
 
 # Install packages
 RUN apt-get update \
