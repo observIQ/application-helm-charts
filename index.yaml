@@ -746,6 +746,22 @@ entries:
   couchbase:
   - apiVersion: v2
     appVersion: 7.2.0
+    created: "2024-03-25T18:00:32.709687075Z"
+    digest: c198400332cc243f50664585af2bd2a62762e1a935ead63df1b427dac67ca996
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/couchbase-community
+    keywords:
+    - community
+    - forum
+    maintainers:
+    - name: observIQ
+    name: couchbase
+    sources:
+    - https://www.couchbase.com/
+    urls:
+    - https://github.com/observIQ/application-helm-charts/releases/download/couchbase-1.0.2/couchbase-1.0.2.tgz
+    version: 1.0.2
+  - apiVersion: v2
+    appVersion: 7.2.0
     created: "2023-10-24T20:01:20.467550798Z"
     digest: 9e01c6421f5a644ef9a24d619eb3d5a2e6fbcb06561be69f683dfd4b8ae179a3
     home: https://github.com/observiq/application-helm-charts/tree/main/charts/couchbase-community
@@ -2314,4 +2330,4 @@ entries:
     urls:
     - https://github.com/observiq/application-helm-charts/releases/download/wildfly-0.0.1/wildfly-0.0.1.tgz
     version: 0.0.1
-generated: "2023-11-29T18:15:03.504814269Z"
+generated: "2024-03-25T18:00:32.709997816Z"
