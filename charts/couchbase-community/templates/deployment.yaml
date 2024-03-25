@@ -51,3 +51,20 @@ spec:
         - name: backup-http
           protocol: TCP
           containerPort: 8097
+        volumeMounts:
+        - mountPath: /opt/couchbase/var/lib/couchbase/logs
+          name: couchbase-logs
+      - name: log-forwarder
+        securityContext:
+          runAsUser: 1000
+          runAsGroup: 1000
+        image: couchbase/fluent-bit:1.2.7
+        env:
+        - name: COUCHBASE_LOGS
+          value: /opt/couchbase/var/lib/couchbase/logs
+        volumeMounts:
+        - mountPath: /opt/couchbase/var/lib/couchbase/logs
+          name: couchbase-logs
+      volumes:
+      - name: couchbase-logs
+        emptyDir:
