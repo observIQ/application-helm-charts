@@ -10,4 +10,4 @@ maintainers:
 name: couchbase
 sources:
   - https://www.couchbase.com/
-version: 1.0.1
+version: 1.0.2
