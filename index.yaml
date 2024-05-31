@@ -274,6 +274,28 @@ entries:
     urls:
     - https://github.com/observiq/application-helm-charts/releases/download/apache-activemq-0.0.1/apache-activemq-0.0.1.tgz
     version: 0.0.1
+  apache-airflow:
+  - apiVersion: v2
+    appVersion: 2.8.3
+    created: "2024-05-31T19:31:37.735422894Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 13.2.24
+    digest: 66911cc076c95d0231515fb73a668d41d48cd404a566201dfb6124fbab44889b
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/apache-airflow
+    keywords:
+    - community
+    - forum
+    maintainers:
+    - name: observIQ
+    name: apache-airflow
+    sources:
+    - https://airflow.apache.org/docs/
+    urls:
+    - https://github.com/observIQ/application-helm-charts/releases/download/apache-airflow-1.0.0/apache-airflow-1.0.0.tgz
+    version: 1.0.0
   apache-cassandra:
   - apiVersion: v2
     appVersion: 4.1.0
@@ -2330,4 +2352,4 @@ entries:
     urls:
     - https://github.com/observiq/application-helm-charts/releases/download/wildfly-0.0.1/wildfly-0.0.1.tgz
     version: 0.0.1
-generated: "2024-03-25T18:00:32.709997816Z"
+generated: "2024-05-31T19:31:37.735585497Z"
