@@ -17,13 +17,14 @@
  under the License.
  -->
 
-# Helm Chart for Apache Airflow
+# Custom Helm Chart for Apache Airflow (intended for dev use)
 
 [![Artifact HUB](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/apache-airflow)](https://artifacthub.io/packages/search?repo=apache-airflow)
 
 [Apache Airflow](https://airflow.apache.org/) is a platform to programmatically author, schedule and monitor workflows.
 
 ## Introduction
+> This is a custom helm chart intended only for development purposes
 
 This chart will bootstrap an [Airflow](https://airflow.apache.org) deployment on a [Kubernetes](http://kubernetes.io)
 cluster using the [Helm](https://helm.sh) package manager.
