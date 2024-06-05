@@ -8,10 +8,7 @@ data:
 
     # Run mesos master and exporter in the background
     mesos-master --work_dir=/var/lib/mesos --log_dir=/var/log/mesos/ &
-    /mesos_exporter-1.1.2.linux-arm64/mesos_exporter -master http://localhost:5050 &
-
-    # Infinite loop to keep container alive
-     while :; do echo 'Hit CTRL+C' > /dev/null; sleep 1; done
+    /mesos_exporter-1.1.2.linux-arm64/mesos_exporter -master http://localhost:5050
 ---
 apiVersion: v1
 kind: ConfigMap
@@ -22,9 +19,4 @@ data:
     #!/bin/bash
 
     # Run mesos agent and exporter in the background
-    mesos-master --work_dir=/var/lib/mesos --log_dir=/var/log/mesos/ &
-    mesos-agent --work_dir=/var/lib/mesos/agent --log_dir=/var/log/mesos --master=localhost:5050 --launcher=posix --systemd_enable_support=false &
-    /mesos_exporter-1.1.2.linux-arm64/mesos_exporter -master http://localhost:5050 &
-
-    # Infinite loop to keep container alive
-     while :; do echo 'Hit CTRL+C' > /dev/null; sleep 1; done
+    mesos-agent --work_dir=/var/lib/mesos/agent --log_dir=/var/log/mesos --master=localhost:5050 --launcher=posix --systemd_enable_support=false
