@@ -1,59 +1,140 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: varnish
+  name: release-name-varnish-cache
+  labels:
+    helm.sh/chart: varnish-cache-0.1.0
+    app.kubernetes.io/name: varnish-cache
+    app.kubernetes.io/instance: release-name
+    app.kubernetes.io/version: "7.4.2"
+    app.kubernetes.io/managed-by: Helm      
 spec:
-  replicas: {{ .Values.replicas }}
+  replicas: 1  
   selector:
     matchLabels:
-      app: varnish
+      app.kubernetes.io/name: varnish-cache
+      app.kubernetes.io/instance: release-name
   template:
-    metadata:
-      name: varnish
+    metadata:      
       labels:
-        app: varnish
-    spec:
-      # Process namespace sharing is required for the varnish and exporter containers
-      # to share the Varnish working directory.
-      shareProcessNamespace: true
-      containers:
-      - name: nginx
-        image: {{ .Values.nginxImage }}
-        volumeMounts:
-          - name: nginx-config
-            mountPath: /etc/nginx/conf.d/default.conf
-            subPath: default.conf
-      - name: varnish
-        image: {{ .Values.varnishImage }}
-        volumeMounts:
-          - name: varnish-secret
-            mountPath: /etc/varnish/secret
-            subPath: secret
-          - name: shared-data
-            mountPath: /var/lib/varnish
-          - name: varnish-config
-            mountPath: /etc/varnish/default.vcl
-            subPath: default.vcl
-      - name: exporter
-        command:
-          - "/prometheus_varnish_exporter"
-        image: {{ .Values.exporterImage }}
-        volumeMounts:
-          - name: shared-data
-            mountPath: /var/lib/varnish
-            readOnly: true
-        ports:
-        - containerPort: 9131
-          name: prometheus
+        app.kubernetes.io/name: varnish-cache
+        app.kubernetes.io/instance: release-name      
+      annotations:
+        checksum/release-name-vcl: 7b15612fd2d2d03fe720b9c01929cd5ea1114dc8c153a2951f75e904599187f2
+    spec:            
+      serviceAccountName: release-name-varnish-cache      
+      securityContext:
+        fsGroup: 999
+      shareProcessNamespace: false
+      containers:        
+        - name: varnish-cache
+          securityContext:
+            runAsNonRoot: true
+            runAsUser: 1002
+          
+          image: "docker.io/varnish:7.4.2"
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 6081
+              protocol: TCP
+          
+          livenessProbe:
+            tcpSocket:
+              port: 6081
+            failureThreshold: 3
+            initialDelaySeconds: 30
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 5
+          readinessProbe:
+            tcpSocket:
+              port: 6081
+            failureThreshold: 3
+            initialDelaySeconds: 5
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
+          command:
+            - /usr/sbin/varnishd
+            - -F
+            - -a
+            - http=$(VARNISH_HTTP_ADDRESS):6081,HTTP
+            - -f
+            - /etc/varnish/default.vcl
+            - -T
+            - 127.0.0.1:6082
+            - -t
+            - "120"
+            - -p
+            - thread_pool_min=50
+            - -p
+            - thread_pool_max=1000
+            - -p
+            - thread_pool_timeout=120
+          env:
+            - name: VARNISH_HTTP_ADDRESS
+              valueFrom:
+                fieldRef:
+                  fieldPath: status.podIP
+          volumeMounts:
+            - name: release-name-config
+              mountPath: /etc/varnish
+            - name: release-name-config-vcl
+              mountPath: "/etc/varnish/default.vcl"
+              subPath: default.vcl
+            - name: release-name-varnish-vsm
+              mountPath: /var/lib/varnish        
+        - name: varnish-cache-ncsa
+          securityContext:
+            runAsNonRoot: true
+            runAsUser: 1002
+          
+          image: "docker.io/varnish:7.4.2"
+          imagePullPolicy: IfNotPresent
+          command: ["varnishncsa"]
+          args:
+            - -c
+          readinessProbe:
+            exec:
+              command:
+                - /usr/bin/varnishncsa
+                - -d
+                - -t 3
+            failureThreshold: 3
+            initialDelaySeconds: 5
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
+          livenessProbe:
+            exec:
+              command:
+                - /usr/bin/varnishncsa
+                - -d
+                - -t 3
+            failureThreshold: 3
+            initialDelaySeconds: 30
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 5
+          volumeMounts:
+          - name: release-name-varnish-vsm
+            mountPath: /var/lib/varnish                    
       volumes:
-        - name: varnish-secret
-          configMap:
-            name: varnish-secret
-        - name: varnish-config
-          configMap:
-            name: varnish-config
-        - name: nginx-config
-          configMap:
-            name: nginx-config
-        - name: shared-data
-          emptyDir: {}
+      - name: release-name-config
+        emptyDir:
+          medium: "Memory"
+      - name: release-name-config-vcl
+        configMap:
+          name: release-name-varnish-cache-vcl
+      - name: release-name-varnish-vsm
+        emptyDir:
+          medium: "Memory"            
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector:
+                matchLabels:
+                  app.kubernetes.io/name: varnish-cache
+                  app.kubernetes.io/instance: release-name
+              topologyKey: kubernetes.io/hostname
