@@ -1,59 +1,100 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: varnish
+  name: custom-varnish-cache
+  labels:
+    helm.sh/chart: varnish-cache-0.1.0
+    app.kubernetes.io/name: varnish-cache
+    app.kubernetes.io/instance: custom
+    app.kubernetes.io/version: "7.4.2"
+    app.kubernetes.io/managed-by: Helm      
 spec:
-  replicas: {{ .Values.replicas }}
+  replicas: 1  
   selector:
     matchLabels:
-      app: varnish
+      app.kubernetes.io/name: varnish-cache
+      app.kubernetes.io/instance: custom
   template:
-    metadata:
-      name: varnish
+    metadata:      
       labels:
-        app: varnish
-    spec:
-      # Process namespace sharing is required for the varnish and exporter containers
-      # to share the Varnish working directory.
+        app.kubernetes.io/name: varnish-cache
+        app.kubernetes.io/instance: custom
+    spec:            
+      serviceAccountName: custom-varnish-cache      
+      securityContext:
+        fsGroup: 999
       shareProcessNamespace: true
-      containers:
-      - name: nginx
-        image: {{ .Values.nginxImage }}
-        volumeMounts:
-          - name: nginx-config
-            mountPath: /etc/nginx/conf.d/default.conf
-            subPath: default.conf
-      - name: varnish
-        image: {{ .Values.varnishImage }}
-        volumeMounts:
-          - name: varnish-secret
-            mountPath: /etc/varnish/secret
-            subPath: secret
-          - name: shared-data
-            mountPath: /var/lib/varnish
-          - name: varnish-config
-            mountPath: /etc/varnish/default.vcl
-            subPath: default.vcl
-      - name: exporter
-        command:
-          - "/prometheus_varnish_exporter"
-        image: {{ .Values.exporterImage }}
-        volumeMounts:
-          - name: shared-data
-            mountPath: /var/lib/varnish
-            readOnly: true
-        ports:
-        - containerPort: 9131
-          name: prometheus
+      containers:      
+        - name: nginx
+          image: {{ .Values.nginxImage }}
+          volumeMounts:
+            - name: nginx-config
+              mountPath: /etc/nginx/conf.d/default.conf
+              subPath: default.conf
+            - name: varnish-secret
+              mountPath: /etc/varnish/secret
+              subPath: secret
+        - name: varnish-cache
+          securityContext:
+            runAsNonRoot: true
+            runAsUser: 1002
+          image: {{ .Values.varnishImage }}
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 6081
+              protocol: TCP
+          env:
+            - name: VARNISH_HTTP_ADDRESS
+              valueFrom:
+                fieldRef:
+                  fieldPath: status.podIP
+          volumeMounts:
+            - name: varnish-secret
+              mountPath: /etc/varnish/secret
+              subPath: secret
+            - name: custom-config
+              mountPath: /etc/varnish
+            - name: custom-config-vcl
+              mountPath: "/etc/varnish/default.vcl"
+              subPath: default.vcl
+            - name: custom-varnish-vsm
+              mountPath: /var/lib/varnish    
+        - name: exporter
+          command:
+            - "/prometheus_varnish_exporter"
+          image: {{ .Values.exporterImage }}
+          volumeMounts:
+            - name: custom-varnish-vsm
+              mountPath: /var/lib/varnish
+              readOnly: true
+            - name: varnish-secret
+              mountPath: /etc/varnish/secret
+              subPath: secret
+          ports:
+          - containerPort: 9131
+            name: prometheus                
       volumes:
-        - name: varnish-secret
-          configMap:
-            name: varnish-secret
-        - name: varnish-config
-          configMap:
-            name: varnish-config
-        - name: nginx-config
-          configMap:
-            name: nginx-config
-        - name: shared-data
-          emptyDir: {}
+      - name: custom-config
+        emptyDir:
+          medium: "Memory"
+      - name: custom-config-vcl
+        configMap:
+          name: custom-varnish-cache-vcl
+      - name: custom-varnish-vsm
+        emptyDir:
+          medium: "Memory"
+      - name: varnish-secret
+        configMap:
+          name: varnish-secret
+      - name: nginx-config
+        configMap:
+          name: nginx-config
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector:
+                matchLabels:
+                  app.kubernetes.io/name: varnish-cache
+                  app.kubernetes.io/instance: custom
+              topologyKey: kubernetes.io/hostname

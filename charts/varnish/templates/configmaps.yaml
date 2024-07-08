@@ -37,11 +37,17 @@ data:
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: varnish-config
+  name: custom-varnish-cache-vcl
+  labels:
+    helm.sh/chart: varnish-cache-0.1.0
+    app.kubernetes.io/name: varnish-cache
+    app.kubernetes.io/instance: custom
+    app.kubernetes.io/version: "7.4.2"
+    app.kubernetes.io/managed-by: Helm
 data:
   default.vcl: |
     vcl 4.1;
-
+    
     probe health {
         .url = "/";
         .timeout = 2s;
@@ -49,10 +55,9 @@ data:
         .window = 5;
         .threshold = 3;
     } 
-
+    
     backend server_nginx_0 {
         .host = "localhost";
         .port = "8080";
         .probe = health;
     }
----
