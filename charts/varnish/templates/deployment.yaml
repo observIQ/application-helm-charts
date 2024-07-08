@@ -44,39 +44,6 @@ spec:
             - name: http
               containerPort: 6081
               protocol: TCP
-          livenessProbe:
-            tcpSocket:
-              port: 6081
-            failureThreshold: 3
-            initialDelaySeconds: 30
-            periodSeconds: 10
-            successThreshold: 1
-            timeoutSeconds: 5
-          readinessProbe:
-            tcpSocket:
-              port: 6081
-            failureThreshold: 3
-            initialDelaySeconds: 5
-            periodSeconds: 10
-            successThreshold: 1
-            timeoutSeconds: 1
-          command:
-            - /usr/sbin/varnishd
-            - -F
-            - -a
-            - http=$(VARNISH_HTTP_ADDRESS):6081,HTTP
-            - -f
-            - /etc/varnish/default.vcl
-            - -T
-            - 127.0.0.1:6082
-            - -t
-            - "120"
-            - -p
-            - thread_pool_min=50
-            - -p
-            - thread_pool_max=1000
-            - -p
-            - thread_pool_timeout=120
           env:
             - name: VARNISH_HTTP_ADDRESS
               valueFrom:
@@ -98,7 +65,7 @@ spec:
             - "/prometheus_varnish_exporter"
           image: {{ .Values.exporterImage }}
           volumeMounts:
-            - name: shared-data
+            - name: custom-varnish-vsm
               mountPath: /var/lib/varnish
               readOnly: true
             - name: varnish-secret
@@ -106,42 +73,7 @@ spec:
               subPath: secret
           ports:
           - containerPort: 9131
-            name: prometheus    
-        - name: varnish-cache-ncsa
-          securityContext:
-            runAsNonRoot: true
-            runAsUser: 1002
-          
-          image: {{ .Values.varnishImage }}
-          imagePullPolicy: IfNotPresent
-          command: ["varnishncsa"]
-          args:
-            - -c
-          readinessProbe:
-            exec:
-              command:
-                - /usr/bin/varnishncsa
-                - -d
-                - -t 3
-            failureThreshold: 3
-            initialDelaySeconds: 5
-            periodSeconds: 10
-            successThreshold: 1
-            timeoutSeconds: 1
-          livenessProbe:
-            exec:
-              command:
-                - /usr/bin/varnishncsa
-                - -d
-                - -t 3
-            failureThreshold: 3
-            initialDelaySeconds: 30
-            periodSeconds: 10
-            successThreshold: 1
-            timeoutSeconds: 5
-          volumeMounts:
-          - name: custom-varnish-vsm
-            mountPath: /var/lib/varnish                    
+            name: prometheus                
       volumes:
       - name: custom-config
         emptyDir:
@@ -158,8 +90,6 @@ spec:
       - name: nginx-config
         configMap:
           name: nginx-config
-      - name: shared-data
-        emptyDir: {}          
       affinity:
         podAntiAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
