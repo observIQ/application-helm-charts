@@ -37,14 +37,12 @@ spec:
           securityContext:
             runAsNonRoot: true
             runAsUser: 1002
-          
           image: {{ .Values.varnishImage }}
           imagePullPolicy: IfNotPresent
           ports:
             - name: http
               containerPort: 6081
               protocol: TCP
-          
           livenessProbe:
             tcpSocket:
               port: 6081
