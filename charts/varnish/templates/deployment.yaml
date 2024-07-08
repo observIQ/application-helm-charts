@@ -84,9 +84,9 @@ spec:
                 fieldRef:
                   fieldPath: status.podIP
           volumeMounts:
-            - name: customconfig
+            - name: custom-config
               mountPath: /etc/varnish
-            - name: customconfig-vcl
+            - name: custom-config-vcl
               mountPath: "/etc/varnish/default.vcl"
               subPath: default.vcl
             - name: custom-varnish-vsm
@@ -138,10 +138,10 @@ spec:
           - name: custom-varnish-vsm
             mountPath: /var/lib/varnish                    
       volumes:
-      - name: customconfig
+      - name: custom-config
         emptyDir:
           medium: "Memory"
-      - name: customconfig-vcl
+      - name: custom-config-vcl
         configMap:
           name: custom-varnish-cache-vcl
       - name: custom-varnish-vsm
