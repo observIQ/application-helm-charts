@@ -142,7 +142,12 @@ spec:
           name: custom-varnish-cache-vcl
       - name: custom-varnish-vsm
         emptyDir:
-          medium: "Memory"            
+          medium: "Memory"
+      - name: nginx-config
+        configMap:
+          name: nginx-config
+      - name: shared-data
+        emptyDir: {}          
       affinity:
         podAntiAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
