@@ -83,6 +83,9 @@ spec:
                 fieldRef:
                   fieldPath: status.podIP
           volumeMounts:
+            - name: varnish-secret
+              mountPath: /etc/varnish/secret
+              subPath: secret
             - name: custom-config
               mountPath: /etc/varnish
             - name: custom-config-vcl
