@@ -18,9 +18,7 @@ spec:
     metadata:      
       labels:
         app.kubernetes.io/name: varnish-cache
-        app.kubernetes.io/instance: custom      
-      annotations:
-        checksum/customvcl: 7b15612fd2d2d03fe720b9c01929cd5ea1114dc8c153a2951f75e904599187f2
+        app.kubernetes.io/instance: custom
     spec:            
       serviceAccountName: custom-varnish-cache      
       securityContext:
