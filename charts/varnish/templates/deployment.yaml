@@ -1,11 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: release-name-varnish-cache
+  name: customvarnish-cache
   labels:
     helm.sh/chart: varnish-cache-0.1.0
     app.kubernetes.io/name: varnish-cache
-    app.kubernetes.io/instance: release-name
+    app.kubernetes.io/instance: custom
     app.kubernetes.io/version: "7.4.2"
     app.kubernetes.io/managed-by: Helm      
 spec:
@@ -13,16 +13,16 @@ spec:
   selector:
     matchLabels:
       app.kubernetes.io/name: varnish-cache
-      app.kubernetes.io/instance: release-name
+      app.kubernetes.io/instance: custom
   template:
     metadata:      
       labels:
         app.kubernetes.io/name: varnish-cache
-        app.kubernetes.io/instance: release-name      
+        app.kubernetes.io/instance: custom      
       annotations:
-        checksum/release-name-vcl: 7b15612fd2d2d03fe720b9c01929cd5ea1114dc8c153a2951f75e904599187f2
+        checksum/customvcl: 7b15612fd2d2d03fe720b9c01929cd5ea1114dc8c153a2951f75e904599187f2
     spec:            
-      serviceAccountName: release-name-varnish-cache      
+      serviceAccountName: customvarnish-cache      
       securityContext:
         fsGroup: 999
       shareProcessNamespace: false
@@ -78,12 +78,12 @@ spec:
                 fieldRef:
                   fieldPath: status.podIP
           volumeMounts:
-            - name: release-name-config
+            - name: customconfig
               mountPath: /etc/varnish
-            - name: release-name-config-vcl
+            - name: customconfig-vcl
               mountPath: "/etc/varnish/default.vcl"
               subPath: default.vcl
-            - name: release-name-varnish-vsm
+            - name: customvarnish-vsm
               mountPath: /var/lib/varnish        
         - name: varnish-cache-ncsa
           securityContext:
@@ -118,16 +118,16 @@ spec:
             successThreshold: 1
             timeoutSeconds: 5
           volumeMounts:
-          - name: release-name-varnish-vsm
+          - name: customvarnish-vsm
             mountPath: /var/lib/varnish                    
       volumes:
-      - name: release-name-config
+      - name: customconfig
         emptyDir:
           medium: "Memory"
-      - name: release-name-config-vcl
+      - name: customconfig-vcl
         configMap:
-          name: release-name-varnish-cache-vcl
-      - name: release-name-varnish-vsm
+          name: customvarnish-cache-vcl
+      - name: customvarnish-vsm
         emptyDir:
           medium: "Memory"            
       affinity:
@@ -136,5 +136,5 @@ spec:
             - labelSelector:
                 matchLabels:
                   app.kubernetes.io/name: varnish-cache
-                  app.kubernetes.io/instance: release-name
+                  app.kubernetes.io/instance: custom
               topologyKey: kubernetes.io/hostname
