@@ -1,5 +1,5 @@
 apiVersion: v2
-appVersion: 6.0.11
+appVersion: 6.0.13
 engine: gotpl
 home: https://github.com/observiq/application-helm-charts/tree/main/charts/varnish
 keywords:
@@ -10,4 +10,5 @@ maintainers:
 name: varnish
 sources:
   - https://varnish-cache.org/
-version: 1.0.1
+  - https://artifacthub.io/packages/helm/varnish/varnish-cache
+version: 1.0.2
