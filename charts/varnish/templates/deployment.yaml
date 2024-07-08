@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: customvarnish-cache
+  name: custom-varnish-cache
   labels:
     helm.sh/chart: varnish-cache-0.1.0
     app.kubernetes.io/name: varnish-cache
@@ -22,7 +22,7 @@ spec:
       annotations:
         checksum/customvcl: 7b15612fd2d2d03fe720b9c01929cd5ea1114dc8c153a2951f75e904599187f2
     spec:            
-      serviceAccountName: customvarnish-cache      
+      serviceAccountName: custom-varnish-cache      
       securityContext:
         fsGroup: 999
       shareProcessNamespace: false
@@ -83,7 +83,7 @@ spec:
             - name: customconfig-vcl
               mountPath: "/etc/varnish/default.vcl"
               subPath: default.vcl
-            - name: customvarnish-vsm
+            - name: custom-varnish-vsm
               mountPath: /var/lib/varnish        
         - name: varnish-cache-ncsa
           securityContext:
@@ -118,7 +118,7 @@ spec:
             successThreshold: 1
             timeoutSeconds: 5
           volumeMounts:
-          - name: customvarnish-vsm
+          - name: custom-varnish-vsm
             mountPath: /var/lib/varnish                    
       volumes:
       - name: customconfig
@@ -126,8 +126,8 @@ spec:
           medium: "Memory"
       - name: customconfig-vcl
         configMap:
-          name: customvarnish-cache-vcl
-      - name: customvarnish-vsm
+          name: custom-varnish-cache-vcl
+      - name: custom-varnish-vsm
         emptyDir:
           medium: "Memory"            
       affinity:
