@@ -2144,6 +2144,23 @@ entries:
     version: 0.0.1
   varnish:
   - apiVersion: v2
+    appVersion: 6.0.13
+    created: "2024-07-08T20:26:19.492083212Z"
+    digest: 39cf5a9dba31a841544f1591f5077d10e0fb7abf9550a993d6d1610c2f6b2628
+    home: https://github.com/observiq/application-helm-charts/tree/main/charts/varnish
+    keywords:
+    - community
+    - forum
+    maintainers:
+    - name: observIQ
+    name: varnish
+    sources:
+    - https://varnish-cache.org/
+    - https://artifacthub.io/packages/helm/varnish/varnish-cache
+    urls:
+    - https://github.com/observIQ/application-helm-charts/releases/download/varnish-1.0.2/varnish-1.0.2.tgz
+    version: 1.0.2
+  - apiVersion: v2
     appVersion: 6.0.11
     created: "2023-10-24T20:01:22.335956872Z"
     digest: 8aa8ea121ff422380f3f1bc699ad1213174b626cc0f9ba5699d0be5e25988c85
@@ -2368,4 +2385,4 @@ entries:
     urls:
     - https://github.com/observiq/application-helm-charts/releases/download/wildfly-0.0.1/wildfly-0.0.1.tgz
     version: 0.0.1
-generated: "2024-06-05T19:56:41.876981892Z"
+generated: "2024-07-08T20:26:19.492401996Z"
