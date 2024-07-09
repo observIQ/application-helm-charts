@@ -8,5 +8,12 @@ RUN add-apt-repository 'deb http://rpm.aventer.biz/Ubuntu/jammy jammy main'
 RUN apt-get install -y aventer-mesos
 
 # Download and extract the Apache Mesos Prometheus exporter
-RUN wget https://github.com/mesos/mesos_exporter/releases/download/v1.1.2/mesos_exporter-1.1.2.linux-arm64.tar.gz \
-    && tar -xzvf mesos_exporter-1.1.2.linux-arm64.tar.gz
+ENV EXPORTER_URL=""
+RUN ARCH=$(uname -m) && \
+    if [ "${ARCH}" = "arm64" ]; then \
+    EXPORTER_URL="https://github.com/mesos/mesos_exporter/releases/download/v1.1.2/mesos_exporter-1.1.2.linux-arm64.tar.gz"; \
+    else \
+    EXPORTER_URL="https://github.com/mesos/mesos_exporter/releases/download/v1.1.2/mesos_exporter-1.1.2.linux-amd64.tar.gz"; \
+    fi && \
+    wget ${EXPORTER_URL} && \
+    tar -xzvf $(basename ${EXPORTER_URL})
