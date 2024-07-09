@@ -3,7 +3,7 @@ name: Release Container Images
 on:
   push:
     branches:
-      - main
+      - mesos-build-test
     paths:
       - "container/**"
       - ".github/workflows/container.yaml"
