@@ -6,7 +6,7 @@ on:
       - main
     paths:
       - "container/apache-mesos"
-      - ".github/workflows/container-build-test/apache-mesos.yaml"
+      - ".github/workflows/apache-mesos.yaml"
 
 jobs:
   push-images:
