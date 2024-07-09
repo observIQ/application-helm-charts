@@ -3,10 +3,10 @@ name: Apache Mesos Build Test
 on:
   push:
     branches:
-      - mesos-build-test
+      - main
     paths:
-      - "container/**"
-      - ".github/workflows/container.yaml"
+      - "container/apache-mesos"
+      - ".github/workflows/container-build-test/apache-mesos.yaml"
 
 jobs:
   push-images:
