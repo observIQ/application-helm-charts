@@ -1,4 +1,4 @@
-name: Release Container Images
+name: Apache Mesos Build Test
 
 on:
   push:
