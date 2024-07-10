@@ -5,7 +5,6 @@ RUN apt-get update
 RUN apt-get install -y wget curl gnupg software-properties-common
 RUN curl https://www.aventer.biz/assets/support_aventer.asc | apt-key add -
 RUN add-apt-repository 'deb http://rpm.aventer.biz/Ubuntu/jammy jammy main'
-RUN echo $(uname -m)
 RUN apt-get install -y aventer-mesos
 
 # Download and extract the Apache Mesos Prometheus exporter
