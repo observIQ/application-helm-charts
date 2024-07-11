@@ -49,7 +49,7 @@ jobs:
           context: container/apache-mesos
           file: container/apache-mesos/Dockerfile
           platforms: linux/arm64,linux/amd64
-          push:  false
+          push:  true
           tags:  ghcr.io/observiq/apache-mesos:${{ steps.get-tag.outputs.tag }}
 
   push-images:
