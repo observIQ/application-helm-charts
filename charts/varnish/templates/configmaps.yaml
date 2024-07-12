@@ -28,6 +28,17 @@ data:
 apiVersion: v1
 kind: ConfigMap
 metadata:
+  name: varnish-ncsa-startup
+data:
+  start-varnish-ncsa.sh: |
+    #!/bin/bash
+    
+    varnishncsa -n /var/lib/varnish -F '{"Timestamp": "%t", "Varnish-Side": "%{Varnish:side}x", "Age": %{age}o, "Handling": "%{Varnish:handling}x", "Request": "%r", "Status": "%s", "Response-Reason": "%{VSL:RespReason}x", "Fetch-Error": "%{VSL:FetchError}x", "X-Forwarded-For": "%{x-forwarded-for}i", "Remote-User": "%u", "Bytes": "%b", "Time-To-Serve": %D, "User-Agent": "%{User-agent}i", "Referer": "%{Referer}i", "X-Varnish": "%{x-varnish}o", "X-Magento-Tags": "%{x-magento-tags}o"}}' -D -w /var/log/varnish/varnishncsa-frontend.log
+    varnishncsa -n /var/lib/varnish -b -F '{"Timestamp": "%t", "Varnish-Side": "%{Varnish:side}x", "Handling": "%{Varnish:handling}x", "Request": "%r", "Status": "%s", "Response-Reason": "%{VSL:RespReason}x", "Fetch-Error": "%{VSL:FetchError}x", "Bytes": "%b", "Time-To-Serve": %D}' -w /var/log/varnish/varnishncsa-backend.log
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
   name: varnish-secret
 data:
   # Use a real secret in production, not a configmap.
@@ -47,17 +58,35 @@ metadata:
 data:
   default.vcl: |
     vcl 4.1;
-    
+
     probe health {
         .url = "/";
         .timeout = 2s;
         .interval = 5s;
         .window = 5;
         .threshold = 3;
-    } 
-    
-    backend server_nginx_0 {
+    }
+
+    backend default {
         .host = "localhost";
         .port = "8080";
         .probe = health;
     }
+
+    sub vcl_recv {
+        # Force a cache miss to ensure backend requests
+        return (pass);
+    }
+
+    sub vcl_backend_response {
+        set beresp.ttl = 10s;
+    }
+
+    sub vcl_deliver {
+        if (obj.hits > 0) {
+            set resp.http.X-Cache = "HIT";
+        } else {
+            set resp.http.X-Cache = "MISS";
+        }
+    }
+
