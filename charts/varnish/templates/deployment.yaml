@@ -86,13 +86,34 @@ spec:
           ports:
           - containerPort: 9131
             name: prometheus
-        - name: varnish-cache-ncsa
+        - name: varnish-cache-ncsa-frontend
           securityContext:
             runAsNonRoot: true
             runAsUser: 103
           image: {{ .Values.varnishImage }}
           imagePullPolicy: IfNotPresent
-          command: ["sh", "-c", "/start-varnish-ncsa.sh"]
+          command: ["/bin/sh", "-c"]
+          args: ["varnishncsa -n /var/lib/varnish -F '{\"Timestamp\": \"%t\", \"Varnish-Side\": \"%{Varnish:side}x\", \"Age\": %{age}o, \"Handling\": \"%{Varnish:handling}x\", \"Request\": \"%r\", \"Status\": \"%s\", \"Response-Reason\": \"%{VSL:RespReason}x\", \"Fetch-Error\": \"%{VSL:FetchError}x\", \"X-Forwarded-For\": \"%{x-forwarded-for}i\", \"Remote-User\": \"%u\", \"Bytes\": \"%b\", \"Time-To-Serve\": %D, \"User-Agent\": \"%{User-agent}i\", \"Referer\": \"%{Referer}i\", \"X-Varnish\": \"%{x-varnish}o\", \"X-Magento-Tags\": \"%{x-magento-tags}o\"}' -w /var/log/varnish/varnishncsa-frontend.log"]
+          volumeMounts:
+          - name: varnish-ncsa-startup
+            mountPath: /start-varnish-ncsa.sh
+            subPath: start-varnish-ncsa.sh
+          - name: custom-varnish-vsm
+            mountPath: /var/lib/varnish
+            readOnly: true
+          - name: varnish-secret
+            mountPath: /etc/varnish/secret
+            subPath: secret
+          - name: varnish-log
+            mountPath: /var/log/varnish
+        - name: varnish-cache-ncsa-backend
+          securityContext:
+            runAsNonRoot: true
+            runAsUser: 103
+          image: {{ .Values.varnishImage }}
+          imagePullPolicy: IfNotPresent
+          command: ["/bin/sh", "-c"]
+          args: ["varnishncsa -n /var/lib/varnish -b -F '{\"Timestamp\": \"%t\", \"Varnish-Side\": \"%{Varnish:side}x\", \"Handling\": \"%{Varnish:handling}x\", \"Request\": \"%r\", \"Status\": \"%s\", \"Response-Reason\": \"%{VSL:RespReason}x\", \"Fetch-Error\": \"%{VSL:FetchError}x\", \"Bytes\": \"%b\", \"Time-To-Serve\": %D}' -w /var/log/varnish/varnishncsa-backend.log"]
           volumeMounts:
           - name: varnish-ncsa-startup
             mountPath: /start-varnish-ncsa.sh
