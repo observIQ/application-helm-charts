@@ -28,17 +28,6 @@ data:
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: varnish-ncsa-startup
-data:
-  start-varnish-ncsa.sh: |
-    #!/bin/bash
-    
-    varnishncsa -n /var/lib/varnish -F '{"Timestamp": "%t", "Varnish-Side": "%{Varnish:side}x", "Age": %{age}o, "Handling": "%{Varnish:handling}x", "Request": "%r", "Status": "%s", "Response-Reason": "%{VSL:RespReason}x", "Fetch-Error": "%{VSL:FetchError}x", "X-Forwarded-For": "%{x-forwarded-for}i", "Remote-User": "%u", "Bytes": "%b", "Time-To-Serve": %D, "User-Agent": "%{User-agent}i", "Referer": "%{Referer}i", "X-Varnish": "%{x-varnish}o", "X-Magento-Tags": "%{x-magento-tags}o"}}' -D -w /var/log/varnish/varnishncsa-frontend.log
-    varnishncsa -n /var/lib/varnish -b -F '{"Timestamp": "%t", "Varnish-Side": "%{Varnish:side}x", "Handling": "%{Varnish:handling}x", "Request": "%r", "Status": "%s", "Response-Reason": "%{VSL:RespReason}x", "Fetch-Error": "%{VSL:FetchError}x", "Bytes": "%b", "Time-To-Serve": %D}' -w /var/log/varnish/varnishncsa-backend.log
----
-apiVersion: v1
-kind: ConfigMap
-metadata:
   name: varnish-secret
 data:
   # Use a real secret in production, not a configmap.

@@ -95,9 +95,6 @@ spec:
           command: ["/bin/sh", "-c"]
           args: ["varnishncsa -n /var/lib/varnish -F '{\"Timestamp\": \"%t\", \"Varnish-Side\": \"%{Varnish:side}x\", \"Age\": %{age}o, \"Handling\": \"%{Varnish:handling}x\", \"Request\": \"%r\", \"Status\": \"%s\", \"Response-Reason\": \"%{VSL:RespReason}x\", \"Fetch-Error\": \"%{VSL:FetchError}x\", \"X-Forwarded-For\": \"%{x-forwarded-for}i\", \"Remote-User\": \"%u\", \"Bytes\": \"%b\", \"Time-To-Serve\": %D, \"User-Agent\": \"%{User-agent}i\", \"Referer\": \"%{Referer}i\", \"X-Varnish\": \"%{x-varnish}o\", \"X-Magento-Tags\": \"%{x-magento-tags}o\"}' -w /var/log/varnish/varnishncsa-frontend.log"]
           volumeMounts:
-          - name: varnish-ncsa-startup
-            mountPath: /start-varnish-ncsa.sh
-            subPath: start-varnish-ncsa.sh
           - name: custom-varnish-vsm
             mountPath: /var/lib/varnish
             readOnly: true
@@ -115,9 +112,6 @@ spec:
           command: ["/bin/sh", "-c"]
           args: ["varnishncsa -n /var/lib/varnish -b -F '{\"Timestamp\": \"%t\", \"Varnish-Side\": \"%{Varnish:side}x\", \"Handling\": \"%{Varnish:handling}x\", \"Request\": \"%r\", \"Status\": \"%s\", \"Response-Reason\": \"%{VSL:RespReason}x\", \"Fetch-Error\": \"%{VSL:FetchError}x\", \"Bytes\": \"%b\", \"Time-To-Serve\": %D}' -w /var/log/varnish/varnishncsa-backend.log"]
           volumeMounts:
-          - name: varnish-ncsa-startup
-            mountPath: /start-varnish-ncsa.sh
-            subPath: start-varnish-ncsa.sh
           - name: custom-varnish-vsm
             mountPath: /var/lib/varnish
             readOnly: true
@@ -152,13 +146,6 @@ spec:
           name: nginx-config
       - name: varnish-log
         emptyDir: {}
-      - name: varnish-ncsa-startup
-        configMap:
-          name: varnish-ncsa-startup
-          defaultMode: 0755
-          items:
-          - key: start-varnish-ncsa.sh
-            path: start-varnish-ncsa.sh
       - name: alloy-varnish-log-config
         configMap:
           name: alloy-varnish-log-config
