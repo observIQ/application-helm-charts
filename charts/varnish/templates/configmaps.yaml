@@ -115,7 +115,7 @@ data:
       path_targets = [{
         __address__ = "localhost",
         __path__    = "/var/log/varnish/varnishncsa-*.log",
-        instance    = constants.hostname,
+        instance    = "custom-varnish-cache.sample-apps.svc.cluster.local:9131",
         job         = "integrations/varnish-cache",
       }]
     }
