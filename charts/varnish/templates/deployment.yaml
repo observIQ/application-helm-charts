@@ -126,6 +126,14 @@ spec:
             subPath: secret
           - name: varnish-log
             mountPath: /var/log/varnish
+        - name: alloy-varnish-logs
+          image: grafana/alloy:latest
+          volumeMounts:
+          - name: varnish-log
+            mountPath: /var/log/varnish
+          - name: alloy-varnish-log-config
+            mountPath: /etc/alloy/config.alloy
+            subPath: config.alloy
       volumes:
       - name: custom-config
         emptyDir:
@@ -151,6 +159,12 @@ spec:
           items:
           - key: start-varnish-ncsa.sh
             path: start-varnish-ncsa.sh
+      - name: alloy-varnish-log-config
+        configMap:
+          name: alloy-varnish-log-config
+          items:
+          - key: config.alloy
+            path: config.alloy
       affinity:
         podAntiAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:

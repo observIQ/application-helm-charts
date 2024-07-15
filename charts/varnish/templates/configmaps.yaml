@@ -89,4 +89,39 @@ data:
             set resp.http.X-Cache = "MISS";
         }
     }
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: alloy-varnish-log-config
+  labels:
+    alloy-config: varnish-logs
+data:
+  config.alloy: |
+    logging {
+      level  = "info"
+      format = "logfmt"
+    }
 
+    loki.write "logs_integrations" {
+      endpoint {
+        url = "http://loki.default.svc.cluster.local:3100/loki/api/v1/push"
+
+      }
+      external_labels = {"cluster" = "my-cluster"}
+    }
+
+    local.file_match "logs_integrations_integrations_varnish_cache" {
+      path_targets = [{
+        __address__ = "localhost",
+        __path__    = "/var/log/varnish/varnishncsa-*.log",
+        instance    = constants.hostname,
+        job         = "integrations/varnish-cache",
+      }]
+    }
+
+    loki.source.file "logs_integrations_integrations_apache_airflow" {
+      targets    = local.file_match.logs_integrations_integrations_varnish_cache.targets
+      forward_to = [loki.write.logs_integrations.receiver]
+    }
+---
