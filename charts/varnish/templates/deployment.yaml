@@ -22,8 +22,18 @@ spec:
     spec:            
       serviceAccountName: custom-varnish-cache      
       securityContext:
-        fsGroup: 999
+        fsGroup: 101
       shareProcessNamespace: true
+      initContainers:
+      - name: init-script
+        image: alpine:latest
+        securityContext:
+          runAsNonRoot: true
+          runAsUser: 103
+        command: ['sh', '-c', 'touch /var/log/varnish/varnishncsa-frontend.log /var/log/varnish/varnishncsa-backend.log && chmod 666 /var/log/varnish/*.log']
+        volumeMounts:
+        - name: varnish-log
+          mountPath: /var/log/varnish
       containers:      
         - name: nginx
           image: {{ .Values.nginxImage }}
@@ -37,7 +47,7 @@ spec:
         - name: varnish-cache
           securityContext:
             runAsNonRoot: true
-            runAsUser: 1002
+            runAsUser: 103
           image: {{ .Values.varnishImage }}
           imagePullPolicy: IfNotPresent
           ports:
@@ -59,7 +69,9 @@ spec:
               mountPath: "/etc/varnish/default.vcl"
               subPath: default.vcl
             - name: custom-varnish-vsm
-              mountPath: /var/lib/varnish    
+              mountPath: /var/lib/varnish
+            - name: varnish-log
+              mountPath: /var/log/varnish
         - name: exporter
           command:
             - "/prometheus_varnish_exporter"
@@ -73,7 +85,49 @@ spec:
               subPath: secret
           ports:
           - containerPort: 9131
-            name: prometheus                
+            name: prometheus
+        - name: varnish-cache-ncsa-frontend
+          securityContext:
+            runAsNonRoot: true
+            runAsUser: 103
+          image: {{ .Values.varnishImage }}
+          imagePullPolicy: IfNotPresent
+          command: ["/bin/sh", "-c"]
+          args: ["varnishncsa -n /var/lib/varnish -F '{\"Timestamp\": \"%t\", \"Varnish-Side\": \"%{Varnish:side}x\", \"Age\": %{age}o, \"Handling\": \"%{Varnish:handling}x\", \"Request\": \"%r\", \"Status\": \"%s\", \"Response-Reason\": \"%{VSL:RespReason}x\", \"Fetch-Error\": \"%{VSL:FetchError}x\", \"X-Forwarded-For\": \"%{x-forwarded-for}i\", \"Remote-User\": \"%u\", \"Bytes\": \"%b\", \"Time-To-Serve\": %D, \"User-Agent\": \"%{User-agent}i\", \"Referer\": \"%{Referer}i\", \"X-Varnish\": \"%{x-varnish}o\", \"X-Magento-Tags\": \"%{x-magento-tags}o\"}' -w /var/log/varnish/varnishncsa-frontend.log"]
+          volumeMounts:
+          - name: custom-varnish-vsm
+            mountPath: /var/lib/varnish
+            readOnly: true
+          - name: varnish-secret
+            mountPath: /etc/varnish/secret
+            subPath: secret
+          - name: varnish-log
+            mountPath: /var/log/varnish
+        - name: varnish-cache-ncsa-backend
+          securityContext:
+            runAsNonRoot: true
+            runAsUser: 103
+          image: {{ .Values.varnishImage }}
+          imagePullPolicy: IfNotPresent
+          command: ["/bin/sh", "-c"]
+          args: ["varnishncsa -n /var/lib/varnish -b -F '{\"Timestamp\": \"%t\", \"Varnish-Side\": \"%{Varnish:side}x\", \"Handling\": \"%{Varnish:handling}x\", \"Request\": \"%r\", \"Status\": \"%s\", \"Response-Reason\": \"%{VSL:RespReason}x\", \"Fetch-Error\": \"%{VSL:FetchError}x\", \"Bytes\": \"%b\", \"Time-To-Serve\": %D}' -w /var/log/varnish/varnishncsa-backend.log"]
+          volumeMounts:
+          - name: custom-varnish-vsm
+            mountPath: /var/lib/varnish
+            readOnly: true
+          - name: varnish-secret
+            mountPath: /etc/varnish/secret
+            subPath: secret
+          - name: varnish-log
+            mountPath: /var/log/varnish
+        - name: alloy-varnish-logs
+          image: grafana/alloy:latest
+          volumeMounts:
+          - name: varnish-log
+            mountPath: /var/log/varnish
+          - name: alloy-varnish-log-config
+            mountPath: /etc/alloy/config.alloy
+            subPath: config.alloy
       volumes:
       - name: custom-config
         emptyDir:
@@ -90,6 +144,14 @@ spec:
       - name: nginx-config
         configMap:
           name: nginx-config
+      - name: varnish-log
+        emptyDir: {}
+      - name: alloy-varnish-log-config
+        configMap:
+          name: alloy-varnish-log-config
+          items:
+          - key: config.alloy
+            path: config.alloy
       affinity:
         podAntiAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:
