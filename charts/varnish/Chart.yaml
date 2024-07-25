@@ -11,4 +11,4 @@ name: varnish
 sources:
   - https://varnish-cache.org/
   - https://artifacthub.io/packages/helm/varnish/varnish-cache
-version: 1.0.3
+version: 1.0.4
